@@ -1,0 +1,1018 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title></title>
+<!-- 2019-08-27 Tue 13:08 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="VLEAD" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title"></h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. License</a></li>
+<li><a href="#sec-2">2. Code</a>
+<ul>
+<li><a href="#sec-2-1">2.1. Function to create animated label object</a></li>
+<li><a href="#sec-2-2">2.2. Function to draw an animated label for demo at different positions</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3. Tangle</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> License</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+<i>/ Copyright 2011 David Galles, University of San Francisco. All rights reserved.
+/</i>
+<i>/ Redistribution and use in source and binary forms, with or without modification, are
+/</i> permitted provided that the following conditions are met:
+<i>/
+/</i> 1. Redistributions of source code must retain the above copyright notice, this list of
+<i>/ conditions and the following disclaimer.
+/</i>
+<i>/ 2. Redistributions in binary form must reproduce the above copyright notice, this list
+/</i> of conditions and the following disclaimer in the documentation and/or other materials
+<i>/ provided with the distribution.
+/</i>
+<i>/ THIS SOFTWARE IS PROVIDED BY &lt;COPYRIGHT HOLDER&gt; ``AS IS'' AND ANY EXPRESS OR IMPLIED
+/</i> WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+<i>/ FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL &lt;COPYRIGHT HOLDER&gt; OR
+/</i> CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+<i>/ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+/</i> SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+<i>/ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+/</i> NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+<i>/ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+/</i>
+<i>/ The views and conclusions contained in the software and documentation are those of the
+/</i> authors and should not be interpreted as representing official policies, either expressed
+// or implied, of the University of San Francisco
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Code</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Function to create animated label object</h3>
+<div class="outline-text-3" id="text-2-1">
+<div class="org-src-container">
+
+<pre class="src src-js" id="AnimatedLabel"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">AnimatedLabel</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">val</span>, <span style="font-weight: bold; font-style: italic;">center</span>, <span style="font-weight: bold; font-style: italic;">initialWidth</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.centering = center;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.label = val;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.highlighted = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.alpha = 1.0;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.addedToScene = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.labelColor = <span style="font-style: italic;">"#000000"</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth = 0;
+        <span style="font-weight: bold;">if</span> (initialWidth != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth = initialWidth;
+        }
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.leftWidth = -1;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.centerWidth = -1;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex = -1;
+}
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">AnimatedObject</span>();
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = AnimatedLabel;
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.alwaysOnTop = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.centered = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.centering;
+}
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> Function to draw an animated label for demo at different positions</h3>
+<div class="outline-text-3" id="text-2-2">
+<div class="org-src-container">
+
+<pre class="src src-js" id="AnimatedLabel">AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.draw = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">ctx</span>)
+{
+        <span style="font-weight: bold;">if</span> (!<span style="font-weight: bold; text-decoration: underline;">this</span>.addedToScene)
+        {
+                <span style="font-weight: bold;">return</span>;
+        }
+        
+        ctx.globalAlpha = <span style="font-weight: bold; text-decoration: underline;">this</span>.alpha;
+        ctx.font = <span style="font-style: italic;">'16px sans-serif'</span>;
+
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">startingXForHighlight</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.x; 
+
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex &gt;= <span style="font-weight: bold; text-decoration: underline;">this</span>.label.length)
+        {
+             <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex = -1;
+        }
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndexDirty &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex != -1)
+        {
+              <span style="font-weight: bold; text-decoration: underline;">this</span>.leftWidth = ctx.measureText(<span style="font-weight: bold; text-decoration: underline;">this</span>.label.substring(0,<span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex)).width;
+              <span style="font-weight: bold; text-decoration: underline;">this</span>.centerWidth = ctx.measureText(<span style="font-weight: bold; text-decoration: underline;">this</span>.label.substring(<span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex, <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex+1)).width;
+              <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndexDirty = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+        }
+        
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex != -1)
+                {
+                    startingXForHighlight = <span style="font-weight: bold; text-decoration: underline;">this</span>.x - <span style="font-weight: bold; text-decoration: underline;">this</span>.width / 2;
+                    ctx.textAlign = <span style="font-style: italic;">'left'</span>;
+                    ctx.textBaseline   = <span style="font-style: italic;">'middle'</span>; 
+                }
+                <span style="font-weight: bold;">else</span>
+                {
+                    ctx.textAlign = <span style="font-style: italic;">'center'</span>;
+                    ctx.textBaseline   = <span style="font-style: italic;">'middle'</span>; 
+                }
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                ctx.textAlign = <span style="font-style: italic;">'left'</span>;
+                ctx.textBaseline   = <span style="font-style: italic;">'top'</span>; 
+        }
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.highlighted)
+        {
+            ctx.strokeStyle = <span style="font-style: italic;">"#ffaaaa"</span>;
+            ctx.fillStyle = <span style="font-style: italic;">"#ff0000"</span>;
+                ctx.lineWidth = <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightDiff;
+                ctx.strokeText(<span style="font-weight: bold; text-decoration: underline;">this</span>.label, <span style="font-weight: bold; text-decoration: underline;">this</span>.x, <span style="font-weight: bold; text-decoration: underline;">this</span>.y);             
+                <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">ctx.fillText(this.label, this.x, this.y);</span>
+        }
+        ctx.strokeStyle = <span style="font-weight: bold; text-decoration: underline;">this</span>.labelColor;
+        ctx.fillStyle = <span style="font-weight: bold; text-decoration: underline;">this</span>.labelColor;
+        ctx.lineWidth = 1;
+        strList = <span style="font-weight: bold; text-decoration: underline;">this</span>.label.split(<span style="font-style: italic;">"\n"</span>);
+        <span style="font-weight: bold;">if</span> (strList.length == 1)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex == -1)
+                {
+                    ctx.fillText(<span style="font-weight: bold; text-decoration: underline;">this</span>.label, <span style="font-weight: bold; text-decoration: underline;">this</span>.x, <span style="font-weight: bold; text-decoration: underline;">this</span>.y); 
+                }
+                <span style="font-weight: bold;">else</span>
+                {
+                    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">leftStr</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.label.substring(0, <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex);
+                    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">highlightStr</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.label.substring(<span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex, <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex + 1)
+                    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">rightStr</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.label.substring(<span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex + 1)
+                    ctx.fillText(leftStr, startingXForHighlight, <span style="font-weight: bold; text-decoration: underline;">this</span>.y)
+                    ctx.strokeStyle = <span style="font-style: italic;">"#FF0000"</span>;
+                    ctx.fillStyle = <span style="font-style: italic;">"#FF0000"</span>;
+                    ctx.fillText(highlightStr, startingXForHighlight + <span style="font-weight: bold; text-decoration: underline;">this</span>.leftWidth, <span style="font-weight: bold; text-decoration: underline;">this</span>.y)
+
+
+                    ctx.strokeStyle = <span style="font-weight: bold; text-decoration: underline;">this</span>.labelColor;
+                    ctx.fillStyle = <span style="font-weight: bold; text-decoration: underline;">this</span>.labelColor;
+                    ctx.fillText(rightStr, startingXForHighlight + <span style="font-weight: bold; text-decoration: underline;">this</span>.leftWidth + <span style="font-weight: bold; text-decoration: underline;">this</span>.centerWidth, <span style="font-weight: bold; text-decoration: underline;">this</span>.y)
+
+
+                }
+                <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">this.textWidth = ctx.measureText(this.label).width;</span>
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">offset</span> = (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)?  (1.0 - strList.length) / 2.0 : 0;
+                <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; strList.length; i++)
+                {
+                        ctx.fillText(strList[i], <span style="font-weight: bold; text-decoration: underline;">this</span>.x, <span style="font-weight: bold; text-decoration: underline;">this</span>.y + offset + i * 12);
+                        <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">this.textWidth = Math.max(this.textWidth, ctx.measureText(strList[i]).width);</span>
+                }               
+        }
+        ctx.closePath();
+}
+
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getAlignLeftPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+    <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+    {
+        <span style="font-weight: bold;">return</span> [otherObject.left() - <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth / 2, <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.centerY()];
+    }
+    <span style="font-weight: bold;">else</span>
+    {
+        <span style="font-weight: bold;">return</span> [otherObject.left() - <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth, otherObject.centerY() - 5];
+    }
+}
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.alignLeft = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.centerY();
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.x = otherObject.left() - <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth / 2;
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.centerY() - 5;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.x = otherObject.left() - <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth;
+        }
+}
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.alignRight = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.centerY();
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.x = otherObject.right() + <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth / 2;
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.centerY() - 5;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.x = otherObject.right();
+        }
+}
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getAlignRightPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+    <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+    {
+        <span style="font-weight: bold;">return</span> [otherObject.right() + <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth / 2, otherObject.centerY()];
+    }
+    <span style="font-weight: bold;">else</span>
+    {
+        <span style="font-weight: bold;">return</span> [otherObject.right(), otherObject.centerY() - 5];
+    }
+}
+
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.alignTop = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.top() - 5;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.x = otherObject.centerX();
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.top() - 10;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.x = otherObject.centerX() -<span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth / 2;
+        }
+}
+
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getAlignTopPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+        {
+                <span style="font-weight: bold;">return</span> [otherObject.centerX(), otherObject.top() - 5];
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+            <span style="font-weight: bold;">return</span> [otherObject.centerX() -<span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth / 2, otherObject.top() - 10];
+        }
+}
+
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.alignBottom = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.bottom() + 5;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.x = otherObject.centerX();
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.bottom();
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.x = otherObject.centerX() - <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth / 2;
+        }
+}
+
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getAlignBottomPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+        {
+            <span style="font-weight: bold;">return</span> [otherObject.centerX(),  otherObject.bottom() + 5];
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+            <span style="font-weight: bold;">return</span> [otherObject.centerX() - <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth / 2,  otherObject.bottom()];
+        }
+}
+
+
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getWidth = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth;
+}
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getHeight = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">return</span> 10;  <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">HACK!  HACK!  HACK!  HACK!</span>
+}
+
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setHighlight = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">value</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.highlighted = value;
+}
+                
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.createUndoDelete = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoDeleteLabel</span>(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.label, <span style="font-weight: bold; text-decoration: underline;">this</span>.x, <span style="font-weight: bold; text-decoration: underline;">this</span>.y, <span style="font-weight: bold; text-decoration: underline;">this</span>.centering, <span style="font-weight: bold; text-decoration: underline;">this</span>.labelColor, <span style="font-weight: bold; text-decoration: underline;">this</span>.layer, <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex);
+}
+                
+                
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.centerX = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+        {
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.x;
+        }
+        <span style="font-weight: bold;">else</span> 
+        {
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.x + <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth; 
+        }
+        
+}
+           
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.centerY = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+        {
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.y;
+        }
+        <span style="font-weight: bold;">else</span> 
+        {
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.y + 5; <span style="font-weight: bold; font-style: italic;">// </span>
+        }
+   
+}
+           
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.top = <span style="font-weight: bold;">function</span>()           
+{
+           <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+           {
+                   <span style="font-weight: bold;">return</span>  <span style="font-weight: bold; text-decoration: underline;">this</span>.y - 5; <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">TODO: Un-Hardwire</span>
+           }
+           <span style="font-weight: bold;">else</span> 
+           {
+                        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.y;   
+           }
+}
+
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.bottom = <span style="font-weight: bold;">function</span>()
+{
+   <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+   {
+           <span style="font-weight: bold;">return</span>  <span style="font-weight: bold; text-decoration: underline;">this</span>.y + 5; <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO: + height / 2;</span>
+   }
+   <span style="font-weight: bold;">else</span> 
+   {
+           <span style="font-weight: bold;">return</span>  <span style="font-weight: bold; text-decoration: underline;">this</span>.y + 10; <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO: + hieght;</span>
+   }
+}
+           
+           
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.right = <span style="font-weight: bold;">function</span>()
+{
+   <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+   {
+           <span style="font-weight: bold;">return</span>  <span style="font-weight: bold; text-decoration: underline;">this</span>.x + <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth / 2; <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO: + width / 2;</span>
+   }
+   <span style="font-weight: bold;">else</span>
+   {
+           <span style="font-weight: bold;">return</span>  <span style="font-weight: bold; text-decoration: underline;">this</span>.x + <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth; <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO: + width;</span>
+   }
+}
+
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.left = <span style="font-weight: bold;">function</span>()
+{
+   <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+   {
+           <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>. x - <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth / 2;
+   }
+   <span style="font-weight: bold;">else</span>
+   {
+           <span style="font-weight: bold;">return</span>  <span style="font-weight: bold; text-decoration: underline;">this</span>.x; <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  - a little?</span>
+   }
+}
+
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setHighlightIndex = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">hlIndex</span>)
+{
+    <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Only allow highlight index for labels that don't have End-Of-Line</span>
+    <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.label.indexOf(<span style="font-style: italic;">"\n"</span>) == -1 &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.label.length &gt; hlIndex)
+    {
+         <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex = hlIndex;
+         <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndexDirty = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+    }
+    <span style="font-weight: bold;">else</span>
+    {
+         <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex = -1;
+
+    }
+}
+
+
+ AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getTailPointerAttachPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">fromX</span>, <span style="font-weight: bold; font-style: italic;">fromY</span>, <span style="font-weight: bold; font-style: italic;">anchorPoint</span>)
+ {                       
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.getClosestCardinalPoint(fromX, fromY); 
+ }
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getHeadPointerAttachPos = <span style="font-weight: bold;">function</span> (<span style="font-weight: bold; font-style: italic;">fromX</span>, <span style="font-weight: bold; font-style: italic;">fromY</span>) 
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.getClosestCardinalPoint(fromX, fromY);                      
+}
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setText = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">newText</span>, <span style="font-weight: bold; font-style: italic;">textIndex</span>, <span style="font-weight: bold; font-style: italic;">initialWidth</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.label = newText;
+        <span style="font-weight: bold;">if</span> (initialWidth != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth = initialWidth;
+        }
+}
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoDeleteLabel</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">lab</span>, <span style="font-weight: bold; font-style: italic;">x</span>, <span style="font-weight: bold; font-style: italic;">y</span>, <span style="font-weight: bold; font-style: italic;">centered</span>, <span style="font-weight: bold; font-style: italic;">color</span>, <span style="font-weight: bold; font-style: italic;">l</span>, <span style="font-weight: bold; font-style: italic;">hli</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.posX = x;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.posY = y;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.nodeLabel = lab;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.labCentered = centered;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.labelColor = color;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.layer = l;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex = hli;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.dirty = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+}
+
+UndoDeleteLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoDeleteLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoDeleteLabel;
+
+UndoDeleteLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.addLabelObject(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.nodeLabel, <span style="font-weight: bold; text-decoration: underline;">this</span>.labCentered);
+        world.setNodePosition(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.posX, <span style="font-weight: bold; text-decoration: underline;">this</span>.posY);
+        world.setForegroundColor(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.labelColor);
+        world.setLayer(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.layer);
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Tangle</h2>
+<div class="outline-text-2" id="text-3">
+<div class="org-src-container">
+
+<pre class="src src-js"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">AnimatedLabel</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">val</span>, <span style="font-weight: bold; font-style: italic;">center</span>, <span style="font-weight: bold; font-style: italic;">initialWidth</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.centering = center;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.label = val;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.highlighted = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.alpha = 1.0;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.addedToScene = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.labelColor = <span style="font-style: italic;">"#000000"</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth = 0;
+        <span style="font-weight: bold;">if</span> (initialWidth != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth = initialWidth;
+        }
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.leftWidth = -1;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.centerWidth = -1;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex = -1;
+}
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">AnimatedObject</span>();
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = AnimatedLabel;
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.alwaysOnTop = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.centered = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.centering;
+}
+
+
+
+
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.draw = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">ctx</span>)
+{
+        <span style="font-weight: bold;">if</span> (!<span style="font-weight: bold; text-decoration: underline;">this</span>.addedToScene)
+        {
+                <span style="font-weight: bold;">return</span>;
+        }
+        
+        ctx.globalAlpha = <span style="font-weight: bold; text-decoration: underline;">this</span>.alpha;
+        ctx.font = <span style="font-style: italic;">'16px sans-serif'</span>;
+
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">startingXForHighlight</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.x; 
+
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex &gt;= <span style="font-weight: bold; text-decoration: underline;">this</span>.label.length)
+        {
+             <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex = -1;
+        }
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndexDirty &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex != -1)
+        {
+              <span style="font-weight: bold; text-decoration: underline;">this</span>.leftWidth = ctx.measureText(<span style="font-weight: bold; text-decoration: underline;">this</span>.label.substring(0,<span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex)).width;
+              <span style="font-weight: bold; text-decoration: underline;">this</span>.centerWidth = ctx.measureText(<span style="font-weight: bold; text-decoration: underline;">this</span>.label.substring(<span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex, <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex+1)).width;
+              <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndexDirty = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+        }
+        
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex != -1)
+                {
+                    startingXForHighlight = <span style="font-weight: bold; text-decoration: underline;">this</span>.x - <span style="font-weight: bold; text-decoration: underline;">this</span>.width / 2;
+                    ctx.textAlign = <span style="font-style: italic;">'left'</span>;
+                    ctx.textBaseline   = <span style="font-style: italic;">'middle'</span>; 
+                }
+                <span style="font-weight: bold;">else</span>
+                {
+                    ctx.textAlign = <span style="font-style: italic;">'center'</span>;
+                    ctx.textBaseline   = <span style="font-style: italic;">'middle'</span>; 
+                }
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                ctx.textAlign = <span style="font-style: italic;">'left'</span>;
+                ctx.textBaseline   = <span style="font-style: italic;">'top'</span>; 
+        }
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.highlighted)
+        {
+            ctx.strokeStyle = <span style="font-style: italic;">"#ffaaaa"</span>;
+            ctx.fillStyle = <span style="font-style: italic;">"#ff0000"</span>;
+                ctx.lineWidth = <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightDiff;
+                ctx.strokeText(<span style="font-weight: bold; text-decoration: underline;">this</span>.label, <span style="font-weight: bold; text-decoration: underline;">this</span>.x, <span style="font-weight: bold; text-decoration: underline;">this</span>.y);             
+                <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">ctx.fillText(this.label, this.x, this.y);</span>
+        }
+        ctx.strokeStyle = <span style="font-weight: bold; text-decoration: underline;">this</span>.labelColor;
+        ctx.fillStyle = <span style="font-weight: bold; text-decoration: underline;">this</span>.labelColor;
+        ctx.lineWidth = 1;
+        strList = <span style="font-weight: bold; text-decoration: underline;">this</span>.label.split(<span style="font-style: italic;">"\n"</span>);
+        <span style="font-weight: bold;">if</span> (strList.length == 1)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex == -1)
+                {
+                    ctx.fillText(<span style="font-weight: bold; text-decoration: underline;">this</span>.label, <span style="font-weight: bold; text-decoration: underline;">this</span>.x, <span style="font-weight: bold; text-decoration: underline;">this</span>.y); 
+                }
+                <span style="font-weight: bold;">else</span>
+                {
+                    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">leftStr</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.label.substring(0, <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex);
+                    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">highlightStr</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.label.substring(<span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex, <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex + 1)
+                    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">rightStr</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.label.substring(<span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex + 1)
+                    ctx.fillText(leftStr, startingXForHighlight, <span style="font-weight: bold; text-decoration: underline;">this</span>.y)
+                    ctx.strokeStyle = <span style="font-style: italic;">"#FF0000"</span>;
+                    ctx.fillStyle = <span style="font-style: italic;">"#FF0000"</span>;
+                    ctx.fillText(highlightStr, startingXForHighlight + <span style="font-weight: bold; text-decoration: underline;">this</span>.leftWidth, <span style="font-weight: bold; text-decoration: underline;">this</span>.y)
+
+
+                    ctx.strokeStyle = <span style="font-weight: bold; text-decoration: underline;">this</span>.labelColor;
+                    ctx.fillStyle = <span style="font-weight: bold; text-decoration: underline;">this</span>.labelColor;
+                    ctx.fillText(rightStr, startingXForHighlight + <span style="font-weight: bold; text-decoration: underline;">this</span>.leftWidth + <span style="font-weight: bold; text-decoration: underline;">this</span>.centerWidth, <span style="font-weight: bold; text-decoration: underline;">this</span>.y)
+
+
+                }
+                <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">this.textWidth = ctx.measureText(this.label).width;</span>
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">offset</span> = (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)?  (1.0 - strList.length) / 2.0 : 0;
+                <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; strList.length; i++)
+                {
+                        ctx.fillText(strList[i], <span style="font-weight: bold; text-decoration: underline;">this</span>.x, <span style="font-weight: bold; text-decoration: underline;">this</span>.y + offset + i * 12);
+                        <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">this.textWidth = Math.max(this.textWidth, ctx.measureText(strList[i]).width);</span>
+                }               
+        }
+        ctx.closePath();
+}
+
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getAlignLeftPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+    <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+    {
+        <span style="font-weight: bold;">return</span> [otherObject.left() - <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth / 2, <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.centerY()];
+    }
+    <span style="font-weight: bold;">else</span>
+    {
+        <span style="font-weight: bold;">return</span> [otherObject.left() - <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth, otherObject.centerY() - 5];
+    }
+}
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.alignLeft = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.centerY();
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.x = otherObject.left() - <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth / 2;
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.centerY() - 5;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.x = otherObject.left() - <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth;
+        }
+}
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.alignRight = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.centerY();
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.x = otherObject.right() + <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth / 2;
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.centerY() - 5;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.x = otherObject.right();
+        }
+}
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getAlignRightPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+    <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+    {
+        <span style="font-weight: bold;">return</span> [otherObject.right() + <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth / 2, otherObject.centerY()];
+    }
+    <span style="font-weight: bold;">else</span>
+    {
+        <span style="font-weight: bold;">return</span> [otherObject.right(), otherObject.centerY() - 5];
+    }
+}
+
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.alignTop = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.top() - 5;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.x = otherObject.centerX();
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.top() - 10;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.x = otherObject.centerX() -<span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth / 2;
+        }
+}
+
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getAlignTopPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+        {
+                <span style="font-weight: bold;">return</span> [otherObject.centerX(), otherObject.top() - 5];
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+            <span style="font-weight: bold;">return</span> [otherObject.centerX() -<span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth / 2, otherObject.top() - 10];
+        }
+}
+
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.alignBottom = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.bottom() + 5;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.x = otherObject.centerX();
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.bottom();
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.x = otherObject.centerX() - <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth / 2;
+        }
+}
+
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getAlignBottomPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+        {
+            <span style="font-weight: bold;">return</span> [otherObject.centerX(),  otherObject.bottom() + 5];
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+            <span style="font-weight: bold;">return</span> [otherObject.centerX() - <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth / 2,  otherObject.bottom()];
+        }
+}
+
+
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getWidth = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth;
+}
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getHeight = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">return</span> 10;  <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">HACK!  HACK!  HACK!  HACK!</span>
+}
+
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setHighlight = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">value</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.highlighted = value;
+}
+                
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.createUndoDelete = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoDeleteLabel</span>(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.label, <span style="font-weight: bold; text-decoration: underline;">this</span>.x, <span style="font-weight: bold; text-decoration: underline;">this</span>.y, <span style="font-weight: bold; text-decoration: underline;">this</span>.centering, <span style="font-weight: bold; text-decoration: underline;">this</span>.labelColor, <span style="font-weight: bold; text-decoration: underline;">this</span>.layer, <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex);
+}
+                
+                
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.centerX = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+        {
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.x;
+        }
+        <span style="font-weight: bold;">else</span> 
+        {
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.x + <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth; 
+        }
+        
+}
+           
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.centerY = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+        {
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.y;
+        }
+        <span style="font-weight: bold;">else</span> 
+        {
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.y + 5; <span style="font-weight: bold; font-style: italic;">// </span>
+        }
+   
+}
+           
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.top = <span style="font-weight: bold;">function</span>()           
+{
+           <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+           {
+                   <span style="font-weight: bold;">return</span>  <span style="font-weight: bold; text-decoration: underline;">this</span>.y - 5; <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">TODO: Un-Hardwire</span>
+           }
+           <span style="font-weight: bold;">else</span> 
+           {
+                        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.y;   
+           }
+}
+
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.bottom = <span style="font-weight: bold;">function</span>()
+{
+   <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+   {
+           <span style="font-weight: bold;">return</span>  <span style="font-weight: bold; text-decoration: underline;">this</span>.y + 5; <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO: + height / 2;</span>
+   }
+   <span style="font-weight: bold;">else</span> 
+   {
+           <span style="font-weight: bold;">return</span>  <span style="font-weight: bold; text-decoration: underline;">this</span>.y + 10; <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO: + hieght;</span>
+   }
+}
+           
+           
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.right = <span style="font-weight: bold;">function</span>()
+{
+   <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+   {
+           <span style="font-weight: bold;">return</span>  <span style="font-weight: bold; text-decoration: underline;">this</span>.x + <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth / 2; <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO: + width / 2;</span>
+   }
+   <span style="font-weight: bold;">else</span>
+   {
+           <span style="font-weight: bold;">return</span>  <span style="font-weight: bold; text-decoration: underline;">this</span>.x + <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth; <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO: + width;</span>
+   }
+}
+
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.left = <span style="font-weight: bold;">function</span>()
+{
+   <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.centering)
+   {
+           <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>. x - <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth / 2;
+   }
+   <span style="font-weight: bold;">else</span>
+   {
+           <span style="font-weight: bold;">return</span>  <span style="font-weight: bold; text-decoration: underline;">this</span>.x; <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  - a little?</span>
+   }
+}
+
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setHighlightIndex = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">hlIndex</span>)
+{
+    <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Only allow highlight index for labels that don't have End-Of-Line</span>
+    <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.label.indexOf(<span style="font-style: italic;">"\n"</span>) == -1 &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.label.length &gt; hlIndex)
+    {
+         <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex = hlIndex;
+         <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndexDirty = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+    }
+    <span style="font-weight: bold;">else</span>
+    {
+         <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex = -1;
+
+    }
+}
+
+
+ AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getTailPointerAttachPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">fromX</span>, <span style="font-weight: bold; font-style: italic;">fromY</span>, <span style="font-weight: bold; font-style: italic;">anchorPoint</span>)
+ {                       
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.getClosestCardinalPoint(fromX, fromY); 
+ }
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getHeadPointerAttachPos = <span style="font-weight: bold;">function</span> (<span style="font-weight: bold; font-style: italic;">fromX</span>, <span style="font-weight: bold; font-style: italic;">fromY</span>) 
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.getClosestCardinalPoint(fromX, fromY);                      
+}
+
+AnimatedLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setText = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">newText</span>, <span style="font-weight: bold; font-style: italic;">textIndex</span>, <span style="font-weight: bold; font-style: italic;">initialWidth</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.label = newText;
+        <span style="font-weight: bold;">if</span> (initialWidth != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.textWidth = initialWidth;
+        }
+}
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoDeleteLabel</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">lab</span>, <span style="font-weight: bold; font-style: italic;">x</span>, <span style="font-weight: bold; font-style: italic;">y</span>, <span style="font-weight: bold; font-style: italic;">centered</span>, <span style="font-weight: bold; font-style: italic;">color</span>, <span style="font-weight: bold; font-style: italic;">l</span>, <span style="font-weight: bold; font-style: italic;">hli</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.posX = x;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.posY = y;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.nodeLabel = lab;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.labCentered = centered;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.labelColor = color;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.layer = l;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex = hli;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.dirty = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+}
+
+UndoDeleteLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoDeleteLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoDeleteLabel;
+
+UndoDeleteLabel.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.addLabelObject(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.nodeLabel, <span style="font-weight: bold; text-decoration: underline;">this</span>.labCentered);
+        world.setNodePosition(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.posX, <span style="font-weight: bold; text-decoration: underline;">this</span>.posY);
+        world.setForegroundColor(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.labelColor);
+        world.setLayer(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.layer);
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: VLEAD</p>
+<p class="date">Created: 2019-08-27 Tue 13:08</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.1.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

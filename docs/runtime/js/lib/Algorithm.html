@@ -1,0 +1,1060 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title></title>
+<!-- 2019-08-27 Tue 13:08 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="VLEAD" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title"></h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Introduction</a>
+<ul>
+<li><a href="#sec-1-1">1.1. This module helps in adding labels, buttons to the algorithms bar</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2. Library for adding labels,buttons</a>
+<ul>
+<li><a href="#sec-2-1">2.1. Function to add label to algorithms bar</a></li>
+<li><a href="#sec-2-2">2.2. Function to add checkbox to algorithms bar</a></li>
+<li><a href="#sec-2-3">2.3. Function to add radiobuttons group to the algorithm bar</a></li>
+<li><a href="#sec-2-4">2.4. Function to change color and properties of buttons in panel above the artefact</a></li>
+<li><a href="#sec-2-5">2.5. Function to add listener functions for animation transitions</a></li>
+<li><a href="#sec-2-6">2.6. Function to clear the action history</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3. Tangle</a></li>
+</ul>
+</div>
+</div>
+<p>
+*License
+<i>/ Copyright 2011 David Galles, University of San Francisco. All rights reserved.
+/</i>
+<i>/ Redistribution and use in source and binary forms, with or without modification, are
+/</i> permitted provided that the following conditions are met:
+<i>/
+/</i> 1. Redistributions of source code must retain the above copyright notice, this list of
+<i>/ conditions and the following disclaimer.
+/</i>
+<i>/ 2. Redistributions in binary form must reproduce the above copyright notice, this list
+/</i> of conditions and the following disclaimer in the documentation and/or other materials
+<i>/ provided with the distribution.
+/</i>
+<i>/ THIS SOFTWARE IS PROVIDED BY &lt;COPYRIGHT HOLDER&gt; ``AS IS'' AND ANY EXPRESS OR IMPLIED
+/</i> WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+<i>/ FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL &lt;COPYRIGHT HOLDER&gt; OR
+/</i> CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+<i>/ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+/</i> SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+<i>/ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+/</i> NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+<i>/ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+/</i>
+<i>/ The views and conclusions contained in the software and documentation are those of the
+/</i> authors and should not be interpreted as representing official policies, either expressed
+// or implied, of the University of San Francisco
+</p>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> This module helps in adding labels, buttons to the algorithms bar</h3>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Library for adding labels,buttons</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Function to add label to algorithms bar</h3>
+<div class="outline-text-3" id="text-2-1">
+<div class="org-src-container">
+
+<pre class="src src-js" id="Algorithm"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">addLabelToAlgorithmBar</span>(<span style="font-weight: bold; font-style: italic;">labelName</span>)
+{
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">element</span> = document.createTextNode(labelName);
+        
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">tableEntry</span> = document.createElement(<span style="font-style: italic;">"td"</span>);  
+        tableEntry.appendChild(element);
+        
+        
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">controlBar</span> = document.getElementById(<span style="font-style: italic;">"AlgorithmSpecificControls"</span>);
+        
+    <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">Append the element in page (in span).</span>
+    controlBar.appendChild(tableEntry);
+        <span style="font-weight: bold;">return</span> element;
+}
+</pre>
+</div>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> Function to add checkbox to algorithms bar</h3>
+<div class="outline-text-3" id="text-2-2">
+<div class="org-src-container">
+
+<pre class="src src-js" id="Algorithm"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">addCheckboxToAlgorithmBar</span>(<span style="font-weight: bold; font-style: italic;">boxLabel</span>)
+{       
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">element</span> = document.createElement(<span style="font-style: italic;">"input"</span>);
+
+    element.setAttribute(<span style="font-style: italic;">"type"</span>, <span style="font-style: italic;">"checkbox"</span>);
+    element.setAttribute(<span style="font-style: italic;">"value"</span>, boxLabel);
+        
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">label</span> = document.createTextNode(boxLabel);
+        
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">tableEntry</span> = document.createElement(<span style="font-style: italic;">"td"</span>);  
+        tableEntry.appendChild(element);
+        tableEntry.appendChild(label);
+        
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">controlBar</span> = document.getElementById(<span style="font-style: italic;">"AlgorithmSpecificControls"</span>);
+        
+    <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">Append the element in page (in span).</span>
+    controlBar.appendChild(tableEntry);
+        <span style="font-weight: bold;">return</span> element;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> Function to add radiobuttons group to the algorithm bar</h3>
+<div class="outline-text-3" id="text-2-3">
+<div class="org-src-container">
+
+<pre class="src src-js" id="Algorithm"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">addRadioButtonGroupToAlgorithmBar</span>(<span style="font-weight: bold; font-style: italic;">buttonNames</span>, <span style="font-weight: bold; font-style: italic;">groupName</span>)
+{
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">buttonList</span> = [];
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">newTable</span> = document.createElement(<span style="font-style: italic;">"table"</span>);
+                
+        <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; buttonNames.length; i++)
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">midLevel</span> = document.createElement(<span style="font-style: italic;">"tr"</span>);
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">bottomLevel</span> = document.createElement(<span style="font-style: italic;">"td"</span>);
+                
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">button</span> = document.createElement(<span style="font-style: italic;">"input"</span>);
+                button.setAttribute(<span style="font-style: italic;">"type"</span>, <span style="font-style: italic;">"radio"</span>);
+                button.setAttribute(<span style="font-style: italic;">"name"</span>, groupName);
+                button.setAttribute(<span style="font-style: italic;">"value"</span>, buttonNames[i]);
+                bottomLevel.appendChild(button);
+                midLevel.appendChild(bottomLevel);
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">txtNode</span> = document.createTextNode(<span style="font-style: italic;">" "</span> + buttonNames[i]); 
+                bottomLevel.appendChild(txtNode);
+                newTable.appendChild(midLevel); 
+                buttonList.push(button);
+        }
+        
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">topLevelTableEntry</span> = document.createElement(<span style="font-style: italic;">"td"</span>);
+        topLevelTableEntry.appendChild(newTable);
+        
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">controlBar</span> = document.getElementById(<span style="font-style: italic;">"AlgorithmSpecificControls"</span>);
+        controlBar.appendChild(topLevelTableEntry);
+        
+        <span style="font-weight: bold;">return</span> buttonList
+}
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> Function to change color and properties of buttons in panel above the artefact</h3>
+<div class="outline-text-3" id="text-2-4">
+<div class="org-src-container">
+
+<pre class="src src-js" id="Algorithm"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">addControlToAlgorithmBar</span>(<span style="font-weight: bold; font-style: italic;">type</span>, <span style="font-weight: bold; font-style: italic;">name</span>) {
+        
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">element</span> = document.createElement(<span style="font-style: italic;">"input"</span>);
+        
+    element.setAttribute(<span style="font-style: italic;">"type"</span>, type);
+    element.setAttribute(<span style="font-style: italic;">"value"</span>, name);
+<span style="font-weight: bold; font-style: italic;">//    </span><span style="font-weight: bold; font-style: italic;">element.setAttribute("name", name);</span>
+        
+        
+        <span style="font-weight: bold;">if</span>(type==<span style="font-style: italic;">"Button"</span>){
+                element.style.backgroundColor = <span style="font-style: italic;">"#3297CF"</span>;
+                element.style.borderColor = <span style="font-style: italic;">"#3297CF"</span>;
+                element.style.color=<span style="font-style: italic;">"#ffffff"</span>
+                element.style.borderStyle = <span style="font-style: italic;">"solid"</span>
+                element.style.fontSize = <span style="font-style: italic;">"16px"</span>;
+                element.style.width = <span style="font-style: italic;">"100%"</span>;
+                element.style.height = <span style="font-style: italic;">"100%"</span>;
+                element.style.borderRadius = <span style="font-style: italic;">"100px"</span>
+
+        }
+        
+
+
+
+
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">tableEntry</span> = document.createElement(<span style="font-style: italic;">"td"</span>);
+        
+                tableEntry.style.width=<span style="font-style: italic;">"10%"</span>;
+        
+        tableEntry.appendChild(element);
+        
+        
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">controlBar</span> = document.getElementById(<span style="font-style: italic;">"AlgorithmSpecificControls"</span>);
+        
+    <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">Append the element in page (in span).</span>
+    controlBar.appendChild(tableEntry);
+        <span style="font-weight: bold;">return</span> element;
+        
+}
+
+
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">Algorithm</span>(<span style="font-weight: bold; font-style: italic;">am</span>)
+{
+        
+}
+
+
+
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setCodeAlpha = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">code</span>, <span style="font-weight: bold; font-style: italic;">newAlpha</span>)
+{
+   <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span>,<span style="font-weight: bold; font-style: italic;">j</span>;
+   <span style="font-weight: bold;">for</span> (i = 0; i &lt; code.length; i++)
+       <span style="font-weight: bold;">for</span> (j = 0; j &lt; code[i].length; j++) {
+          <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetAlpha"</span>, code[i][j], newAlpha);
+       }
+}
+
+
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.addCodeToCanvasBase  = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">code</span>, <span style="font-weight: bold; font-style: italic;">start_x</span>, <span style="font-weight: bold; font-style: italic;">start_y</span>, <span style="font-weight: bold; font-style: italic;">line_height</span>, <span style="font-weight: bold; font-style: italic;">standard_color</span>, <span style="font-weight: bold; font-style: italic;">layer</span>)
+{
+        layer = <span style="font-weight: bold;">typeof</span> layer !== <span style="font-style: italic;">'undefined'</span> ? layer : 0;
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">codeID</span> = Array(code.length);
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span>, <span style="font-weight: bold; font-style: italic;">j</span>;
+        <span style="font-weight: bold;">for</span> (i = 0; i &lt; code.length; i++)
+        {
+                codeID[i] = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Array</span>(code[i].length);
+                <span style="font-weight: bold;">for</span> (j = 0; j &lt; code[i].length; j++)
+                {
+                        codeID[i][j] = <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex++;
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"CreateLabel"</span>, codeID[i][j], code[i][j], start_x, start_y + i * line_height, 0);
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetForegroundColor"</span>, codeID[i][j], standard_color);
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetLayer"</span>, codeID[i][j], layer);
+                        <span style="font-weight: bold;">if</span> (j &gt; 0)
+                        {
+                                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"AlignRight"</span>, codeID[i][j], codeID[i][j-1]);
+                        }
+                }
+                
+                
+        }
+        <span style="font-weight: bold;">return</span> codeID;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-5" class="outline-3">
+<h3 id="sec-2-5"><span class="section-number-3">2.5</span> Function to add listener functions for animation transitions</h3>
+<div class="outline-text-3" id="text-2-5">
+<div class="org-src-container">
+
+<pre class="src src-js" id="Algorithm">Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.init = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">am</span>, <span style="font-weight: bold; font-style: italic;">w</span>, <span style="font-weight: bold; font-style: italic;">h</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.animationManager = am;
+        am.addListener(<span style="font-style: italic;">"AnimationStarted"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.disableUI);
+        am.addListener(<span style="font-style: italic;">"AnimationEnded"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.enableUI);
+        am.addListener(<span style="font-style: italic;">"AnimationUndo"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.undo);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.canvasWidth = w;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.canvasHeight = h;
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.actionHistory = [];
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.recordAnimation = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.commands = []
+}
+
+
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Overload in subclass</span>
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.sizeChanged = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">newWidth</span>, <span style="font-weight: bold; font-style: italic;">newHeight</span>)
+{
+        
+}
+
+
+                
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.implementAction = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">funct</span>, <span style="font-weight: bold; font-style: italic;">val</span>)
+{
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">nxt</span> = [funct, val];                 
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.actionHistory.push(nxt);
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">retVal</span> = funct(val);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.animationManager.StartNewAnimation(retVal);                        
+}
+                
+                
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.isAllDigits = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">str</span>)
+{
+        <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = str.length - 1; i &gt;= 0; i--)
+        {
+                <span style="font-weight: bold;">if</span> (str.charAt(i) &lt; <span style="font-style: italic;">"0"</span> || str.charAt(i) &gt; <span style="font-style: italic;">"9"</span>)
+                {
+                        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">false</span>;
+
+                }
+        }
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">true</span>;
+}
+                
+                
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.normalizeNumber = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">input</span>, <span style="font-weight: bold; font-style: italic;">maxLen</span>)
+{
+        <span style="font-weight: bold;">if</span> (!<span style="font-weight: bold; text-decoration: underline;">this</span>.isAllDigits(input) || input == <span style="font-style: italic;">""</span>)
+        {
+                <span style="font-weight: bold;">return</span> input;
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                <span style="font-weight: bold;">return</span> (<span style="font-style: italic;">"OOO0000"</span> +input).substr(-maxLen, maxLen);
+        }
+}
+                
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.disableUI = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">to be overridden in base class</span>
+}
+
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.enableUI = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">to be overridden in base class</span>
+}
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">controlKey</span>(<span style="font-weight: bold; font-style: italic;">keyASCII</span>)
+{
+                <span style="font-weight: bold;">return</span> keyASCII == 8 || keyASCII == 9 || keyASCII == 37 || keyASCII == 38 ||
+        keyASCII == 39 || keyASCII == 40 || keyASCII == 46;
+}
+
+
+
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.returnSubmitFloat = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">field</span>, <span style="font-weight: bold; font-style: italic;">funct</span>, <span style="font-weight: bold; font-style: italic;">maxsize</span>)
+{
+        <span style="font-weight: bold;">if</span> (maxsize != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+        {
+                field.size = maxsize;
+        }
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">keyASCII</span> = 0;
+                <span style="font-weight: bold;">if</span>(window.event) <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">IE</span>
+                {
+                        keyASCII = event.keyCode
+                }
+                <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> (event.which) <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Netscape/Firefox/Opera</span>
+                {
+                        keyASCII = event.which
+                } 
+                <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Submit on return</span>
+                <span style="font-weight: bold;">if</span> (keyASCII == 13)
+                {
+                        funct();
+                }
+                <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Control keys (arrows, del, etc) are always OK</span>
+                <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> (controlKey(keyASCII))
+                {
+                        <span style="font-weight: bold;">return</span>;
+                }
+                <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">- (minus sign) only OK at beginning of number</span>
+                <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">(For now we will allow anywhere -- hard to see where the beginning of the</span>
+                <span style="font-weight: bold; font-style: italic;">//   </span><span style="font-weight: bold; font-style: italic;">number is ...)</span>
+                <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">else if (keyASCII == 109 &amp;&amp; field.value.length  == 0)</span>
+                <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> (keyASCII == 109)
+                {
+                        <span style="font-weight: bold;">return</span>;
+                }
+                <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Digis are OK if we have enough space</span>
+                <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> ((maxsize != <span style="font-weight: bold; text-decoration: underline;">undefined</span> || field.value.length &lt; maxsize) &amp;&amp;
+                                 (keyASCII &gt;= 48 &amp;&amp; keyASCII &lt;= 57))
+                {
+                        <span style="font-weight: bold;">return</span>;
+                }
+                <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">. (Decimal point) is OK if we haven't had one yet, and there is space</span>
+                <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> ((maxsize != <span style="font-weight: bold; text-decoration: underline;">undefined</span> || field.value.length &lt; maxsize) &amp;&amp;
+                                 (keyASCII == 190) &amp;&amp; field.value.indexOf(<span style="font-style: italic;">"."</span>) == -1)
+                                 
+                {
+                        <span style="font-weight: bold;">return</span>;
+                }
+                <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Nothing else is OK</span>
+                <span style="font-weight: bold;">else</span>            
+                {
+                        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">false</span>;
+                }
+                
+        }
+}
+
+
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.returnSubmit = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">field</span>, <span style="font-weight: bold; font-style: italic;">funct</span>, <span style="font-weight: bold; font-style: italic;">maxsize</span>, <span style="font-weight: bold; font-style: italic;">intOnly</span>)
+{
+        <span style="font-weight: bold;">if</span> (maxsize != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+        {
+            field.size = maxsize;
+        }
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">keyASCII</span> = 0;
+                <span style="font-weight: bold;">if</span>(window.event) <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">IE</span>
+                {
+                        keyASCII = event.keyCode
+                }
+                <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> (event.which) <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Netscape/Firefox/Opera</span>
+                {
+                        keyASCII = event.which
+                } 
+
+                <span style="font-weight: bold;">if</span> (keyASCII == 13 &amp;&amp; funct !== <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        funct();
+                }
+                <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> (keyASCII == 190 || keyASCII == 59 || keyASCII == 173 || keyASCII == 189)
+                { 
+                        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">false</span>;   
+                    
+                }
+                <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> ((maxsize != <span style="font-weight: bold; text-decoration: underline;">undefined</span> &amp;&amp; field.value.length &gt;= maxsize) ||
+                                 intOnly &amp;&amp; (keyASCII &lt; 48 || keyASCII &gt; 57))
+                {
+                        <span style="font-weight: bold;">if</span> (!controlKey(keyASCII))
+                                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">false</span>;
+                }
+                
+        }
+        
+}
+
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.addReturnSubmit = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">field</span>, <span style="font-weight: bold; font-style: italic;">action</span>)
+{
+        field.onkeydown = <span style="font-weight: bold; text-decoration: underline;">this</span>.returnSubmit(field, action, 4, <span style="font-weight: bold; text-decoration: underline;">false</span>);   
+}
+
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.reset = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">to be overriden in base class</span>
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">(Throw exception here?)</span>
+}
+                
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undo = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Remvoe the last action (the one that we are going to undo)</span>
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.actionHistory.pop();
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Clear out our data structure.  Be sure to implement reset in</span>
+        <span style="font-weight: bold; font-style: italic;">//   </span><span style="font-weight: bold; font-style: italic;">every AlgorithmAnimation subclass!</span>
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.reset();
+        <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">Redo all actions from the beginning, throwing out the animation</span>
+        <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">commands (the animation manager will update the animation on its own).</span>
+        <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">Note that if you do something non-deterministic, you might cause problems!</span>
+        <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">Be sure if you do anything non-deterministic (that is, calls to a random</span>
+        <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">number generator) you clear out the undo stack here and in the animation</span>
+        <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">manager.</span>
+        <span style="font-weight: bold; font-style: italic;">//</span>
+        <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">If this seems horribly inefficient -- it is! However, it seems to work well</span>
+        <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">in practice, and you get undo for free for all algorithms, which is a non-trivial</span>
+        <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">gain.</span>
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">len</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.actionHistory.length;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.recordAnimation = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+        <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; len; i++)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.actionHistory[i][0](<span style="font-weight: bold; text-decoration: underline;">this</span>.actionHistory[i][1]);
+        }
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.recordAnimation = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-6" class="outline-3">
+<h3 id="sec-2-6"><span class="section-number-3">2.6</span> Function to clear the action history</h3>
+<div class="outline-text-3" id="text-2-6">
+<div class="org-src-container">
+
+<pre class="src src-js" id="Algorithm">Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.clearHistory = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.actionHistory = [];
+}
+                
+                <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Helper method to add text input with nice border.</span>
+                <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">AS3 probably has a built-in way to do this.   Replace when found.</span>
+                
+
+                <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Helper method to create a command string from a bunch of arguments</span>
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.cmd = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.recordAnimation)
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">command</span> = <span style="font-weight: bold; text-decoration: underline;">arguments</span>[0];
+                <span style="font-weight: bold;">for</span>(i = 1; i &lt; <span style="font-weight: bold; text-decoration: underline;">arguments</span>.length; i++)
+                {
+                        command = command + <span style="font-style: italic;">"&lt;;&gt;"</span> + String(<span style="font-weight: bold; text-decoration: underline;">arguments</span>[i]);
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.commands.push(command);
+        }
+        
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Tangle</h2>
+<div class="outline-text-2" id="text-3">
+<div class="org-src-container">
+
+<pre class="src src-js"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">addLabelToAlgorithmBar</span>(<span style="font-weight: bold; font-style: italic;">labelName</span>)
+{
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">element</span> = document.createTextNode(labelName);
+        
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">tableEntry</span> = document.createElement(<span style="font-style: italic;">"td"</span>);  
+        tableEntry.appendChild(element);
+        
+        
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">controlBar</span> = document.getElementById(<span style="font-style: italic;">"AlgorithmSpecificControls"</span>);
+        
+    <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">Append the element in page (in span).</span>
+    controlBar.appendChild(tableEntry);
+        <span style="font-weight: bold;">return</span> element;
+}
+
+
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">addCheckboxToAlgorithmBar</span>(<span style="font-weight: bold; font-style: italic;">boxLabel</span>)
+{       
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">element</span> = document.createElement(<span style="font-style: italic;">"input"</span>);
+
+    element.setAttribute(<span style="font-style: italic;">"type"</span>, <span style="font-style: italic;">"checkbox"</span>);
+    element.setAttribute(<span style="font-style: italic;">"value"</span>, boxLabel);
+        
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">label</span> = document.createTextNode(boxLabel);
+        
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">tableEntry</span> = document.createElement(<span style="font-style: italic;">"td"</span>);  
+        tableEntry.appendChild(element);
+        tableEntry.appendChild(label);
+        
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">controlBar</span> = document.getElementById(<span style="font-style: italic;">"AlgorithmSpecificControls"</span>);
+        
+    <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">Append the element in page (in span).</span>
+    controlBar.appendChild(tableEntry);
+        <span style="font-weight: bold;">return</span> element;
+}
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">addRadioButtonGroupToAlgorithmBar</span>(<span style="font-weight: bold; font-style: italic;">buttonNames</span>, <span style="font-weight: bold; font-style: italic;">groupName</span>)
+{
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">buttonList</span> = [];
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">newTable</span> = document.createElement(<span style="font-style: italic;">"table"</span>);
+                
+        <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; buttonNames.length; i++)
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">midLevel</span> = document.createElement(<span style="font-style: italic;">"tr"</span>);
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">bottomLevel</span> = document.createElement(<span style="font-style: italic;">"td"</span>);
+                
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">button</span> = document.createElement(<span style="font-style: italic;">"input"</span>);
+                button.setAttribute(<span style="font-style: italic;">"type"</span>, <span style="font-style: italic;">"radio"</span>);
+                button.setAttribute(<span style="font-style: italic;">"name"</span>, groupName);
+                button.setAttribute(<span style="font-style: italic;">"value"</span>, buttonNames[i]);
+                bottomLevel.appendChild(button);
+                midLevel.appendChild(bottomLevel);
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">txtNode</span> = document.createTextNode(<span style="font-style: italic;">" "</span> + buttonNames[i]); 
+                bottomLevel.appendChild(txtNode);
+                newTable.appendChild(midLevel); 
+                buttonList.push(button);
+        }
+        
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">topLevelTableEntry</span> = document.createElement(<span style="font-style: italic;">"td"</span>);
+        topLevelTableEntry.appendChild(newTable);
+        
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">controlBar</span> = document.getElementById(<span style="font-style: italic;">"AlgorithmSpecificControls"</span>);
+        controlBar.appendChild(topLevelTableEntry);
+        
+        <span style="font-weight: bold;">return</span> buttonList
+}
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">addControlToAlgorithmBar</span>(<span style="font-weight: bold; font-style: italic;">type</span>, <span style="font-weight: bold; font-style: italic;">name</span>) {
+        
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">element</span> = document.createElement(<span style="font-style: italic;">"input"</span>);
+        
+    element.setAttribute(<span style="font-style: italic;">"type"</span>, type);
+    element.setAttribute(<span style="font-style: italic;">"value"</span>, name);
+<span style="font-weight: bold; font-style: italic;">//    </span><span style="font-weight: bold; font-style: italic;">element.setAttribute("name", name);</span>
+        
+        
+        <span style="font-weight: bold;">if</span>(type==<span style="font-style: italic;">"Button"</span>){
+                element.style.backgroundColor = <span style="font-style: italic;">"#3297CF"</span>;
+                element.style.borderColor = <span style="font-style: italic;">"#3297CF"</span>;
+                element.style.color=<span style="font-style: italic;">"#ffffff"</span>
+                element.style.borderStyle = <span style="font-style: italic;">"solid"</span>
+                element.style.fontSize = <span style="font-style: italic;">"16px"</span>;
+                element.style.width = <span style="font-style: italic;">"100%"</span>;
+                element.style.height = <span style="font-style: italic;">"100%"</span>;
+                element.style.borderRadius = <span style="font-style: italic;">"100px"</span>
+
+        }
+        
+
+
+
+
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">tableEntry</span> = document.createElement(<span style="font-style: italic;">"td"</span>);
+        
+                tableEntry.style.width=<span style="font-style: italic;">"10%"</span>;
+        
+        tableEntry.appendChild(element);
+        
+        
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">controlBar</span> = document.getElementById(<span style="font-style: italic;">"AlgorithmSpecificControls"</span>);
+        
+    <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">Append the element in page (in span).</span>
+    controlBar.appendChild(tableEntry);
+        <span style="font-weight: bold;">return</span> element;
+        
+}
+
+
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">Algorithm</span>(<span style="font-weight: bold; font-style: italic;">am</span>)
+{
+        
+}
+
+
+
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setCodeAlpha = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">code</span>, <span style="font-weight: bold; font-style: italic;">newAlpha</span>)
+{
+   <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span>,<span style="font-weight: bold; font-style: italic;">j</span>;
+   <span style="font-weight: bold;">for</span> (i = 0; i &lt; code.length; i++)
+       <span style="font-weight: bold;">for</span> (j = 0; j &lt; code[i].length; j++) {
+          <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetAlpha"</span>, code[i][j], newAlpha);
+       }
+}
+
+
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.addCodeToCanvasBase  = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">code</span>, <span style="font-weight: bold; font-style: italic;">start_x</span>, <span style="font-weight: bold; font-style: italic;">start_y</span>, <span style="font-weight: bold; font-style: italic;">line_height</span>, <span style="font-weight: bold; font-style: italic;">standard_color</span>, <span style="font-weight: bold; font-style: italic;">layer</span>)
+{
+        layer = <span style="font-weight: bold;">typeof</span> layer !== <span style="font-style: italic;">'undefined'</span> ? layer : 0;
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">codeID</span> = Array(code.length);
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span>, <span style="font-weight: bold; font-style: italic;">j</span>;
+        <span style="font-weight: bold;">for</span> (i = 0; i &lt; code.length; i++)
+        {
+                codeID[i] = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Array</span>(code[i].length);
+                <span style="font-weight: bold;">for</span> (j = 0; j &lt; code[i].length; j++)
+                {
+                        codeID[i][j] = <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex++;
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"CreateLabel"</span>, codeID[i][j], code[i][j], start_x, start_y + i * line_height, 0);
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetForegroundColor"</span>, codeID[i][j], standard_color);
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetLayer"</span>, codeID[i][j], layer);
+                        <span style="font-weight: bold;">if</span> (j &gt; 0)
+                        {
+                                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"AlignRight"</span>, codeID[i][j], codeID[i][j-1]);
+                        }
+                }
+                
+                
+        }
+        <span style="font-weight: bold;">return</span> codeID;
+}
+
+
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.init = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">am</span>, <span style="font-weight: bold; font-style: italic;">w</span>, <span style="font-weight: bold; font-style: italic;">h</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.animationManager = am;
+        am.addListener(<span style="font-style: italic;">"AnimationStarted"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.disableUI);
+        am.addListener(<span style="font-style: italic;">"AnimationEnded"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.enableUI);
+        am.addListener(<span style="font-style: italic;">"AnimationUndo"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.undo);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.canvasWidth = w;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.canvasHeight = h;
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.actionHistory = [];
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.recordAnimation = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.commands = []
+}
+
+
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Overload in subclass</span>
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.sizeChanged = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">newWidth</span>, <span style="font-weight: bold; font-style: italic;">newHeight</span>)
+{
+        
+}
+
+
+                
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.implementAction = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">funct</span>, <span style="font-weight: bold; font-style: italic;">val</span>)
+{
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">nxt</span> = [funct, val];                 
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.actionHistory.push(nxt);
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">retVal</span> = funct(val);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.animationManager.StartNewAnimation(retVal);                        
+}
+                
+                
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.isAllDigits = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">str</span>)
+{
+        <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = str.length - 1; i &gt;= 0; i--)
+        {
+                <span style="font-weight: bold;">if</span> (str.charAt(i) &lt; <span style="font-style: italic;">"0"</span> || str.charAt(i) &gt; <span style="font-style: italic;">"9"</span>)
+                {
+                        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">false</span>;
+
+                }
+        }
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">true</span>;
+}
+                
+                
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.normalizeNumber = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">input</span>, <span style="font-weight: bold; font-style: italic;">maxLen</span>)
+{
+        <span style="font-weight: bold;">if</span> (!<span style="font-weight: bold; text-decoration: underline;">this</span>.isAllDigits(input) || input == <span style="font-style: italic;">""</span>)
+        {
+                <span style="font-weight: bold;">return</span> input;
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                <span style="font-weight: bold;">return</span> (<span style="font-style: italic;">"OOO0000"</span> +input).substr(-maxLen, maxLen);
+        }
+}
+                
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.disableUI = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">to be overridden in base class</span>
+}
+
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.enableUI = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">to be overridden in base class</span>
+}
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">controlKey</span>(<span style="font-weight: bold; font-style: italic;">keyASCII</span>)
+{
+                <span style="font-weight: bold;">return</span> keyASCII == 8 || keyASCII == 9 || keyASCII == 37 || keyASCII == 38 ||
+        keyASCII == 39 || keyASCII == 40 || keyASCII == 46;
+}
+
+
+
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.returnSubmitFloat = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">field</span>, <span style="font-weight: bold; font-style: italic;">funct</span>, <span style="font-weight: bold; font-style: italic;">maxsize</span>)
+{
+        <span style="font-weight: bold;">if</span> (maxsize != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+        {
+                field.size = maxsize;
+        }
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">keyASCII</span> = 0;
+                <span style="font-weight: bold;">if</span>(window.event) <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">IE</span>
+                {
+                        keyASCII = event.keyCode
+                }
+                <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> (event.which) <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Netscape/Firefox/Opera</span>
+                {
+                        keyASCII = event.which
+                } 
+                <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Submit on return</span>
+                <span style="font-weight: bold;">if</span> (keyASCII == 13)
+                {
+                        funct();
+                }
+                <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Control keys (arrows, del, etc) are always OK</span>
+                <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> (controlKey(keyASCII))
+                {
+                        <span style="font-weight: bold;">return</span>;
+                }
+                <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">- (minus sign) only OK at beginning of number</span>
+                <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">(For now we will allow anywhere -- hard to see where the beginning of the</span>
+                <span style="font-weight: bold; font-style: italic;">//   </span><span style="font-weight: bold; font-style: italic;">number is ...)</span>
+                <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">else if (keyASCII == 109 &amp;&amp; field.value.length  == 0)</span>
+                <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> (keyASCII == 109)
+                {
+                        <span style="font-weight: bold;">return</span>;
+                }
+                <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Digis are OK if we have enough space</span>
+                <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> ((maxsize != <span style="font-weight: bold; text-decoration: underline;">undefined</span> || field.value.length &lt; maxsize) &amp;&amp;
+                                 (keyASCII &gt;= 48 &amp;&amp; keyASCII &lt;= 57))
+                {
+                        <span style="font-weight: bold;">return</span>;
+                }
+                <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">. (Decimal point) is OK if we haven't had one yet, and there is space</span>
+                <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> ((maxsize != <span style="font-weight: bold; text-decoration: underline;">undefined</span> || field.value.length &lt; maxsize) &amp;&amp;
+                                 (keyASCII == 190) &amp;&amp; field.value.indexOf(<span style="font-style: italic;">"."</span>) == -1)
+                                 
+                {
+                        <span style="font-weight: bold;">return</span>;
+                }
+                <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Nothing else is OK</span>
+                <span style="font-weight: bold;">else</span>            
+                {
+                        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">false</span>;
+                }
+                
+        }
+}
+
+
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.returnSubmit = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">field</span>, <span style="font-weight: bold; font-style: italic;">funct</span>, <span style="font-weight: bold; font-style: italic;">maxsize</span>, <span style="font-weight: bold; font-style: italic;">intOnly</span>)
+{
+        <span style="font-weight: bold;">if</span> (maxsize != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+        {
+            field.size = maxsize;
+        }
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">keyASCII</span> = 0;
+                <span style="font-weight: bold;">if</span>(window.event) <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">IE</span>
+                {
+                        keyASCII = event.keyCode
+                }
+                <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> (event.which) <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Netscape/Firefox/Opera</span>
+                {
+                        keyASCII = event.which
+                } 
+
+                <span style="font-weight: bold;">if</span> (keyASCII == 13 &amp;&amp; funct !== <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        funct();
+                }
+                <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> (keyASCII == 190 || keyASCII == 59 || keyASCII == 173 || keyASCII == 189)
+                { 
+                        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">false</span>;   
+                    
+                }
+                <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> ((maxsize != <span style="font-weight: bold; text-decoration: underline;">undefined</span> &amp;&amp; field.value.length &gt;= maxsize) ||
+                                 intOnly &amp;&amp; (keyASCII &lt; 48 || keyASCII &gt; 57))
+                {
+                        <span style="font-weight: bold;">if</span> (!controlKey(keyASCII))
+                                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">false</span>;
+                }
+                
+        }
+        
+}
+
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.addReturnSubmit = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">field</span>, <span style="font-weight: bold; font-style: italic;">action</span>)
+{
+        field.onkeydown = <span style="font-weight: bold; text-decoration: underline;">this</span>.returnSubmit(field, action, 4, <span style="font-weight: bold; text-decoration: underline;">false</span>);   
+}
+
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.reset = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">to be overriden in base class</span>
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">(Throw exception here?)</span>
+}
+                
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undo = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Remvoe the last action (the one that we are going to undo)</span>
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.actionHistory.pop();
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Clear out our data structure.  Be sure to implement reset in</span>
+        <span style="font-weight: bold; font-style: italic;">//   </span><span style="font-weight: bold; font-style: italic;">every AlgorithmAnimation subclass!</span>
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.reset();
+        <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">Redo all actions from the beginning, throwing out the animation</span>
+        <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">commands (the animation manager will update the animation on its own).</span>
+        <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">Note that if you do something non-deterministic, you might cause problems!</span>
+        <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">Be sure if you do anything non-deterministic (that is, calls to a random</span>
+        <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">number generator) you clear out the undo stack here and in the animation</span>
+        <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">manager.</span>
+        <span style="font-weight: bold; font-style: italic;">//</span>
+        <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">If this seems horribly inefficient -- it is! However, it seems to work well</span>
+        <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">in practice, and you get undo for free for all algorithms, which is a non-trivial</span>
+        <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">gain.</span>
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">len</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.actionHistory.length;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.recordAnimation = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+        <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; len; i++)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.actionHistory[i][0](<span style="font-weight: bold; text-decoration: underline;">this</span>.actionHistory[i][1]);
+        }
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.recordAnimation = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+}
+
+
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.clearHistory = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.actionHistory = [];
+}
+                
+                <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Helper method to add text input with nice border.</span>
+                <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">AS3 probably has a built-in way to do this.   Replace when found.</span>
+                
+
+                <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Helper method to create a command string from a bunch of arguments</span>
+Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.cmd = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.recordAnimation)
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">command</span> = <span style="font-weight: bold; text-decoration: underline;">arguments</span>[0];
+                <span style="font-weight: bold;">for</span>(i = 1; i &lt; <span style="font-weight: bold; text-decoration: underline;">arguments</span>.length; i++)
+                {
+                        command = command + <span style="font-style: italic;">"&lt;;&gt;"</span> + String(<span style="font-weight: bold; text-decoration: underline;">arguments</span>[i]);
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.commands.push(command);
+        }
+        
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: VLEAD</p>
+<p class="date">Created: 2019-08-27 Tue 13:08</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.1.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

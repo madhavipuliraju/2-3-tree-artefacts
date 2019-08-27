@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/jquery-ui-1.8.11.custom.css">
+		<link rel="stylesheet" href="http://dev.vlabs.ac.in/exp/styles/common-styles.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+		<script type = "text/javascript" src = "../js/lib/CustomEvents.js"> </script>
+		<script type = "text/javascript" src = "../js/lib/UndoFunctions.js"> </script>
+		<script type = "text/javascript" src = "../js/lib/AnimatedObject.js"> </script>
+		<script type = "text/javascript" src = "../js/lib/AnimatedLabel.js"> </script>
+		<script type = "text/javascript" src = "../js/lib/Line.js"> </script>
+		<script type = "text/javascript" src = "../js/lib/ObjectManager.js"> </script>
+		<script type = "text/javascript" src = "../js/lib/AnimationMain.js"> </script>
+		<script type = "text/javascript" src = "../js/lib/AnimatedBTreeNode.js"> </script>
+		<script type = "text/javascript" src = "../js/lib/Algorithm.js"> </script>
+		<script type = "text/javascript" src = "../js/TwoThreeTreeExercise.js"> </script> 
+	</head> 
+
+
+	<body onload="init();" class="VisualizationMainPage">
+
+	<div class="instruction-box">
+		<button class="collapsible">Instructions</button>
+		<div class="content">
+			<b>Instructions</b>:
+			<ul>
+			  <li>Click on <b>Generate Root</b> to generate root of the 23 tree.</li>
+			  <li>Depending on the <b>Next element to be inserted</b> select one of the operations.</li>
+			  <li>Click <b>Insert</b> if the element to be inserted does not cause any split.</li>
+			  <li>Click <b>Insert Left</b> if the element gets inserted in the left of root.</li>
+			  <li>Your sequence of operation will be recorded.</li>
+			  <li>Click on <b>Submit</b> when there are no more elements to insert.</li>
+			  <li>You can check your answer by clicking <b>Show Steps</b> for a step by step solution.</li>
+		  </ul> 
+		</div>
+	</div>
+
+
+		<div id = "container">
+			<div = id = "mainContent"> 
+
+				<div class="row">
+					<div class="col-md-5 col-xs-12">
+						<div class="comment-box">
+							<b>Next Element to inserted:</b>
+							<p id="nextelement"> </p>
+						</div>
+					</div>
+					<div class="col-md-7 col-xs-12">
+						<div class="comment-box">
+							<b>Comments:</b>
+							<p id="nextcomment"> </p>
+						</div>
+					</div>
+				</div>
+
+				<div id = "algoControlSection">
+					<div id="AlgorithmSpecificControls" class="form-inline input-group container">
+						<button class="button-input" id="control-exer-root">Generate Root</button>
+						<button class="button-input" id="control-exer-insert-same">Insert in Place</button>
+						<button class="button-input" id="control-exer-insert-l">Insert Left</button>
+						<button class="button-input" id="control-exer-insert-m">Insert Middle</button>
+						<button class="button-input" id="control-exer-insert-r">Insert Right</button>
+						<button class="button-input" id="control-exer-insert-split">Insert and Split</button>
+						<button class="button-input" id="control-exer-submit">Submit</button>
+						<button class="button-input" id="control-exer-steps">Show Steps</button>
+						<button class="button-input" id="control-exer-reset">Reset</button>
+						<label style="display:none;"><input type="checkbox" id="control-exer-null">Show null Leaves</label>
+					</div>
+				</div>
+				<canvas id="canvas" width="500" height="300"></canvas>
+
+
+				<div id = "generalAnimationControlSection" style="display:none;">
+					<table id="GeneralAnimationControls">  </table>							
+				</div>
+				
+			</div>
+
+		<script>
+        var collapsibleEl = document.getElementsByClassName("collapsible")[0];
+        collapsibleEl.addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    </script>
+
+	</body>
+</html>

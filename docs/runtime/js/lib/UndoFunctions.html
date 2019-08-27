@@ -1,0 +1,958 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title></title>
+<!-- 2019-08-27 Tue 13:08 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="VLEAD" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title"></h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. License</a></li>
+<li><a href="#sec-2">2. Javascript Code for undo functions</a></li>
+<li><a href="#sec-3">3. Code Structure</a>
+<ul>
+<li><a href="#sec-3-1">3.1. Dummy callback functions to be implemented at later point</a></li>
+<li><a href="#sec-3-2">3.2. Undo Move operations</a></li>
+<li><a href="#sec-3-3">3.3. UndoCreate</a></li>
+<li><a href="#sec-3-4">3.4. UndoHighlight</a></li>
+<li><a href="#sec-3-5">3.5. Undo height,width</a></li>
+<li><a href="#sec-3-6">3.6. UndoSetNumElements</a></li>
+<li><a href="#sec-3-7">3.7. Undo set foregroundcolor and background color</a></li>
+<li><a href="#sec-3-8">3.8. Undo text and text color</a></li>
+<li><a href="#sec-3-9">3.9. Undo edge and edges colors</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Tangle</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> License</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+<i>/ Copyright 2011 David Galles, University of San Francisco. All rights reserved.
+/</i>
+<i>/ Redistribution and use in source and binary forms, with or without modification, are
+/</i> permitted provided that the following conditions are met:
+<i>/
+/</i> 1. Redistributions of source code must retain the above copyright notice, this list of
+<i>/ conditions and the following disclaimer.
+/</i>
+<i>/ 2. Redistributions in binary form must reproduce the above copyright notice, this list
+/</i> of conditions and the following disclaimer in the documentation and/or other materials
+<i>/ provided with the distribution.
+/</i>
+<i>/ THIS SOFTWARE IS PROVIDED BY &lt;COPYRIGHT HOLDER&gt; ``AS IS'' AND ANY EXPRESS OR IMPLIED
+/</i> WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+<i>/ FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL &lt;COPYRIGHT HOLDER&gt; OR
+/</i> CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+<i>/ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+/</i> SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+<i>/ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+/</i> NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+<i>/ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+/</i>
+<i>/ The views and conclusions contained in the software and documentation are those of the
+/</i> authors and should not be interpreted as representing official policies, either expressed
+// or implied, of the University of San Francisco
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Javascript Code for undo functions</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+This module contains the required code for performing an undo of any animation.
+Most of it used by the "Skip back" and skip forward buttons of the artefacts.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Code Structure</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Dummy callback functions to be implemented at later point</h3>
+<div class="outline-text-3" id="text-3-1">
+<div class="org-src-container">
+
+<pre class="src src-js" id="UndoFunctions"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoBlock</span>()
+{
+        
+}
+
+UndoBlock.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.addUndoAnimation = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">animationList</span>)
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">false</span>;
+}
+
+UndoBlock.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>) 
+{
+        
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Undo Move operations</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Module used to undo a move operation of the animation artefacts
+</p>
+<div class="org-src-container">
+
+<pre class="src src-js" id="UndoFunctions"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoMove</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">fmX</span>, <span style="font-weight: bold; font-style: italic;">fmy</span>, <span style="font-weight: bold; font-style: italic;">tx</span>, <span style="font-weight: bold; font-style: italic;">ty</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.fromX = fmX;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.fromY = fmy;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.toX = tx;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.toY = ty;
+}
+
+
+UndoMove.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoMove.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoMove;
+
+UndoMove.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.addUndoAnimation = <span style="font-weight: bold;">function</span> (<span style="font-weight: bold; font-style: italic;">animationList</span>)
+{
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">nextAnim</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">SingleAnimation</span>(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.fromX, <span style="font-weight: bold; text-decoration: underline;">this</span>.fromY, <span style="font-weight: bold; text-decoration: underline;">this</span>.toX, <span style="font-weight: bold; text-decoration: underline;">this</span>.toY);
+        animationList.push(nextAnim);
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">true</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> UndoCreate</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+Module used to undo creation of nodes/circles or any animation artefact
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-js" id="UndoFunctions"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoCreate</span>(<span style="font-weight: bold; font-style: italic;">id</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+}
+
+UndoCreate.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoCreate.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoCreate;
+
+        
+UndoCreate.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+                        world.removeObject(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID);
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3-4" class="outline-3">
+<h3 id="sec-3-4"><span class="section-number-3">3.4</span> UndoHighlight</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+Module used to undo higlighting of an objects like a redblack tree node or 23 tree node.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-js" id="UndoFunctions"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoHighlight</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">val</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightValue = val;
+}
+
+UndoHighlight.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoHighlight.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoHighlight;
+
+UndoHighlight.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setHighlight(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightValue);
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-5" class="outline-3">
+<h3 id="sec-3-5"><span class="section-number-3">3.5</span> Undo height,width</h3>
+<div class="outline-text-3" id="text-3-5">
+<p>
+Module used to undo a set height,width of an object.Height,width of object are preserved to older value.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-js" id="UndoFunctions"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetHeight</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">val</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.height = val;
+}
+
+UndoSetHeight.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetHeight.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetHeight;
+
+UndoSetHeight.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setHeight(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.height);
+}
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetWidth</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">val</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.width = val;
+}
+
+UndoSetWidth.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetWidth.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetWidth;
+
+UndoSetWidth.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setWidth(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.width);
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-6" class="outline-3">
+<h3 id="sec-3-6"><span class="section-number-3">3.6</span> UndoSetNumElements</h3>
+<div class="outline-text-3" id="text-3-6">
+<p>
+Module to restore multiple elements to original size
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-js" id="UndoFunctions"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetNumElements</span>(<span style="font-weight: bold; font-style: italic;">obj</span>, <span style="font-weight: bold; font-style: italic;">newNumElems</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = obj.objectID;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.sizeBeforeChange = obj.getNumElements();
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.sizeAfterChange = newNumElems;
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.sizeBeforeChange &gt; <span style="font-weight: bold; text-decoration: underline;">this</span>.sizeAfterChange)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.labels = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Array</span>(<span style="font-weight: bold; text-decoration: underline;">this</span>.sizeBeforeChange - <span style="font-weight: bold; text-decoration: underline;">this</span>.sizeAfterChange);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.colors = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Array</span>(<span style="font-weight: bold; text-decoration: underline;">this</span>.sizeBeforeChange - <span style="font-weight: bold; text-decoration: underline;">this</span>.sizeAfterChange);
+                <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.sizeBeforeChange - <span style="font-weight: bold; text-decoration: underline;">this</span>.sizeAfterChange; i++)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.labels[i] = obj.getText(i+<span style="font-weight: bold; text-decoration: underline;">this</span>.sizeAfterChange);
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.colors[i] = obj.getTextColor(i+<span style="font-weight: bold; text-decoration: underline;">this</span>.sizeAfterChange);
+                }
+                
+        }       
+}
+
+UndoSetNumElements.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetNumElements.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetNumElements;
+
+
+UndoSetNumElements.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setNumElements(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.sizeBeforeChange);
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.sizeBeforeChange &gt; <span style="font-weight: bold; text-decoration: underline;">this</span>.sizeAfterChange)
+        {
+                <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.sizeBeforeChange - <span style="font-weight: bold; text-decoration: underline;">this</span>.sizeAfterChange; i++)
+                {
+                        world.setText(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.labels[i], i+<span style="font-weight: bold; text-decoration: underline;">this</span>.sizeAfterChange);
+                        world.setTextColor(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.colors[i], i+<span style="font-weight: bold; text-decoration: underline;">this</span>.sizeAfterChange);
+                }
+        }
+}
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetAlpha</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">alph</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.alphaVal = alph;
+}
+
+UndoSetAlpha.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetAlpha.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetAlpha;
+
+UndoSetAlpha.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>) 
+{
+        world.setAlpha(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.alphaVal);
+}
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetNull</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">nv</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.nullVal = nv;
+}
+
+UndoSetNull.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetNull.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetNull;
+
+UndoSetNull.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>) 
+{
+        world.setNull(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.nullVal);
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-7" class="outline-3">
+<h3 id="sec-3-7"><span class="section-number-3">3.7</span> Undo set foregroundcolor and background color</h3>
+<div class="outline-text-3" id="text-3-7">
+<div class="org-src-container">
+
+<pre class="src src-js" id="UndoFunctions"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetForegroundColor</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">color</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.color = color;
+}
+
+UndoSetForegroundColor.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetForegroundColor.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetForegroundColor;
+
+UndoSetForegroundColor.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep =  <span style="font-weight: bold;">function</span> (<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setForegroundColor(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.color);
+}
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetBackgroundColor</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">color</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.color = color;
+}
+
+UndoSetBackgroundColor.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetBackgroundColor.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetBackgroundColor;
+
+UndoSetBackgroundColor.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep =  <span style="font-weight: bold;">function</span> (<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setBackgroundColor(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.color);
+}
+
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetHighlightIndex</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">index</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.index = index;
+}
+
+UndoSetHighlightIndex.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetHighlightIndex.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetHighlightIndex;
+
+UndoSetHighlightIndex.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep =  <span style="font-weight: bold;">function</span> (<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setHighlightIndex(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.index);
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-8" class="outline-3">
+<h3 id="sec-3-8"><span class="section-number-3">3.8</span> Undo text and text color</h3>
+<div class="outline-text-3" id="text-3-8">
+<div class="org-src-container">
+
+<pre class="src src-js" id="UndoFunctions"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetText</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">str</span>, <span style="font-weight: bold; font-style: italic;">index</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.newText = str;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.labelIndex = index;
+}
+
+UndoSetText.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetText.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetText;
+
+UndoSetText.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setText(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.newText, <span style="font-weight: bold; text-decoration: underline;">this</span>.labelIndex);
+}
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetTextColor</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">color</span>, <span style="font-weight: bold; font-style: italic;">index</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.color = color;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.index = index;
+}
+
+UndoSetTextColor.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetTextColor.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetTextColor;
+
+UndoSetTextColor.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setTextColor(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.color, <span style="font-weight: bold; text-decoration: underline;">this</span>.index);
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-9" class="outline-3">
+<h3 id="sec-3-9"><span class="section-number-3">3.9</span> Undo edge and edges colors</h3>
+<div class="outline-text-3" id="text-3-9">
+<div class="org-src-container">
+
+<pre class="src src-js" id="UndoFunctions"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoHighlightEdge</span>(<span style="font-weight: bold; font-style: italic;">from</span>, <span style="font-weight: bold; font-style: italic;">to</span>, <span style="font-weight: bold; font-style: italic;">val</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.fromID = from;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.toID = to;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightValue = val;
+}
+
+UndoHighlightEdge.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoHighlightEdge.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoHighlightEdge;
+
+UndoHighlightEdge.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setEdgeHighlight(<span style="font-weight: bold; text-decoration: underline;">this</span>.fromID, <span style="font-weight: bold; text-decoration: underline;">this</span>.toID, <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightValue);
+}
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetEdgeColor</span>(<span style="font-weight: bold; font-style: italic;">from</span>, <span style="font-weight: bold; font-style: italic;">to</span>, <span style="font-weight: bold; font-style: italic;">oldColor</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.fromID = from;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.toID = to;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.color = oldColor;
+}
+
+UndoSetEdgeColor.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetEdgeColor.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetEdgeColor;
+
+UndoSetEdgeColor.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setEdgeColor(<span style="font-weight: bold; text-decoration: underline;">this</span>.fromID, <span style="font-weight: bold; text-decoration: underline;">this</span>.toID, <span style="font-weight: bold; text-decoration: underline;">this</span>.color);
+}
+
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetEdgeAlpha</span>(<span style="font-weight: bold; font-style: italic;">from</span>, <span style="font-weight: bold; font-style: italic;">to</span>, <span style="font-weight: bold; font-style: italic;">oldAplha</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.fromID = from;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.toID = to;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.alpha  = oldAplha;
+}
+
+UndoSetEdgeAlpha.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetEdgeAlpha.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetEdgeAlpha;
+
+UndoSetEdgeAlpha.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setEdgeAlpha(<span style="font-weight: bold; text-decoration: underline;">this</span>.fromID, <span style="font-weight: bold; text-decoration: underline;">this</span>.toID, <span style="font-weight: bold; text-decoration: underline;">this</span>.alpha);
+}
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetPosition</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">x</span>, <span style="font-weight: bold; font-style: italic;">y</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.x = x; 
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.y = y;
+}
+
+UndoSetPosition.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetPosition.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetPosition;
+
+
+UndoSetPosition.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setNodePosition(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.x, <span style="font-weight: bold; text-decoration: underline;">this</span>.y);
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Tangle</h2>
+<div class="outline-text-2" id="text-4">
+<div class="org-src-container">
+
+<pre class="src src-js"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoBlock</span>()
+{
+        
+}
+
+UndoBlock.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.addUndoAnimation = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">animationList</span>)
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">false</span>;
+}
+
+UndoBlock.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>) 
+{
+        
+}
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoMove</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">fmX</span>, <span style="font-weight: bold; font-style: italic;">fmy</span>, <span style="font-weight: bold; font-style: italic;">tx</span>, <span style="font-weight: bold; font-style: italic;">ty</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.fromX = fmX;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.fromY = fmy;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.toX = tx;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.toY = ty;
+}
+
+
+UndoMove.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoMove.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoMove;
+
+UndoMove.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.addUndoAnimation = <span style="font-weight: bold;">function</span> (<span style="font-weight: bold; font-style: italic;">animationList</span>)
+{
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">nextAnim</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">SingleAnimation</span>(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.fromX, <span style="font-weight: bold; text-decoration: underline;">this</span>.fromY, <span style="font-weight: bold; text-decoration: underline;">this</span>.toX, <span style="font-weight: bold; text-decoration: underline;">this</span>.toY);
+        animationList.push(nextAnim);
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">true</span>;
+}
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoCreate</span>(<span style="font-weight: bold; font-style: italic;">id</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+}
+
+UndoCreate.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoCreate.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoCreate;
+
+        
+UndoCreate.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+                        world.removeObject(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID);
+}
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoHighlight</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">val</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightValue = val;
+}
+
+UndoHighlight.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoHighlight.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoHighlight;
+
+UndoHighlight.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setHighlight(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightValue);
+}
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetHeight</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">val</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.height = val;
+}
+
+UndoSetHeight.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetHeight.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetHeight;
+
+UndoSetHeight.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setHeight(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.height);
+}
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetWidth</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">val</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.width = val;
+}
+
+UndoSetWidth.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetWidth.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetWidth;
+
+UndoSetWidth.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setWidth(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.width);
+}
+
+
+
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetNumElements</span>(<span style="font-weight: bold; font-style: italic;">obj</span>, <span style="font-weight: bold; font-style: italic;">newNumElems</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = obj.objectID;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.sizeBeforeChange = obj.getNumElements();
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.sizeAfterChange = newNumElems;
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.sizeBeforeChange &gt; <span style="font-weight: bold; text-decoration: underline;">this</span>.sizeAfterChange)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.labels = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Array</span>(<span style="font-weight: bold; text-decoration: underline;">this</span>.sizeBeforeChange - <span style="font-weight: bold; text-decoration: underline;">this</span>.sizeAfterChange);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.colors = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Array</span>(<span style="font-weight: bold; text-decoration: underline;">this</span>.sizeBeforeChange - <span style="font-weight: bold; text-decoration: underline;">this</span>.sizeAfterChange);
+                <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.sizeBeforeChange - <span style="font-weight: bold; text-decoration: underline;">this</span>.sizeAfterChange; i++)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.labels[i] = obj.getText(i+<span style="font-weight: bold; text-decoration: underline;">this</span>.sizeAfterChange);
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.colors[i] = obj.getTextColor(i+<span style="font-weight: bold; text-decoration: underline;">this</span>.sizeAfterChange);
+                }
+                
+        }       
+}
+
+UndoSetNumElements.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetNumElements.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetNumElements;
+
+
+UndoSetNumElements.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setNumElements(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.sizeBeforeChange);
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.sizeBeforeChange &gt; <span style="font-weight: bold; text-decoration: underline;">this</span>.sizeAfterChange)
+        {
+                <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.sizeBeforeChange - <span style="font-weight: bold; text-decoration: underline;">this</span>.sizeAfterChange; i++)
+                {
+                        world.setText(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.labels[i], i+<span style="font-weight: bold; text-decoration: underline;">this</span>.sizeAfterChange);
+                        world.setTextColor(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.colors[i], i+<span style="font-weight: bold; text-decoration: underline;">this</span>.sizeAfterChange);
+                }
+        }
+}
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetAlpha</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">alph</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.alphaVal = alph;
+}
+
+UndoSetAlpha.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetAlpha.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetAlpha;
+
+UndoSetAlpha.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>) 
+{
+        world.setAlpha(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.alphaVal);
+}
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetNull</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">nv</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.nullVal = nv;
+}
+
+UndoSetNull.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetNull.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetNull;
+
+UndoSetNull.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>) 
+{
+        world.setNull(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.nullVal);
+}
+
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetForegroundColor</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">color</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.color = color;
+}
+
+UndoSetForegroundColor.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetForegroundColor.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetForegroundColor;
+
+UndoSetForegroundColor.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep =  <span style="font-weight: bold;">function</span> (<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setForegroundColor(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.color);
+}
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetBackgroundColor</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">color</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.color = color;
+}
+
+UndoSetBackgroundColor.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetBackgroundColor.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetBackgroundColor;
+
+UndoSetBackgroundColor.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep =  <span style="font-weight: bold;">function</span> (<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setBackgroundColor(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.color);
+}
+
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetHighlightIndex</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">index</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.index = index;
+}
+
+UndoSetHighlightIndex.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetHighlightIndex.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetHighlightIndex;
+
+UndoSetHighlightIndex.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep =  <span style="font-weight: bold;">function</span> (<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setHighlightIndex(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.index);
+}
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetText</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">str</span>, <span style="font-weight: bold; font-style: italic;">index</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.newText = str;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.labelIndex = index;
+}
+
+UndoSetText.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetText.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetText;
+
+UndoSetText.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setText(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.newText, <span style="font-weight: bold; text-decoration: underline;">this</span>.labelIndex);
+}
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetTextColor</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">color</span>, <span style="font-weight: bold; font-style: italic;">index</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.color = color;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.index = index;
+}
+
+UndoSetTextColor.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetTextColor.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetTextColor;
+
+UndoSetTextColor.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setTextColor(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.color, <span style="font-weight: bold; text-decoration: underline;">this</span>.index);
+}
+
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoHighlightEdge</span>(<span style="font-weight: bold; font-style: italic;">from</span>, <span style="font-weight: bold; font-style: italic;">to</span>, <span style="font-weight: bold; font-style: italic;">val</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.fromID = from;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.toID = to;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightValue = val;
+}
+
+UndoHighlightEdge.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoHighlightEdge.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoHighlightEdge;
+
+UndoHighlightEdge.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setEdgeHighlight(<span style="font-weight: bold; text-decoration: underline;">this</span>.fromID, <span style="font-weight: bold; text-decoration: underline;">this</span>.toID, <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightValue);
+}
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetEdgeColor</span>(<span style="font-weight: bold; font-style: italic;">from</span>, <span style="font-weight: bold; font-style: italic;">to</span>, <span style="font-weight: bold; font-style: italic;">oldColor</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.fromID = from;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.toID = to;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.color = oldColor;
+}
+
+UndoSetEdgeColor.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetEdgeColor.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetEdgeColor;
+
+UndoSetEdgeColor.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setEdgeColor(<span style="font-weight: bold; text-decoration: underline;">this</span>.fromID, <span style="font-weight: bold; text-decoration: underline;">this</span>.toID, <span style="font-weight: bold; text-decoration: underline;">this</span>.color);
+}
+
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetEdgeAlpha</span>(<span style="font-weight: bold; font-style: italic;">from</span>, <span style="font-weight: bold; font-style: italic;">to</span>, <span style="font-weight: bold; font-style: italic;">oldAplha</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.fromID = from;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.toID = to;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.alpha  = oldAplha;
+}
+
+UndoSetEdgeAlpha.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetEdgeAlpha.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetEdgeAlpha;
+
+UndoSetEdgeAlpha.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setEdgeAlpha(<span style="font-weight: bold; text-decoration: underline;">this</span>.fromID, <span style="font-weight: bold; text-decoration: underline;">this</span>.toID, <span style="font-weight: bold; text-decoration: underline;">this</span>.alpha);
+}
+
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">UndoSetPosition</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">x</span>, <span style="font-weight: bold; font-style: italic;">y</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.x = x; 
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.y = y;
+}
+
+UndoSetPosition.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">UndoBlock</span>();
+UndoSetPosition.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = UndoSetPosition;
+
+
+UndoSetPosition.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.undoInitialStep = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">world</span>)
+{
+        world.setNodePosition(<span style="font-weight: bold; text-decoration: underline;">this</span>.objectID, <span style="font-weight: bold; text-decoration: underline;">this</span>.x, <span style="font-weight: bold; text-decoration: underline;">this</span>.y);
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: VLEAD</p>
+<p class="date">Created: 2019-08-27 Tue 13:08</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.1.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

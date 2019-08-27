@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/jquery-ui-1.8.11.custom.css">
+		<link rel="stylesheet" href="http://dev.vlabs.ac.in/exp/styles/common-styles.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+		<script type = "text/javascript" src = "../js/lib/CustomEvents.js"> </script>
+		<script type = "text/javascript" src = "../js/lib/UndoFunctions.js"> </script>
+		<script type = "text/javascript" src = "../js/lib/AnimatedObject.js"> </script>
+		<script type = "text/javascript" src = "../js/lib/AnimatedLabel.js"> </script>
+		<script type = "text/javascript" src = "../js/lib/Line.js"> </script>
+		<script type = "text/javascript" src = "../js/lib/ObjectManager.js"> </script>
+		<script type = "text/javascript" src = "../js/lib/AnimationMain.js"> </script>
+		<script type = "text/javascript" src = "../js/lib/AnimatedBTreeNode.js"> </script>
+		<script type = "text/javascript" src = "../js/lib/Algorithm.js"> </script>
+		<script type = "text/javascript" src = "../js/TwoThreeTree.js"> </script>  
+	 </head> 
+	<body onload="init();" class="VisualizationMainPage">
+
+	<div class="instruction-box">
+		<button class="collapsible">Instructions</button>
+		<div class="content">
+			<b>Instructions</b>:
+			<ul>
+			  <li>Here we visualize insertion, deletion and search in 2-3 tree.</li> 
+			  <li>To <b>insert</b> the an element in the tree, enter the value in the textbox before insert and then <b>click the INSERT button</b>. Follow same approach for other operations as well.</li>
+			  <li>You can use the <b>Pause</b> button to pause the animation at any point of time.</li>
+			  <li>After animation has been paused, click on the <b>Step Forward</b> and <b>Step Backward</b> button to step through the animation.</li>
+			   <li>You can decrease the <b>speed</b> of the animation by using the <b>animation slider</b>.</li>
+			  <li>It is recommended that you set the speed to a minimum value to visualize each step properly.</li>
+			  <li>The <b>Skip Forward</b> and <b>Skip Backward</b> buttons can be used to undo and redo operations after they have been performed on the tree.</li>
+		  </ul> 
+		</div>
+	</div>
+			
+		<div id = "container">
+			<div id = "mainContent"> 
+			  <div id = "algoControlSection">
+					<div id = "AlgorithmSpecificControls"> 
+						<input type="number" class="text-box" id="control-demo-insert-text" placeholder="Insert" />
+						<button class="button-input" id="control-demo-insert-btn">Insert</button>
+						<input type="number" class="text-box" id="control-demo-delete-text" placeholder="Delete" />
+						<button class="button-input" id="control-demo-delete-btn">Delete</button>
+						<input type="number" class="text-box" id="control-demo-find-text" placeholder="Find" />
+						<button class="button-input" id="control-demo-find-btn">Find</button>
+						<button class="button-input" id="control-demo-print">Print</button>
+						<button class="button-input" id="control-demo-clear">Clear</button>
+					</div>
+			  </div>
+			  <canvas id="canvas" width="1000" height="300" ></canvas>
+			  <div id = "generalAnimationControlSection" style="display:none;">
+				 <table id="GeneralAnimationControls">  </table>		
+			  </div>
+			  
+			</div>
+
+		</div>
+
+		<script>
+        var collapsibleEl = document.getElementsByClassName("collapsible")[0];
+        collapsibleEl.addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    </script>
+
+	</body>
+</html>

@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title></title>
+<!-- 2019-08-27 Tue 13:08 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="VLEAD" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title"></h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. License</a></li>
+<li><a href="#sec-2">2. Introduction</a></li>
+<li><a href="#sec-3">3. Javascript Code</a>
+<ul>
+<li><a href="#sec-3-1">3.1. Constructor function for animated object</a></li>
+<li><a href="#sec-3-2">3.2. Getter methods for alignment positions</a></li>
+<li><a href="#sec-3-3">3.3. Getter and setters for text colors</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Tangle</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> License</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+<i>/ Copyright 2011 David Galles, University of San Francisco. All rights reserved.
+/</i>
+<i>/ Redistribution and use in source and binary forms, with or without modification, are
+/</i> permitted provided that the following conditions are met:
+<i>/
+/</i> 1. Redistributions of source code must retain the above copyright notice, this list of
+<i>/ conditions and the following disclaimer.
+/</i>
+<i>/ 2. Redistributions in binary form must reproduce the above copyright notice, this list
+/</i> of conditions and the following disclaimer in the documentation and/or other materials
+<i>/ provided with the distribution.
+/</i>
+<i>/ THIS SOFTWARE IS PROVIDED BY &lt;COPYRIGHT HOLDER&gt; ``AS IS'' AND ANY EXPRESS OR IMPLIED
+/</i> WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+<i>/ FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL &lt;COPYRIGHT HOLDER&gt; OR
+/</i> CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+<i>/ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+/</i> SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+<i>/ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+/</i> NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+<i>/ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+/</i>
+<i>/ The views and conclusions contained in the software and documentation are those of the
+/</i> authors and should not be interpreted as representing official policies, either expressed
+// or implied, of the University of San Francisco
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Introduction</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Module to add animated objects
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Javascript Code</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Constructor function for animated object</h3>
+<div class="outline-text-3" id="text-3-1">
+<div class="org-src-container">
+
+<pre class="src src-js" id="AnimatedObject"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">AnimatedObject</span>()
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.init();
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.init  = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.backgroundColor = <span style="font-style: italic;">"#FFFFFF"</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.foregroundColor = <span style="font-style: italic;">"#000000"</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.highlighted = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = -1;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.layer = 0;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.addedToScene = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.label = <span style="font-style: italic;">""</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.labelColor = <span style="font-style: italic;">"#000000"</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.alpha = 1.0;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.x = 0;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.y = 0;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.minHeightDiff = 3;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.range = 5;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex = -1;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndexDirty = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.alwaysOnTop = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setBackgroundColor = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">newColor</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.backgroundColor = newColor;
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setForegroundColor = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">newColor</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.foregroundColor = newColor;
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setNull = <span style="font-weight: bold;">function</span>()
+{
+        
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getNull = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">false</span>;
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setAlpha = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">newAlpha</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.alpha = newAlpha;
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getAlpha = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.alpha;
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setForegroundColor = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">newColor</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.foregroundColor = newColor;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.labelColor = newColor;
+}
+
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getHighlight = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.highlighted;
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getWidth = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Do we want to throw here?  Should always override this ...</span>
+        <span style="font-weight: bold;">return</span> 0;
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getHeight = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Do we want to throw here?  Should always override this ...</span>
+        <span style="font-weight: bold;">return</span> 0;
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setHighlight = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">value</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.highlighted = value;
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.centerX = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.x;
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setWidth = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">newWidth</span>)
+{
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Do we want to throw here?  Should always override this ... </span>
+}
+
+
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.centerY = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.y;
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Getter methods for alignment positions</h3>
+<div class="outline-text-3" id="text-3-2">
+<div class="org-src-container">
+
+<pre class="src src-js" id="AnimatedObject">AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getAlignLeftPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+    <span style="font-weight: bold;">return</span> [otherObject.right()+ <span style="font-weight: bold; text-decoration: underline;">this</span>.getWidth() / 2, otherObject.centerY()];
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getAlignRightPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+        
+    <span style="font-weight: bold;">return</span> [otherObject.left() - <span style="font-weight: bold; text-decoration: underline;">this</span>.getWidth() / 2, otherObject.centerY()];
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getAlignTopPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+
+    <span style="font-weight: bold;">return</span> [otherObject.centerX(), otherObject.top() - <span style="font-weight: bold; text-decoration: underline;">this</span>.getHeight() / 2];
+}
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getAlignBottomPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+    <span style="font-weight: bold;">return</span> [otherObject.centerX(), otherObject.bottom() + <span style="font-weight: bold; text-decoration: underline;">this</span>.getHeight() / 2];
+}
+
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.alignLeft = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Assuming centering.  Overridden method could modify if not centered</span>
+        <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">(See AnimatedLabel, for instance)</span>
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.centerY();
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.x = otherObject.right() + <span style="font-weight: bold; text-decoration: underline;">this</span>.getWidth() / 2;     
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.alignRight = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Assuming centering.  Overridden method could modify if not centered</span>
+        <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">(See AnimatedLabel, for instance)</span>
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.centerY();
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.x = otherObject.left() - <span style="font-weight: bold; text-decoration: underline;">this</span>.getWidth() / 2;      
+}
+
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.alignTop = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Assuming centering.  Overridden method could modify if not centered</span>
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.x = otherObject.centerX();
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.top() - <span style="font-weight: bold; text-decoration: underline;">this</span>.getHeight() / 2;      
+        
+        
+}
+
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.alignBottom = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.x = otherObject.centerX();
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.bottom() + <span style="font-weight: bold; text-decoration: underline;">this</span>.getHeight() / 2;           
+        
+}
+
+
+
+<span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">TODO:  Do we need these in the base?                 </span>
+<span style="font-weight: bold; font-style: italic;">                function left(): Number</span>
+<span style="font-weight: bold; font-style: italic;">                {</span>
+<span style="font-weight: bold; font-style: italic;">                        return x - getWidth() / 2;</span>
+<span style="font-weight: bold; font-style: italic;">                }</span>
+<span style="font-weight: bold; font-style: italic;">                </span>
+<span style="font-weight: bold; font-style: italic;">                function right():Number</span>
+<span style="font-weight: bold; font-style: italic;">                {</span>
+<span style="font-weight: bold; font-style: italic;">                        return x + getWidth() / 2;</span>
+<span style="font-weight: bold; font-style: italic;">                }</span>
+<span style="font-weight: bold; font-style: italic;">                </span>
+<span style="font-weight: bold; font-style: italic;">                function top():Number</span>
+<span style="font-weight: bold; font-style: italic;">                {</span>
+<span style="font-weight: bold; font-style: italic;">                        return y - getHeight() / 2;</span>
+<span style="font-weight: bold; font-style: italic;">                }</span>
+<span style="font-weight: bold; font-style: italic;">                </span>
+<span style="font-weight: bold; font-style: italic;">                function bottom():Number</span>
+<span style="font-weight: bold; font-style: italic;">                {</span>
+<span style="font-weight: bold; font-style: italic;">                        return y + getHeight() / 2;</span>
+<span style="font-weight: bold; font-style: italic;">                }</span>
+<span style="font-weight: bold; font-style: italic;">                </span>
+<span style="font-weight: bold; font-style: italic;">                function centerX():Number</span>
+<span style="font-weight: bold; font-style: italic;">                {</span>
+<span style="font-weight: bold; font-style: italic;">                        return x;</span>
+<span style="font-weight: bold; font-style: italic;">                }</span>
+<span style="font-weight: bold; font-style: italic;">                </span>
+<span style="font-weight: bold; font-style: italic;">                function centerY():Number</span>
+<span style="font-weight: bold; font-style: italic;">                {</span>
+<span style="font-weight: bold; font-style: italic;">                        return y;</span>
+<span style="font-weight: bold; font-style: italic;">                }</span>
+<span style="font-weight: bold; font-style: italic;">                */</span>
+                
+                
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getClosestCardinalPoint = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">fromX</span>, <span style="font-weight: bold; font-style: italic;">fromY</span>)
+{
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">xDelta</span>;
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">yDelta</span>;
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">xPos</span>;
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">yPos</span>;
+                        
+        <span style="font-weight: bold;">if</span> (fromX &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.left())
+        {
+                xDelta = <span style="font-weight: bold; text-decoration: underline;">this</span>.left() - fromX;
+                xPos = <span style="font-weight: bold; text-decoration: underline;">this</span>.left();
+        }
+        <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> (fromX &gt; <span style="font-weight: bold; text-decoration: underline;">this</span>.right())
+        {
+                xDelta = fromX - <span style="font-weight: bold; text-decoration: underline;">this</span>.right();
+                xPos = <span style="font-weight: bold; text-decoration: underline;">this</span>.right();
+    }
+        <span style="font-weight: bold;">else</span>
+        {
+                xDelta = 0;
+                xPos = <span style="font-weight: bold; text-decoration: underline;">this</span>.centerX();
+        }
+        
+        <span style="font-weight: bold;">if</span> (fromY &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.top())
+        {
+                yDelta = <span style="font-weight: bold; text-decoration: underline;">this</span>.top() - fromY;
+                yPos = <span style="font-weight: bold; text-decoration: underline;">this</span>.top();
+        }
+        <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> (fromY &gt; <span style="font-weight: bold; text-decoration: underline;">this</span>.bottom())
+        {
+                yDelta = fromY - <span style="font-weight: bold; text-decoration: underline;">this</span>.bottom();
+                yPos = <span style="font-weight: bold; text-decoration: underline;">this</span>.bottom();
+    }
+        <span style="font-weight: bold;">else</span>
+        {
+                yDelta = 0;
+                yPos = <span style="font-weight: bold; text-decoration: underline;">this</span>.centerY();
+        }
+                        
+        <span style="font-weight: bold;">if</span> (yDelta &gt; xDelta)
+        {
+                xPos = <span style="font-weight: bold; text-decoration: underline;">this</span>.centerX();
+        }
+        <span style="font-weight: bold;">else</span> 
+        {
+                yPos  = <span style="font-weight: bold; text-decoration: underline;">this</span>.centerY();
+        }
+        
+        <span style="font-weight: bold;">return</span> [xPos, yPos];
+}
+                
+                
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.centered = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">false</span>;
+}
+
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.pulseHighlight = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">frameNum</span>)
+{                       
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.highlighted)
+        {
+                                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">frameMod</span> = frameNum / 7.0;
+                                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">delta</span>  = Math.abs((frameMod) % (2 * <span style="font-weight: bold; text-decoration: underline;">this</span>.range  - 2) - <span style="font-weight: bold; text-decoration: underline;">this</span>.range + 1)
+                                <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightDiff =  delta + <span style="font-weight: bold; text-decoration: underline;">this</span>.minHeightDiff;
+        }
+                        
+}
+                
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getTailPointerAttachPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">fromX</span>, <span style="font-weight: bold; font-style: italic;">fromY</span>, <span style="font-weight: bold; font-style: italic;">anchorPoint</span>) 
+{
+        <span style="font-weight: bold;">return</span> [<span style="font-weight: bold; text-decoration: underline;">this</span>.x, <span style="font-weight: bold; text-decoration: underline;">this</span>.y];
+}
+                
+                
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getHeadPointerAttachPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">fromX</span>, <span style="font-weight: bold; font-style: italic;">fromY</span>) 
+{
+        <span style="font-weight: bold;">return</span> [<span style="font-weight: bold; text-decoration: underline;">this</span>.x, <span style="font-weight: bold; text-decoration: underline;">this</span>.y];
+}
+                
+<span style="font-weight: bold; font-style: italic;">/*</span><span style="font-weight: bold; font-style: italic;">public function createUndoDelete() : UndoBlock</span>
+<span style="font-weight: bold; font-style: italic;">{</span>
+<span style="font-weight: bold; font-style: italic;">                        // Must be overriden!</span>
+<span style="font-weight: bold; font-style: italic;">                        return null;</span>
+<span style="font-weight: bold; font-style: italic;">}</span>
+<span style="font-weight: bold; font-style: italic;">*/</span>              
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.identifier = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID;
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Getter and setters for text colors</h3>
+<div class="outline-text-3" id="text-3-3">
+<div class="org-src-container">
+
+<pre class="src src-js" id="AnimatedObject">AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getText = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">index</span>)
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.label;
+}
+                
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getTextColor = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">textIndex</span>)
+{                       
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.labelColor
+}
+                
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setTextColor = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">color</span>, <span style="font-weight: bold; font-style: italic;">textIndex</span>)
+{
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.labelColor = color;
+}
+                
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setText = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">newText</span>, <span style="font-weight: bold; font-style: italic;">textIndex</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.label = newText;
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setHighlightIndex = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">hlIndex</span>)
+{
+   <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex = hlIndex;
+   <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndexDirty = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+}
+
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getHighlightIndex = <span style="font-weight: bold;">function</span>()
+{
+   <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex;
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Tangle</h2>
+<div class="outline-text-2" id="text-4">
+<div class="org-src-container">
+
+<pre class="src src-js"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">AnimatedObject</span>()
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.init();
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.init  = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.backgroundColor = <span style="font-style: italic;">"#FFFFFF"</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.foregroundColor = <span style="font-style: italic;">"#000000"</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.highlighted = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID = -1;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.layer = 0;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.addedToScene = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.label = <span style="font-style: italic;">""</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.labelColor = <span style="font-style: italic;">"#000000"</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.alpha = 1.0;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.x = 0;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.y = 0;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.minHeightDiff = 3;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.range = 5;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex = -1;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndexDirty = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.alwaysOnTop = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setBackgroundColor = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">newColor</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.backgroundColor = newColor;
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setForegroundColor = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">newColor</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.foregroundColor = newColor;
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setNull = <span style="font-weight: bold;">function</span>()
+{
+        
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getNull = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">false</span>;
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setAlpha = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">newAlpha</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.alpha = newAlpha;
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getAlpha = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.alpha;
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setForegroundColor = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">newColor</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.foregroundColor = newColor;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.labelColor = newColor;
+}
+
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getHighlight = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.highlighted;
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getWidth = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Do we want to throw here?  Should always override this ...</span>
+        <span style="font-weight: bold;">return</span> 0;
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getHeight = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Do we want to throw here?  Should always override this ...</span>
+        <span style="font-weight: bold;">return</span> 0;
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setHighlight = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">value</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.highlighted = value;
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.centerX = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.x;
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setWidth = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">newWidth</span>)
+{
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Do we want to throw here?  Should always override this ... </span>
+}
+
+
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.centerY = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.y;
+}
+
+
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getAlignLeftPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+    <span style="font-weight: bold;">return</span> [otherObject.right()+ <span style="font-weight: bold; text-decoration: underline;">this</span>.getWidth() / 2, otherObject.centerY()];
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getAlignRightPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+        
+    <span style="font-weight: bold;">return</span> [otherObject.left() - <span style="font-weight: bold; text-decoration: underline;">this</span>.getWidth() / 2, otherObject.centerY()];
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getAlignTopPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+
+    <span style="font-weight: bold;">return</span> [otherObject.centerX(), otherObject.top() - <span style="font-weight: bold; text-decoration: underline;">this</span>.getHeight() / 2];
+}
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getAlignBottomPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+    <span style="font-weight: bold;">return</span> [otherObject.centerX(), otherObject.bottom() + <span style="font-weight: bold; text-decoration: underline;">this</span>.getHeight() / 2];
+}
+
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.alignLeft = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Assuming centering.  Overridden method could modify if not centered</span>
+        <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">(See AnimatedLabel, for instance)</span>
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.centerY();
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.x = otherObject.right() + <span style="font-weight: bold; text-decoration: underline;">this</span>.getWidth() / 2;     
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.alignRight = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Assuming centering.  Overridden method could modify if not centered</span>
+        <span style="font-weight: bold; font-style: italic;">//  </span><span style="font-weight: bold; font-style: italic;">(See AnimatedLabel, for instance)</span>
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.centerY();
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.x = otherObject.left() - <span style="font-weight: bold; text-decoration: underline;">this</span>.getWidth() / 2;      
+}
+
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.alignTop = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Assuming centering.  Overridden method could modify if not centered</span>
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.x = otherObject.centerX();
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.top() - <span style="font-weight: bold; text-decoration: underline;">this</span>.getHeight() / 2;      
+        
+        
+}
+
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.alignBottom = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">otherObject</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.x = otherObject.centerX();
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.y = otherObject.bottom() + <span style="font-weight: bold; text-decoration: underline;">this</span>.getHeight() / 2;           
+        
+}
+
+
+
+<span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">TODO:  Do we need these in the base?                 </span>
+<span style="font-weight: bold; font-style: italic;">                function left(): Number</span>
+<span style="font-weight: bold; font-style: italic;">                {</span>
+<span style="font-weight: bold; font-style: italic;">                        return x - getWidth() / 2;</span>
+<span style="font-weight: bold; font-style: italic;">                }</span>
+<span style="font-weight: bold; font-style: italic;">                </span>
+<span style="font-weight: bold; font-style: italic;">                function right():Number</span>
+<span style="font-weight: bold; font-style: italic;">                {</span>
+<span style="font-weight: bold; font-style: italic;">                        return x + getWidth() / 2;</span>
+<span style="font-weight: bold; font-style: italic;">                }</span>
+<span style="font-weight: bold; font-style: italic;">                </span>
+<span style="font-weight: bold; font-style: italic;">                function top():Number</span>
+<span style="font-weight: bold; font-style: italic;">                {</span>
+<span style="font-weight: bold; font-style: italic;">                        return y - getHeight() / 2;</span>
+<span style="font-weight: bold; font-style: italic;">                }</span>
+<span style="font-weight: bold; font-style: italic;">                </span>
+<span style="font-weight: bold; font-style: italic;">                function bottom():Number</span>
+<span style="font-weight: bold; font-style: italic;">                {</span>
+<span style="font-weight: bold; font-style: italic;">                        return y + getHeight() / 2;</span>
+<span style="font-weight: bold; font-style: italic;">                }</span>
+<span style="font-weight: bold; font-style: italic;">                </span>
+<span style="font-weight: bold; font-style: italic;">                function centerX():Number</span>
+<span style="font-weight: bold; font-style: italic;">                {</span>
+<span style="font-weight: bold; font-style: italic;">                        return x;</span>
+<span style="font-weight: bold; font-style: italic;">                }</span>
+<span style="font-weight: bold; font-style: italic;">                </span>
+<span style="font-weight: bold; font-style: italic;">                function centerY():Number</span>
+<span style="font-weight: bold; font-style: italic;">                {</span>
+<span style="font-weight: bold; font-style: italic;">                        return y;</span>
+<span style="font-weight: bold; font-style: italic;">                }</span>
+<span style="font-weight: bold; font-style: italic;">                */</span>
+                
+                
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getClosestCardinalPoint = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">fromX</span>, <span style="font-weight: bold; font-style: italic;">fromY</span>)
+{
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">xDelta</span>;
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">yDelta</span>;
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">xPos</span>;
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">yPos</span>;
+                        
+        <span style="font-weight: bold;">if</span> (fromX &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.left())
+        {
+                xDelta = <span style="font-weight: bold; text-decoration: underline;">this</span>.left() - fromX;
+                xPos = <span style="font-weight: bold; text-decoration: underline;">this</span>.left();
+        }
+        <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> (fromX &gt; <span style="font-weight: bold; text-decoration: underline;">this</span>.right())
+        {
+                xDelta = fromX - <span style="font-weight: bold; text-decoration: underline;">this</span>.right();
+                xPos = <span style="font-weight: bold; text-decoration: underline;">this</span>.right();
+    }
+        <span style="font-weight: bold;">else</span>
+        {
+                xDelta = 0;
+                xPos = <span style="font-weight: bold; text-decoration: underline;">this</span>.centerX();
+        }
+        
+        <span style="font-weight: bold;">if</span> (fromY &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.top())
+        {
+                yDelta = <span style="font-weight: bold; text-decoration: underline;">this</span>.top() - fromY;
+                yPos = <span style="font-weight: bold; text-decoration: underline;">this</span>.top();
+        }
+        <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> (fromY &gt; <span style="font-weight: bold; text-decoration: underline;">this</span>.bottom())
+        {
+                yDelta = fromY - <span style="font-weight: bold; text-decoration: underline;">this</span>.bottom();
+                yPos = <span style="font-weight: bold; text-decoration: underline;">this</span>.bottom();
+    }
+        <span style="font-weight: bold;">else</span>
+        {
+                yDelta = 0;
+                yPos = <span style="font-weight: bold; text-decoration: underline;">this</span>.centerY();
+        }
+                        
+        <span style="font-weight: bold;">if</span> (yDelta &gt; xDelta)
+        {
+                xPos = <span style="font-weight: bold; text-decoration: underline;">this</span>.centerX();
+        }
+        <span style="font-weight: bold;">else</span> 
+        {
+                yPos  = <span style="font-weight: bold; text-decoration: underline;">this</span>.centerY();
+        }
+        
+        <span style="font-weight: bold;">return</span> [xPos, yPos];
+}
+                
+                
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.centered = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">false</span>;
+}
+
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.pulseHighlight = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">frameNum</span>)
+{                       
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.highlighted)
+        {
+                                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">frameMod</span> = frameNum / 7.0;
+                                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">delta</span>  = Math.abs((frameMod) % (2 * <span style="font-weight: bold; text-decoration: underline;">this</span>.range  - 2) - <span style="font-weight: bold; text-decoration: underline;">this</span>.range + 1)
+                                <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightDiff =  delta + <span style="font-weight: bold; text-decoration: underline;">this</span>.minHeightDiff;
+        }
+                        
+}
+                
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getTailPointerAttachPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">fromX</span>, <span style="font-weight: bold; font-style: italic;">fromY</span>, <span style="font-weight: bold; font-style: italic;">anchorPoint</span>) 
+{
+        <span style="font-weight: bold;">return</span> [<span style="font-weight: bold; text-decoration: underline;">this</span>.x, <span style="font-weight: bold; text-decoration: underline;">this</span>.y];
+}
+                
+                
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getHeadPointerAttachPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">fromX</span>, <span style="font-weight: bold; font-style: italic;">fromY</span>) 
+{
+        <span style="font-weight: bold;">return</span> [<span style="font-weight: bold; text-decoration: underline;">this</span>.x, <span style="font-weight: bold; text-decoration: underline;">this</span>.y];
+}
+                
+<span style="font-weight: bold; font-style: italic;">/*</span><span style="font-weight: bold; font-style: italic;">public function createUndoDelete() : UndoBlock</span>
+<span style="font-weight: bold; font-style: italic;">{</span>
+<span style="font-weight: bold; font-style: italic;">                        // Must be overriden!</span>
+<span style="font-weight: bold; font-style: italic;">                        return null;</span>
+<span style="font-weight: bold; font-style: italic;">}</span>
+<span style="font-weight: bold; font-style: italic;">*/</span>              
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.identifier = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.objectID;
+}
+
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getText = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">index</span>)
+{
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.label;
+}
+                
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getTextColor = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">textIndex</span>)
+{                       
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.labelColor
+}
+                
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setTextColor = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">color</span>, <span style="font-weight: bold; font-style: italic;">textIndex</span>)
+{
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.labelColor = color;
+}
+                
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setText = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">newText</span>, <span style="font-weight: bold; font-style: italic;">textIndex</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.label = newText;
+}
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setHighlightIndex = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">hlIndex</span>)
+{
+   <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex = hlIndex;
+   <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndexDirty = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+}
+
+
+AnimatedObject.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getHighlightIndex = <span style="font-weight: bold;">function</span>()
+{
+   <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightIndex;
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: VLEAD</p>
+<p class="date">Created: 2019-08-27 Tue 13:08</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.1.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

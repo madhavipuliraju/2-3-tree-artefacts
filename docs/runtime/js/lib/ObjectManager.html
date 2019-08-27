@@ -1,0 +1,1903 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title></title>
+<!-- 2019-08-27 Tue 13:08 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="VLEAD" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title"></h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. License</a></li>
+<li><a href="#sec-2">2. Introduction</a>
+<ul>
+<li><a href="#sec-2-1">2.1. This module is used to make the animation objects for the concerned artefacts</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3. Javascript Code</a>
+<ul>
+<li><a href="#sec-3-1">3.1. Basic constructor to set the animation objects, edges,framerate and other required parameters</a></li>
+<li><a href="#sec-3-2">3.2. Function to render the drawing on to the canvas</a></li>
+<li><a href="#sec-3-3">3.3. Function to add highlighted circle</a></li>
+<li><a href="#sec-3-4">3.4. Getters and setters for text colors</a></li>
+<li><a href="#sec-3-5">3.5. Getters and setters for background,foreground,highlighted colors</a></li>
+<li><a href="#sec-3-6">3.6. Getters and setters for text width</a></li>
+<li><a href="#sec-3-7">3.7. Getters and setters for alignment positions at top,right,bottom,left</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Tangle</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> License</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+<i>/ Copyright 2011 David Galles, University of San Francisco. All rights reserved.
+/</i>
+<i>/ Redistribution and use in source and binary forms, with or without modification, are
+/</i> permitted provided that the following conditions are met:
+<i>/
+/</i> 1. Redistributions of source code must retain the above copyright notice, this list of
+<i>/ conditions and the following disclaimer.
+/</i>
+<i>/ 2. Redistributions in binary form must reproduce the above copyright notice, this list
+/</i> of conditions and the following disclaimer in the documentation and/or other materials
+<i>/ provided with the distribution.
+/</i>
+<i>/ THIS SOFTWARE IS PROVIDED BY &lt;COPYRIGHT HOLDER&gt; ``AS IS'' AND ANY EXPRESS OR IMPLIED
+/</i> WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+<i>/ FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL &lt;COPYRIGHT HOLDER&gt; OR
+/</i> CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+<i>/ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+/</i> SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+<i>/ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+/</i> NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+<i>/ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+/</i>
+<i>/ The views and conclusions contained in the software and documentation are those of the
+/</i> authors and should not be interpreted as representing official policies, either expressed
+// or implied, of the University of San Francisco
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Introduction</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> This module is used to make the animation objects for the concerned artefacts</h3>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Javascript Code</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Basic constructor to set the animation objects, edges,framerate and other required parameters</h3>
+<div class="outline-text-3" id="text-3-1">
+<div class="org-src-container">
+
+<pre class="src src-js" id="ObjectManager"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">ObjectManager</span>()
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes = [];
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges = [];
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges = [];
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.activeLayers = [];
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.activeLayers[0] = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.ctx = document.getElementById(<span style="font-style: italic;">'canvas'</span>).getContext(<span style="font-style: italic;">'2d'</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.framenum = 0;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.width = 0;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.height = 0;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.statusReport = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">AnimatedLabel</span>(-1, <span style="font-style: italic;">"XXX"</span>, <span style="font-weight: bold; text-decoration: underline;">false</span>, 30);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.statusReport.x = 30;
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Function to render the drawing on to the canvas</h3>
+<div class="outline-text-3" id="text-3-2">
+<div class="org-src-container">
+
+<pre class="src src-js" id="ObjectManager">        <span style="font-weight: bold; text-decoration: underline;">this</span>.draw = <span style="font-weight: bold;">function</span>()
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.framenum++;
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.framenum &gt; 1000)
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.framenum = 0;
+                
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.ctx.clearRect(0,0,<span style="font-weight: bold; text-decoration: underline;">this</span>.width,<span style="font-weight: bold; text-decoration: underline;">this</span>.height); <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">clear canvas</span>
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.statusReport.y = <span style="font-weight: bold; text-decoration: underline;">this</span>.height - 15;
+                
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span>;
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">j</span>;
+                <span style="font-weight: bold;">for</span> (i = 0; i &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes.length; i++)
+                {
+                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; !<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].highlighted &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].addedToScene &amp;&amp; !<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].alwaysOnTop)
+                        {
+                                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].draw(<span style="font-weight: bold; text-decoration: underline;">this</span>.ctx);   
+                        }
+                }
+                <span style="font-weight: bold;">for</span> (i = 0; i &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes.length; i++)
+                {
+                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].highlighted &amp;&amp; !<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].alwaysOnTop) &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].addedToScene)
+                        {
+                                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].pulseHighlight(<span style="font-weight: bold; text-decoration: underline;">this</span>.framenum);
+                                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].draw(<span style="font-weight: bold; text-decoration: underline;">this</span>.ctx);   
+                        }
+                }
+                
+                <span style="font-weight: bold;">for</span> (i = 0; i &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes.length; i++)
+                {
+                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].alwaysOnTop &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].addedToScene)
+                        {
+                                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].pulseHighlight(<span style="font-weight: bold; text-decoration: underline;">this</span>.framenum);
+                                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].draw(<span style="font-weight: bold; text-decoration: underline;">this</span>.ctx);   
+                        }
+                }
+                
+                
+                <span style="font-weight: bold;">for</span> (i = 0; i &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges.length; i++)
+                {
+                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i] != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                        {
+                                <span style="font-weight: bold;">for</span> (j = 0; j &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i].length; j++)
+                                {
+                                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i][j].addedToScene)
+                                        {
+                                                <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i][j].pulseHighlight(<span style="font-weight: bold; text-decoration: underline;">this</span>.framenum); 
+                                                <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i][j].draw(<span style="font-weight: bold; text-decoration: underline;">this</span>.ctx);        
+                                        }
+                                        
+                                }
+                                
+                        }
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.statusReport.draw(<span style="font-weight: bold; text-decoration: underline;">this</span>.ctx);
+                
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.update = <span style="font-weight: bold;">function</span> ()
+        {
+                
+                
+        }
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setLayers = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">shown</span>,<span style="font-weight: bold; font-style: italic;">layers</span>)
+        {
+                <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; layers.length; i++)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.activeLayers[layers[i]] = shown;
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.resetLayers();
+                
+        }
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Function to add highlighted circle</h3>
+<div class="outline-text-3" id="text-3-3">
+<div class="org-src-container">
+
+<pre class="src src-js" id="ObjectManager">        <span style="font-weight: bold; text-decoration: underline;">this</span>.addHighlightCircleObject = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>, <span style="font-weight: bold; font-style: italic;">objectColor</span>, <span style="font-weight: bold; font-style: italic;">radius</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                    <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"addHighlightCircleObject:Object with same ID ("</span> + String(objectID) + <span style="font-style: italic;">") already Exists!"</span>
+                }
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">newNode</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">HighlightCircle</span>(objectID, objectColor, radius)
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] = newNode;         
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setEdgeAlpha = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">fromID</span>, <span style="font-weight: bold; font-style: italic;">toID</span>, <span style="font-weight: bold; font-style: italic;">alphaVal</span>)
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">oldAlpha</span> = 1.0; 
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp;
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">len</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID].length;
+                        <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = len - 1; i &gt;= 0; i--)
+                        {
+                                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp;
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i] != <span style="font-weight: bold; text-decoration: underline;">undefined</span> &amp;&amp;
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i].Node2 == <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[toID])
+                                {
+                                        oldAlpha = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i].alpha
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i].alpha = alphaVal;         
+                                }
+                        }
+                }       
+                <span style="font-weight: bold;">return</span> oldAlpha;
+                
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setAlpha = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>, <span style="font-weight: bold; font-style: italic;">alphaVal</span>) 
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].setAlpha(alphaVal);
+                }
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getAlpha = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].getAlpha();
+                }
+                <span style="font-weight: bold;">else</span>
+                {
+                        <span style="font-weight: bold;">return</span> -1;
+                }
+        }
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3-4" class="outline-3">
+<h3 id="sec-3-4"><span class="section-number-3">3.4</span> Getters and setters for text colors</h3>
+<div class="outline-text-3" id="text-3-4">
+<div class="org-src-container">
+
+<pre class="src src-js" id="ObjectManager">        <span style="font-weight: bold; text-decoration: underline;">this</span>.getTextColor = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>, <span style="font-weight: bold; font-style: italic;">index</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].getTextColor(index);
+                }
+                <span style="font-weight: bold;">else</span>
+                {
+                        <span style="font-weight: bold;">return</span> <span style="font-style: italic;">"#000000"</span>;
+                }
+                        
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setTextColor = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>, <span style="font-weight: bold; font-style: italic;">color</span>, <span style="font-weight: bold; font-style: italic;">index</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].setTextColor(color, index);
+                }
+        }
+
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setHighlightIndex = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>, <span style="font-weight: bold; font-style: italic;">index</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].setHighlightIndex(index);
+                }
+        }
+
+
+        
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setAllLayers = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">layers</span>)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.activeLayers = [];
+                <span style="font-weight: bold;">for</span>(<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; layers.length; i++)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.activeLayers[layers[i]] = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.resetLayers();
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.resetLayers = <span style="font-weight: bold;">function</span>()
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span>
+                <span style="font-weight: bold;">for</span> (i = 0; i &lt;<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes.length; i++)
+                {
+                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                        {
+                                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].addedToScene = <span style="font-weight: bold; text-decoration: underline;">this</span>.activeLayers[<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].layer] == <span style="font-weight: bold; text-decoration: underline;">true</span>;
+                        }
+                }
+                <span style="font-weight: bold;">for</span> (i = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges.length - 1; i &gt;= 0; i--)
+                {
+                    <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                        {
+                                <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">j</span> = 0; j &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i].length; j++)
+                                {
+                                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i][j] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i][j] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                                        {
+                                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i][j].addedToScene =
+                                                                <span style="font-weight: bold; text-decoration: underline;">this</span>.activeLayers[<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i][j].Node1.layer] == <span style="font-weight: bold; text-decoration: underline;">true</span> &amp;&amp;
+                                                                <span style="font-weight: bold; text-decoration: underline;">this</span>.activeLayers[<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i][j].Node2.layer] == <span style="font-weight: bold; text-decoration: underline;">true</span>;
+                                        }
+                                        
+                                }
+                                
+                        }
+                        
+                }
+                
+        }
+        
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setLayer = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>, <span style="font-weight: bold; font-style: italic;">layer</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID].layer = layer;
+                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.activeLayers[layer])
+                        {
+                                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID].addedToScene = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+                        }
+                        <span style="font-weight: bold;">else</span>
+                        {
+                                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID].addedToScene = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+                        }
+                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                        {
+                                <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectID].length; i++)
+                                {
+                                        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">nextEdge</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectID][i];
+                                        <span style="font-weight: bold;">if</span> (nextEdge != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; nextEdge != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                                        {
+                                                nextEdge.addedToScene = ((nextEdge.Node1.addedToScene) &amp;&amp;
+                                                                                                (nextEdge.Node2.addedToScene));
+                                                
+                                        }
+                                }
+                        }
+                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                        {
+                                <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectID].length; i++)
+                                {
+                                        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">nextEdge</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectID][i];
+                                        <span style="font-weight: bold;">if</span> (nextEdge != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; nextEdge != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                                        {
+                                                nextEdge.addedToScene = ((nextEdge.Node1.addedToScene) &amp;&amp;
+                                                                                                 (nextEdge.Node2.addedToScene));
+                                                
+                                        }
+                                }
+                        }                       
+                }
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.clearAllObjects = <span style="font-weight: bold;">function</span>()
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes = [];
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges = [];
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges = [];
+        }
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3-5" class="outline-3">
+<h3 id="sec-3-5"><span class="section-number-3">3.5</span> Getters and setters for background,foreground,highlighted colors</h3>
+<div class="outline-text-3" id="text-3-5">
+<div class="org-src-container">
+
+<pre class="src src-js" id="ObjectManager">        <span style="font-weight: bold; text-decoration: underline;">this</span>.setForegroundColor = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>, <span style="font-weight: bold; font-style: italic;">color</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID].setForegroundColor(color);
+                        
+                }
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setBackgroundColor = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>, <span style="font-weight: bold; font-style: italic;">color</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID].setBackgroundColor(color);
+                        
+                }
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setHighlight = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>, <span style="font-weight: bold; font-style: italic;">val</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">null</span>  || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Error here?</span>
+                        <span style="font-weight: bold;">return</span>;
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].setHighlight(val);
+        }
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getHighlight = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">null</span>  || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Error here?</span>
+                        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">false</span>;
+                }
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].getHighlight();
+        }
+
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getHighlightIndex = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">null</span>  || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Error here?</span>
+                        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">false</span>;
+                }
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].getHighlightIndex();
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setWidth = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>, <span style="font-weight: bold; font-style: italic;">val</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">null</span>  || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Error here?</span>
+                        <span style="font-weight: bold;">return</span>;
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].setWidth(val);
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setHeight = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>, <span style="font-weight: bold; font-style: italic;">val</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">null</span>  || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Error here?</span>
+                        <span style="font-weight: bold;">return</span>;
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].setHeight(val);
+        }
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getHeight = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">null</span>  || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Error here?</span>
+                        <span style="font-weight: bold;">return</span> -1;
+                }
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].getHeight();
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getWidth = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">null</span>  || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Error here?</span>
+                        <span style="font-weight: bold;">return</span> -1;
+                }
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].getWidth();
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.backgroundColor = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID].backgroundColor;
+                }
+                <span style="font-weight: bold;">else</span>
+                {
+                        <span style="font-weight: bold;">return</span> <span style="font-style: italic;">'#000000'</span>;
+                }
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.foregroundColor = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID].foregroundColor;
+                }
+                <span style="font-weight: bold;">else</span>
+                {
+                        <span style="font-weight: bold;">return</span> <span style="font-style: italic;">'#000000'</span>;
+                }
+        }
+        
+                        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.disconnect = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectIDfrom</span>,<span style="font-weight: bold; font-style: italic;">objectIDto</span>)
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">undo</span> = <span style="font-weight: bold; text-decoration: underline;">null</span>;
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span>;
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectIDfrom] != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">len</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectIDfrom].length;
+                        <span style="font-weight: bold;">for</span> (i = len - 1; i &gt;= 0; i--)
+                        {
+                                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectIDfrom][i] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectIDfrom][i].Node2 == <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectIDto])
+                                {
+                                        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">deleted</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectIDfrom][i];
+                                        undo = deleted.createUndoDisconnect();
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectIDfrom][i] = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectIDfrom][len - 1];
+                                        len -= 1;
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectIDfrom].pop();
+                                }
+                        }
+                }
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectIDto] != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        len = <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectIDto].length;
+                        <span style="font-weight: bold;">for</span> (i = len - 1; i &gt;= 0; i--)
+                        {
+                                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectIDto][i] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectIDto][i].Node1 == <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectIDfrom])
+                                {
+                                        deleted = <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectIDto][i];
+                                        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Note:  Don't need to remove this child, did it above on the regular edge</span>
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectIDto][i] = <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectIDto][len - 1];
+                                        len -= 1;
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectIDto].pop();
+                                }
+                        }
+                }
+                <span style="font-weight: bold;">return</span> undo;
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.deleteIncident = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>)
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">undoStack</span> = [];
+
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">len</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectID].length;
+                        <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = len - 1; i &gt;= 0; i--)
+                        {
+                                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">deleted</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectID][i];
+                                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">node2ID</span> = deleted.Node2.identifier();
+                                undoStack.push(deleted.createUndoDisconnect());
+                                
+                                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">len2</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[node2ID].length;
+                                <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">j</span> = len2 - 1; j &gt;=0; j--)
+                                {
+                                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[node2ID][j] == deleted)
+                                        {
+                                                <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[node2ID][j] = <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[node2ID][len2 - 1];
+                                                len2 -= 1;
+                                                <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[node2ID].pop();
+                                        }
+                                }
+                        }
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectID] = <span style="font-weight: bold; text-decoration: underline;">null</span>;
+                }
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        len = <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectID].length;
+                        <span style="font-weight: bold;">for</span> (i = len - 1; i &gt;= 0; i--)
+                        {
+                                deleted = <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectID][i];
+                                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">node1ID</span> = deleted.Node1.identifier();
+                                undoStack.push(deleted.createUndoDisconnect());
+
+                                len2 = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[node1ID].length;
+                                <span style="font-weight: bold;">for</span> (j = len2 - 1; j &gt;=0; j--)
+                                {
+                                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[node1ID][j] == deleted)
+                                        {
+                                                <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[node1ID][j] = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[node1ID][len2 - 1];
+                                                len2 -= 1;
+                                                <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[node1ID].pop();
+                                        }
+                                }
+                        }
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectID] = <span style="font-weight: bold; text-decoration: underline;">null</span>;
+                }
+                <span style="font-weight: bold;">return</span> undoStack;
+        }
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.removeObject = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">ObjectID</span>)
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">OldObject</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[ObjectID];
+                <span style="font-weight: bold;">if</span> (ObjectID == <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes.length - 1)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes.pop();
+                }
+                <span style="font-weight: bold;">else</span>
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[ObjectID] = <span style="font-weight: bold; text-decoration: underline;">null</span>;
+                }
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getObject = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"getObject:Object with ID ("</span> + String(objectID) + <span style="font-style: italic;">") does not exist"</span>
+                }
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID];
+                
+        }
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.addCircleObject = <span style="font-weight: bold;">function</span> (<span style="font-weight: bold; font-style: italic;">objectID</span>, <span style="font-weight: bold; font-style: italic;">objectLabel</span>)
+        {
+                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                        {
+                                <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"addCircleObject:Object with same ID ("</span> + String(objectID) + <span style="font-style: italic;">") already Exists!"</span>
+                        }
+                        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">newNode</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">AnimatedCircle</span>(objectID, objectLabel);
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] = newNode;
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getNodeX = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"getting x position of an object that does not exit"</span>;
+                }       
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].x;
+        }
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3-6" class="outline-3">
+<h3 id="sec-3-6"><span class="section-number-3">3.6</span> Getters and setters for text width</h3>
+<div class="outline-text-3" id="text-3-6">
+<div class="org-src-container">
+
+<pre class="src src-js" id="ObjectManager">        <span style="font-weight: bold; text-decoration: underline;">this</span>.getTextWidth = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">text</span>)
+        {
+                <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Need to make fonts more flexible, and less hardwired.</span>
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.ctx.font = <span style="font-style: italic;">'10px sans-serif'</span>;
+                <span style="font-weight: bold;">if</span> (text==<span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        w = 3;
+                }
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">strList</span> = text.split(<span style="font-style: italic;">"\n"</span>);
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">width</span> = 0;
+                <span style="font-weight: bold;">if</span> (strList.length == 1)
+                {
+                        width = <span style="font-weight: bold; text-decoration: underline;">this</span>.ctx.measureText(text).width;
+                }
+                <span style="font-weight: bold;">else</span>
+                {
+                        <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; strList.length; i++)
+                        {
+                                width = Math.max(width, <span style="font-weight: bold; text-decoration: underline;">this</span>.ctx.measureText(strList[i]).width);
+                        }               
+                }
+                
+                <span style="font-weight: bold;">return</span> width;
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setText = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>, <span style="font-weight: bold; font-style: italic;">text</span>, <span style="font-weight: bold; font-style: italic;">index</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">return</span>;
+                        <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"setting text of an object that does not exit"</span>;
+                }                       
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].setText(text, index, <span style="font-weight: bold; text-decoration: underline;">this</span>.getTextWidth(text));
+                
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getText = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>, <span style="font-weight: bold; font-style: italic;">index</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"getting text of an object that does not exit"</span>;
+                }                       
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].getText(index);
+                
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getNodeY = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"getting y position of an object that does not exit"</span>;
+                }       
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].y;
+        }
+
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.connectEdge = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectIDfrom</span>, <span style="font-weight: bold; font-style: italic;">objectIDto</span>, <span style="font-weight: bold; font-style: italic;">color</span>, <span style="font-weight: bold; font-style: italic;">curve</span>, <span style="font-weight: bold; font-style: italic;">directed</span>, <span style="font-weight: bold; font-style: italic;">lab</span>, <span style="font-weight: bold; font-style: italic;">connectionPoint</span>)
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">fromObj</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectIDfrom];
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">toObj</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectIDto];
+                <span style="font-weight: bold;">if</span> (fromObj == <span style="font-weight: bold; text-decoration: underline;">null</span> || toObj == <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"Tried to connect two nodes, one didn't exist!"</span>;
+                }
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">l</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Line</span>(fromObj,toObj, color, curve, directed, lab, connectionPoint);
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectIDfrom] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectIDfrom] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectIDfrom] = [];
+                }
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectIDto] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectIDto] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectIDto] = [];
+                }
+                l.addedToScene = fromObj.addedToScene &amp;&amp; toObj.addedToScene;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectIDfrom].push(l);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectIDto].push(l);
+                
+        }
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setNull = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>, <span style="font-weight: bold; font-style: italic;">nullVal</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID].setNull(nullVal);
+                        
+                }
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getNull = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID].getNull();
+                }
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">false</span>;  <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Error here?</span>
+        }
+        
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setEdgeColor = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">fromID</span>, <span style="font-weight: bold; font-style: italic;">toID</span>, <span style="font-weight: bold; font-style: italic;">color</span>) <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">returns old color</span>
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">oldColor</span> =<span style="font-style: italic;">"#000000"</span>;
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp;
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">len</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID].length;
+                        <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = len - 1; i &gt;= 0; i--)
+                        {
+                                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp;
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i] != <span style="font-weight: bold; text-decoration: underline;">undefined</span> &amp;&amp;
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i].Node2 == <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[toID])
+                                {
+                                        oldColor = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i].color();
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i].setColor(color);          
+                                }
+                        }
+                }       
+                <span style="font-weight: bold;">return</span> oldColor;
+        }
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3-7" class="outline-3">
+<h3 id="sec-3-7"><span class="section-number-3">3.7</span> Getters and setters for alignment positions at top,right,bottom,left</h3>
+<div class="outline-text-3" id="text-3-7">
+<div class="org-src-container">
+
+<pre class="src src-js" id="ObjectManager">        <span style="font-weight: bold; text-decoration: underline;">this</span>.alignTop = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">id1</span>, <span style="font-weight: bold; font-style: italic;">id2</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1] == <span style="font-weight: bold; text-decoration: underline;">undefined</span> ||
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"Tring to align two nodes, one doesn't exist: "</span> + String(id1) + <span style="font-style: italic;">","</span> + String(id2);                        
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1].alignTop(<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2]);
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.alignLeft = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">id1</span>, <span style="font-weight: bold; font-style: italic;">id2</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1] == <span style="font-weight: bold; text-decoration: underline;">undefined</span> ||
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"Tring to align two nodes, one doesn't exist: "</span> + String(id1) + <span style="font-style: italic;">","</span> + String(id2);                        
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1].alignLeft(<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2]);
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.alignRight = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">id1</span>, <span style="font-weight: bold; font-style: italic;">id2</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1] == <span style="font-weight: bold; text-decoration: underline;">undefined</span> ||
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"Tring to align two nodes, one doesn't exist: "</span> + String(id1) + <span style="font-style: italic;">","</span> + String(id2);                        
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1].alignRight(<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2]);
+        }
+        
+
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getAlignRightPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">id1</span>, <span style="font-weight: bold; font-style: italic;">id2</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1] == <span style="font-weight: bold; text-decoration: underline;">undefined</span> ||
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"Tring to align two nodes, one doesn't exist: "</span> + String(id1) + <span style="font-style: italic;">","</span> + String(id2);                        
+                }
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1].getAlignRightPos(<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2]);
+        }
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getAlignLeftPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">id1</span>, <span style="font-weight: bold; font-style: italic;">id2</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1] == <span style="font-weight: bold; text-decoration: underline;">undefined</span> ||
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"Tring to align two nodes, one doesn't exist: "</span> + String(id1) + <span style="font-style: italic;">","</span> + String(id2);                        
+                }
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1].getAlignLeftPos(<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2]);
+        }
+        
+
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.alignBottom = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">id1</span>, <span style="font-weight: bold; font-style: italic;">id2</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1] == <span style="font-weight: bold; text-decoration: underline;">undefined</span> ||
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"Tring to align two nodes, one doesn't exist: "</span> + String(id1) + <span style="font-style: italic;">","</span> + String(id2);                        
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1].alignBottom(<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2]);
+        }
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setEdgeHighlight = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">fromID</span>, <span style="font-weight: bold; font-style: italic;">toID</span>, <span style="font-weight: bold; font-style: italic;">val</span>) <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">returns old color</span>
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">oldHighlight</span> = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp;
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">len</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID].length;
+                        <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = len - 1; i &gt;= 0; i--)
+                        {
+                                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; 
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i] != <span style="font-weight: bold; text-decoration: underline;">undefined</span> &amp;&amp; 
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i].Node2 == <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[toID])
+                                {
+                                        oldHighlight = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i].highlighted;
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i].setHighlight(val);                
+                                }
+                        }
+                }
+                <span style="font-weight: bold;">return</span> oldHighlight;
+        }
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.addLabelObject = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>, <span style="font-weight: bold; font-style: italic;">objectLabel</span>, <span style="font-weight: bold; font-style: italic;">centering</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Error</span>(<span style="font-style: italic;">"addLabelObject: Object Already Exists!"</span>);
+                }
+                
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">newLabel</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">AnimatedLabel</span>(objectID, objectLabel, centering, <span style="font-weight: bold; text-decoration: underline;">this</span>.getTextWidth(objectLabel));
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] = newLabel;
+        }
+        
+                
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.addLinkedListObject = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>, <span style="font-weight: bold; font-style: italic;">nodeLabel</span>, <span style="font-weight: bold; font-style: italic;">width</span>, <span style="font-weight: bold; font-style: italic;">height</span>, <span style="font-weight: bold; font-style: italic;">linkPer</span>, <span style="font-weight: bold; font-style: italic;">verticalOrientation</span>, <span style="font-weight: bold; font-style: italic;">linkPosEnd</span>, <span style="font-weight: bold; font-style: italic;">numLabels</span>, <span style="font-weight: bold; font-style: italic;">backgroundColor</span>, <span style="font-weight: bold; font-style: italic;">foregroundColor</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Error</span>(<span style="font-style: italic;">"addLinkedListObject:Object with same ID already Exists!"</span>);
+                        <span style="font-weight: bold;">return</span>;
+                }
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">newNode</span>  = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">AnimatedLinkedList</span>(objectID, nodeLabel, width, height, linkPer, verticalOrientation, linkPosEnd, numLabels, backgroundColor, foregroundColor);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] = newNode;
+        }
+        
+         
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getNumElements = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>)
+        {
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID].getNumElements();
+        }
+         
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setNumElements = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>, <span style="font-weight: bold; font-style: italic;">numElems</span>)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID].setNumElements(numElems);
+        }
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.addBTreeNode = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>, <span style="font-weight: bold; font-style: italic;">widthPerElem</span>, <span style="font-weight: bold; font-style: italic;">height</span>, <span style="font-weight: bold; font-style: italic;">numElems</span>, <span style="font-weight: bold; font-style: italic;">backgroundColor</span>, <span style="font-weight: bold; font-style: italic;">foregroundColor</span>)
+         {
+                 backgroundColor = (backgroundColor == <span style="font-weight: bold; text-decoration: underline;">undefined</span>) ? <span style="font-style: italic;">"#FFFFFF"</span> : backgroundColor;
+                 foregroundColor = (foregroundColor == <span style="font-weight: bold; text-decoration: underline;">undefined</span>) ? <span style="font-style: italic;">"#FFFFFF"</span> : foregroundColor;
+                 
+                 <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                 {
+                         <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"addBTreeNode:Object with same ID already Exists!"</span>;
+                 }
+
+                 <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">newNode</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">AnimatedBTreeNode</span>(objectID,widthPerElem, height, numElems, backgroundColor, foregroundColor);
+                 <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] = newNode;
+         }
+        
+         <span style="font-weight: bold; text-decoration: underline;">this</span>.addRectangleObject = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>,<span style="font-weight: bold; font-style: italic;">nodeLabel</span>, <span style="font-weight: bold; font-style: italic;">width</span>, <span style="font-weight: bold; font-style: italic;">height</span>, <span style="font-weight: bold; font-style: italic;">xJustify</span> , <span style="font-weight: bold; font-style: italic;">yJustify</span> , <span style="font-weight: bold; font-style: italic;">backgroundColor</span>, <span style="font-weight: bold; font-style: italic;">foregroundColor</span>)
+         {
+                 <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                 {
+                         <span style="font-weight: bold;">throw</span> <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Error</span>(<span style="font-style: italic;">"addRectangleObject:Object with same ID already Exists!"</span>);
+                 }
+                 <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">newNode</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">AnimatedRectangle</span>(objectID, nodeLabel, width, height, xJustify, yJustify, backgroundColor, foregroundColor);
+                 <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] = newNode;
+                 
+         }
+         
+         
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setNodePosition = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>, <span style="font-weight: bold; font-style: italic;">newX</span>, <span style="font-weight: bold; font-style: italic;">newY</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Error here?</span>
+                        <span style="font-weight: bold;">return</span>;
+                }
+                <span style="font-weight: bold;">if</span> (newX == <span style="font-weight: bold; text-decoration: underline;">undefined</span> || newY == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        
+                        <span style="font-weight: bold;">return</span>;
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].x = newX;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].y = newY;
+                <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">Don't need to dirty anything, since we repaint everything every frame</span>
+<span style="font-weight: bold; font-style: italic;">                 (TODO:  Revisit if we do conditional redraws)</span>
+<span style="font-weight: bold; font-style: italic;">                 }*/</span>
+                
+        }
+        
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Tangle</h2>
+<div class="outline-text-2" id="text-4">
+<div class="org-src-container">
+
+<pre class="src src-js"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">ObjectManager</span>()
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes = [];
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges = [];
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges = [];
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.activeLayers = [];
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.activeLayers[0] = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.ctx = document.getElementById(<span style="font-style: italic;">'canvas'</span>).getContext(<span style="font-style: italic;">'2d'</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.framenum = 0;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.width = 0;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.height = 0;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.statusReport = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">AnimatedLabel</span>(-1, <span style="font-style: italic;">"XXX"</span>, <span style="font-weight: bold; text-decoration: underline;">false</span>, 30);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.statusReport.x = 30;
+        
+        
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.draw = <span style="font-weight: bold;">function</span>()
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.framenum++;
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.framenum &gt; 1000)
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.framenum = 0;
+                
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.ctx.clearRect(0,0,<span style="font-weight: bold; text-decoration: underline;">this</span>.width,<span style="font-weight: bold; text-decoration: underline;">this</span>.height); <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">clear canvas</span>
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.statusReport.y = <span style="font-weight: bold; text-decoration: underline;">this</span>.height - 15;
+                
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span>;
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">j</span>;
+                <span style="font-weight: bold;">for</span> (i = 0; i &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes.length; i++)
+                {
+                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; !<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].highlighted &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].addedToScene &amp;&amp; !<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].alwaysOnTop)
+                        {
+                                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].draw(<span style="font-weight: bold; text-decoration: underline;">this</span>.ctx);   
+                        }
+                }
+                <span style="font-weight: bold;">for</span> (i = 0; i &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes.length; i++)
+                {
+                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].highlighted &amp;&amp; !<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].alwaysOnTop) &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].addedToScene)
+                        {
+                                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].pulseHighlight(<span style="font-weight: bold; text-decoration: underline;">this</span>.framenum);
+                                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].draw(<span style="font-weight: bold; text-decoration: underline;">this</span>.ctx);   
+                        }
+                }
+                
+                <span style="font-weight: bold;">for</span> (i = 0; i &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes.length; i++)
+                {
+                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].alwaysOnTop &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].addedToScene)
+                        {
+                                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].pulseHighlight(<span style="font-weight: bold; text-decoration: underline;">this</span>.framenum);
+                                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].draw(<span style="font-weight: bold; text-decoration: underline;">this</span>.ctx);   
+                        }
+                }
+                
+                
+                <span style="font-weight: bold;">for</span> (i = 0; i &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges.length; i++)
+                {
+                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i] != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                        {
+                                <span style="font-weight: bold;">for</span> (j = 0; j &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i].length; j++)
+                                {
+                                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i][j].addedToScene)
+                                        {
+                                                <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i][j].pulseHighlight(<span style="font-weight: bold; text-decoration: underline;">this</span>.framenum); 
+                                                <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i][j].draw(<span style="font-weight: bold; text-decoration: underline;">this</span>.ctx);        
+                                        }
+                                        
+                                }
+                                
+                        }
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.statusReport.draw(<span style="font-weight: bold; text-decoration: underline;">this</span>.ctx);
+                
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.update = <span style="font-weight: bold;">function</span> ()
+        {
+                
+                
+        }
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setLayers = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">shown</span>,<span style="font-weight: bold; font-style: italic;">layers</span>)
+        {
+                <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; layers.length; i++)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.activeLayers[layers[i]] = shown;
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.resetLayers();
+                
+        }
+        
+        
+        
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.addHighlightCircleObject = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>, <span style="font-weight: bold; font-style: italic;">objectColor</span>, <span style="font-weight: bold; font-style: italic;">radius</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                    <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"addHighlightCircleObject:Object with same ID ("</span> + String(objectID) + <span style="font-style: italic;">") already Exists!"</span>
+                }
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">newNode</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">HighlightCircle</span>(objectID, objectColor, radius)
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] = newNode;         
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setEdgeAlpha = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">fromID</span>, <span style="font-weight: bold; font-style: italic;">toID</span>, <span style="font-weight: bold; font-style: italic;">alphaVal</span>)
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">oldAlpha</span> = 1.0; 
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp;
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">len</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID].length;
+                        <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = len - 1; i &gt;= 0; i--)
+                        {
+                                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp;
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i] != <span style="font-weight: bold; text-decoration: underline;">undefined</span> &amp;&amp;
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i].Node2 == <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[toID])
+                                {
+                                        oldAlpha = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i].alpha
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i].alpha = alphaVal;         
+                                }
+                        }
+                }       
+                <span style="font-weight: bold;">return</span> oldAlpha;
+                
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setAlpha = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>, <span style="font-weight: bold; font-style: italic;">alphaVal</span>) 
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].setAlpha(alphaVal);
+                }
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getAlpha = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].getAlpha();
+                }
+                <span style="font-weight: bold;">else</span>
+                {
+                        <span style="font-weight: bold;">return</span> -1;
+                }
+        }
+        
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getTextColor = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>, <span style="font-weight: bold; font-style: italic;">index</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].getTextColor(index);
+                }
+                <span style="font-weight: bold;">else</span>
+                {
+                        <span style="font-weight: bold;">return</span> <span style="font-style: italic;">"#000000"</span>;
+                }
+                        
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setTextColor = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>, <span style="font-weight: bold; font-style: italic;">color</span>, <span style="font-weight: bold; font-style: italic;">index</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].setTextColor(color, index);
+                }
+        }
+
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setHighlightIndex = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>, <span style="font-weight: bold; font-style: italic;">index</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].setHighlightIndex(index);
+                }
+        }
+
+
+        
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setAllLayers = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">layers</span>)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.activeLayers = [];
+                <span style="font-weight: bold;">for</span>(<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; layers.length; i++)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.activeLayers[layers[i]] = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.resetLayers();
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.resetLayers = <span style="font-weight: bold;">function</span>()
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span>
+                <span style="font-weight: bold;">for</span> (i = 0; i &lt;<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes.length; i++)
+                {
+                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                        {
+                                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].addedToScene = <span style="font-weight: bold; text-decoration: underline;">this</span>.activeLayers[<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[i].layer] == <span style="font-weight: bold; text-decoration: underline;">true</span>;
+                        }
+                }
+                <span style="font-weight: bold;">for</span> (i = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges.length - 1; i &gt;= 0; i--)
+                {
+                    <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                        {
+                                <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">j</span> = 0; j &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i].length; j++)
+                                {
+                                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i][j] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i][j] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                                        {
+                                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i][j].addedToScene =
+                                                                <span style="font-weight: bold; text-decoration: underline;">this</span>.activeLayers[<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i][j].Node1.layer] == <span style="font-weight: bold; text-decoration: underline;">true</span> &amp;&amp;
+                                                                <span style="font-weight: bold; text-decoration: underline;">this</span>.activeLayers[<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[i][j].Node2.layer] == <span style="font-weight: bold; text-decoration: underline;">true</span>;
+                                        }
+                                        
+                                }
+                                
+                        }
+                        
+                }
+                
+        }
+        
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setLayer = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>, <span style="font-weight: bold; font-style: italic;">layer</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID].layer = layer;
+                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.activeLayers[layer])
+                        {
+                                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID].addedToScene = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+                        }
+                        <span style="font-weight: bold;">else</span>
+                        {
+                                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID].addedToScene = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+                        }
+                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                        {
+                                <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectID].length; i++)
+                                {
+                                        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">nextEdge</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectID][i];
+                                        <span style="font-weight: bold;">if</span> (nextEdge != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; nextEdge != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                                        {
+                                                nextEdge.addedToScene = ((nextEdge.Node1.addedToScene) &amp;&amp;
+                                                                                                (nextEdge.Node2.addedToScene));
+                                                
+                                        }
+                                }
+                        }
+                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                        {
+                                <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectID].length; i++)
+                                {
+                                        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">nextEdge</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectID][i];
+                                        <span style="font-weight: bold;">if</span> (nextEdge != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; nextEdge != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                                        {
+                                                nextEdge.addedToScene = ((nextEdge.Node1.addedToScene) &amp;&amp;
+                                                                                                 (nextEdge.Node2.addedToScene));
+                                                
+                                        }
+                                }
+                        }                       
+                }
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.clearAllObjects = <span style="font-weight: bold;">function</span>()
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes = [];
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges = [];
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges = [];
+        }
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setForegroundColor = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>, <span style="font-weight: bold; font-style: italic;">color</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID].setForegroundColor(color);
+                        
+                }
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setBackgroundColor = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>, <span style="font-weight: bold; font-style: italic;">color</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID].setBackgroundColor(color);
+                        
+                }
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setHighlight = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>, <span style="font-weight: bold; font-style: italic;">val</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">null</span>  || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Error here?</span>
+                        <span style="font-weight: bold;">return</span>;
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].setHighlight(val);
+        }
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getHighlight = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">null</span>  || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Error here?</span>
+                        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">false</span>;
+                }
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].getHighlight();
+        }
+
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getHighlightIndex = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">null</span>  || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Error here?</span>
+                        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">false</span>;
+                }
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].getHighlightIndex();
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setWidth = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>, <span style="font-weight: bold; font-style: italic;">val</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">null</span>  || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Error here?</span>
+                        <span style="font-weight: bold;">return</span>;
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].setWidth(val);
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setHeight = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>, <span style="font-weight: bold; font-style: italic;">val</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">null</span>  || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Error here?</span>
+                        <span style="font-weight: bold;">return</span>;
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].setHeight(val);
+        }
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getHeight = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">null</span>  || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Error here?</span>
+                        <span style="font-weight: bold;">return</span> -1;
+                }
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].getHeight();
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getWidth = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">null</span>  || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Error here?</span>
+                        <span style="font-weight: bold;">return</span> -1;
+                }
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].getWidth();
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.backgroundColor = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID].backgroundColor;
+                }
+                <span style="font-weight: bold;">else</span>
+                {
+                        <span style="font-weight: bold;">return</span> <span style="font-style: italic;">'#000000'</span>;
+                }
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.foregroundColor = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID].foregroundColor;
+                }
+                <span style="font-weight: bold;">else</span>
+                {
+                        <span style="font-weight: bold;">return</span> <span style="font-style: italic;">'#000000'</span>;
+                }
+        }
+        
+                        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.disconnect = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectIDfrom</span>,<span style="font-weight: bold; font-style: italic;">objectIDto</span>)
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">undo</span> = <span style="font-weight: bold; text-decoration: underline;">null</span>;
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span>;
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectIDfrom] != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">len</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectIDfrom].length;
+                        <span style="font-weight: bold;">for</span> (i = len - 1; i &gt;= 0; i--)
+                        {
+                                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectIDfrom][i] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectIDfrom][i].Node2 == <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectIDto])
+                                {
+                                        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">deleted</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectIDfrom][i];
+                                        undo = deleted.createUndoDisconnect();
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectIDfrom][i] = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectIDfrom][len - 1];
+                                        len -= 1;
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectIDfrom].pop();
+                                }
+                        }
+                }
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectIDto] != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        len = <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectIDto].length;
+                        <span style="font-weight: bold;">for</span> (i = len - 1; i &gt;= 0; i--)
+                        {
+                                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectIDto][i] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectIDto][i].Node1 == <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectIDfrom])
+                                {
+                                        deleted = <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectIDto][i];
+                                        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Note:  Don't need to remove this child, did it above on the regular edge</span>
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectIDto][i] = <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectIDto][len - 1];
+                                        len -= 1;
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectIDto].pop();
+                                }
+                        }
+                }
+                <span style="font-weight: bold;">return</span> undo;
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.deleteIncident = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>)
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">undoStack</span> = [];
+
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">len</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectID].length;
+                        <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = len - 1; i &gt;= 0; i--)
+                        {
+                                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">deleted</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectID][i];
+                                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">node2ID</span> = deleted.Node2.identifier();
+                                undoStack.push(deleted.createUndoDisconnect());
+                                
+                                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">len2</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[node2ID].length;
+                                <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">j</span> = len2 - 1; j &gt;=0; j--)
+                                {
+                                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[node2ID][j] == deleted)
+                                        {
+                                                <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[node2ID][j] = <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[node2ID][len2 - 1];
+                                                len2 -= 1;
+                                                <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[node2ID].pop();
+                                        }
+                                }
+                        }
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectID] = <span style="font-weight: bold; text-decoration: underline;">null</span>;
+                }
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        len = <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectID].length;
+                        <span style="font-weight: bold;">for</span> (i = len - 1; i &gt;= 0; i--)
+                        {
+                                deleted = <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectID][i];
+                                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">node1ID</span> = deleted.Node1.identifier();
+                                undoStack.push(deleted.createUndoDisconnect());
+
+                                len2 = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[node1ID].length;
+                                <span style="font-weight: bold;">for</span> (j = len2 - 1; j &gt;=0; j--)
+                                {
+                                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[node1ID][j] == deleted)
+                                        {
+                                                <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[node1ID][j] = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[node1ID][len2 - 1];
+                                                len2 -= 1;
+                                                <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[node1ID].pop();
+                                        }
+                                }
+                        }
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectID] = <span style="font-weight: bold; text-decoration: underline;">null</span>;
+                }
+                <span style="font-weight: bold;">return</span> undoStack;
+        }
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.removeObject = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">ObjectID</span>)
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">OldObject</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[ObjectID];
+                <span style="font-weight: bold;">if</span> (ObjectID == <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes.length - 1)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes.pop();
+                }
+                <span style="font-weight: bold;">else</span>
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[ObjectID] = <span style="font-weight: bold; text-decoration: underline;">null</span>;
+                }
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getObject = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"getObject:Object with ID ("</span> + String(objectID) + <span style="font-style: italic;">") does not exist"</span>
+                }
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID];
+                
+        }
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.addCircleObject = <span style="font-weight: bold;">function</span> (<span style="font-weight: bold; font-style: italic;">objectID</span>, <span style="font-weight: bold; font-style: italic;">objectLabel</span>)
+        {
+                        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                        {
+                                <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"addCircleObject:Object with same ID ("</span> + String(objectID) + <span style="font-style: italic;">") already Exists!"</span>
+                        }
+                        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">newNode</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">AnimatedCircle</span>(objectID, objectLabel);
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] = newNode;
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getNodeX = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"getting x position of an object that does not exit"</span>;
+                }       
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].x;
+        }
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getTextWidth = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">text</span>)
+        {
+                <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Need to make fonts more flexible, and less hardwired.</span>
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.ctx.font = <span style="font-style: italic;">'10px sans-serif'</span>;
+                <span style="font-weight: bold;">if</span> (text==<span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        w = 3;
+                }
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">strList</span> = text.split(<span style="font-style: italic;">"\n"</span>);
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">width</span> = 0;
+                <span style="font-weight: bold;">if</span> (strList.length == 1)
+                {
+                        width = <span style="font-weight: bold; text-decoration: underline;">this</span>.ctx.measureText(text).width;
+                }
+                <span style="font-weight: bold;">else</span>
+                {
+                        <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; strList.length; i++)
+                        {
+                                width = Math.max(width, <span style="font-weight: bold; text-decoration: underline;">this</span>.ctx.measureText(strList[i]).width);
+                        }               
+                }
+                
+                <span style="font-weight: bold;">return</span> width;
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setText = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>, <span style="font-weight: bold; font-style: italic;">text</span>, <span style="font-weight: bold; font-style: italic;">index</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">return</span>;
+                        <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"setting text of an object that does not exit"</span>;
+                }                       
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].setText(text, index, <span style="font-weight: bold; text-decoration: underline;">this</span>.getTextWidth(text));
+                
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getText = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>, <span style="font-weight: bold; font-style: italic;">index</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"getting text of an object that does not exit"</span>;
+                }                       
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].getText(index);
+                
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getNodeY = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"getting y position of an object that does not exit"</span>;
+                }       
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].y;
+        }
+
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.connectEdge = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectIDfrom</span>, <span style="font-weight: bold; font-style: italic;">objectIDto</span>, <span style="font-weight: bold; font-style: italic;">color</span>, <span style="font-weight: bold; font-style: italic;">curve</span>, <span style="font-weight: bold; font-style: italic;">directed</span>, <span style="font-weight: bold; font-style: italic;">lab</span>, <span style="font-weight: bold; font-style: italic;">connectionPoint</span>)
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">fromObj</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectIDfrom];
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">toObj</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectIDto];
+                <span style="font-weight: bold;">if</span> (fromObj == <span style="font-weight: bold; text-decoration: underline;">null</span> || toObj == <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"Tried to connect two nodes, one didn't exist!"</span>;
+                }
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">l</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Line</span>(fromObj,toObj, color, curve, directed, lab, connectionPoint);
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectIDfrom] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectIDfrom] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectIDfrom] = [];
+                }
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectIDto] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectIDto] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectIDto] = [];
+                }
+                l.addedToScene = fromObj.addedToScene &amp;&amp; toObj.addedToScene;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[objectIDfrom].push(l);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.BackEdges[objectIDto].push(l);
+                
+        }
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setNull = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>, <span style="font-weight: bold; font-style: italic;">nullVal</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID].setNull(nullVal);
+                        
+                }
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getNull = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID].getNull();
+                }
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">false</span>;  <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Error here?</span>
+        }
+        
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setEdgeColor = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">fromID</span>, <span style="font-weight: bold; font-style: italic;">toID</span>, <span style="font-weight: bold; font-style: italic;">color</span>) <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">returns old color</span>
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">oldColor</span> =<span style="font-style: italic;">"#000000"</span>;
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp;
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">len</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID].length;
+                        <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = len - 1; i &gt;= 0; i--)
+                        {
+                                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp;
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i] != <span style="font-weight: bold; text-decoration: underline;">undefined</span> &amp;&amp;
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i].Node2 == <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[toID])
+                                {
+                                        oldColor = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i].color();
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i].setColor(color);          
+                                }
+                        }
+                }       
+                <span style="font-weight: bold;">return</span> oldColor;
+        }               
+        
+        
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.alignTop = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">id1</span>, <span style="font-weight: bold; font-style: italic;">id2</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1] == <span style="font-weight: bold; text-decoration: underline;">undefined</span> ||
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"Tring to align two nodes, one doesn't exist: "</span> + String(id1) + <span style="font-style: italic;">","</span> + String(id2);                        
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1].alignTop(<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2]);
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.alignLeft = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">id1</span>, <span style="font-weight: bold; font-style: italic;">id2</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1] == <span style="font-weight: bold; text-decoration: underline;">undefined</span> ||
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"Tring to align two nodes, one doesn't exist: "</span> + String(id1) + <span style="font-style: italic;">","</span> + String(id2);                        
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1].alignLeft(<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2]);
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.alignRight = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">id1</span>, <span style="font-weight: bold; font-style: italic;">id2</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1] == <span style="font-weight: bold; text-decoration: underline;">undefined</span> ||
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"Tring to align two nodes, one doesn't exist: "</span> + String(id1) + <span style="font-style: italic;">","</span> + String(id2);                        
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1].alignRight(<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2]);
+        }
+        
+
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getAlignRightPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">id1</span>, <span style="font-weight: bold; font-style: italic;">id2</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1] == <span style="font-weight: bold; text-decoration: underline;">undefined</span> ||
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"Tring to align two nodes, one doesn't exist: "</span> + String(id1) + <span style="font-style: italic;">","</span> + String(id2);                        
+                }
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1].getAlignRightPos(<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2]);
+        }
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getAlignLeftPos = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">id1</span>, <span style="font-weight: bold; font-style: italic;">id2</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1] == <span style="font-weight: bold; text-decoration: underline;">undefined</span> ||
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"Tring to align two nodes, one doesn't exist: "</span> + String(id1) + <span style="font-style: italic;">","</span> + String(id2);                        
+                }
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1].getAlignLeftPos(<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2]);
+        }
+        
+
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.alignBottom = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">id1</span>, <span style="font-weight: bold; font-style: italic;">id2</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1] == <span style="font-weight: bold; text-decoration: underline;">undefined</span> ||
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"Tring to align two nodes, one doesn't exist: "</span> + String(id1) + <span style="font-style: italic;">","</span> + String(id2);                        
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id1].alignBottom(<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[id2]);
+        }
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setEdgeHighlight = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">fromID</span>, <span style="font-weight: bold; font-style: italic;">toID</span>, <span style="font-weight: bold; font-style: italic;">val</span>) <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">returns old color</span>
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">oldHighlight</span> = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp;
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">len</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID].length;
+                        <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = len - 1; i &gt;= 0; i--)
+                        {
+                                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; 
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i] != <span style="font-weight: bold; text-decoration: underline;">undefined</span> &amp;&amp; 
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i].Node2 == <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[toID])
+                                {
+                                        oldHighlight = <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i].highlighted;
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.Edges[fromID][i].setHighlight(val);                
+                                }
+                        }
+                }
+                <span style="font-weight: bold;">return</span> oldHighlight;
+        }
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.addLabelObject = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>, <span style="font-weight: bold; font-style: italic;">objectLabel</span>, <span style="font-weight: bold; font-style: italic;">centering</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Error</span>(<span style="font-style: italic;">"addLabelObject: Object Already Exists!"</span>);
+                }
+                
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">newLabel</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">AnimatedLabel</span>(objectID, objectLabel, centering, <span style="font-weight: bold; text-decoration: underline;">this</span>.getTextWidth(objectLabel));
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] = newLabel;
+        }
+        
+                
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.addLinkedListObject = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>, <span style="font-weight: bold; font-style: italic;">nodeLabel</span>, <span style="font-weight: bold; font-style: italic;">width</span>, <span style="font-weight: bold; font-style: italic;">height</span>, <span style="font-weight: bold; font-style: italic;">linkPer</span>, <span style="font-weight: bold; font-style: italic;">verticalOrientation</span>, <span style="font-weight: bold; font-style: italic;">linkPosEnd</span>, <span style="font-weight: bold; font-style: italic;">numLabels</span>, <span style="font-weight: bold; font-style: italic;">backgroundColor</span>, <span style="font-weight: bold; font-style: italic;">foregroundColor</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Error</span>(<span style="font-style: italic;">"addLinkedListObject:Object with same ID already Exists!"</span>);
+                        <span style="font-weight: bold;">return</span>;
+                }
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">newNode</span>  = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">AnimatedLinkedList</span>(objectID, nodeLabel, width, height, linkPer, verticalOrientation, linkPosEnd, numLabels, backgroundColor, foregroundColor);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] = newNode;
+        }
+        
+         
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.getNumElements = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>)
+        {
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID].getNumElements();
+        }
+         
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setNumElements = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>, <span style="font-weight: bold; font-style: italic;">numElems</span>)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID].setNumElements(numElems);
+        }
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.addBTreeNode = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>, <span style="font-weight: bold; font-style: italic;">widthPerElem</span>, <span style="font-weight: bold; font-style: italic;">height</span>, <span style="font-weight: bold; font-style: italic;">numElems</span>, <span style="font-weight: bold; font-style: italic;">backgroundColor</span>, <span style="font-weight: bold; font-style: italic;">foregroundColor</span>)
+         {
+                 backgroundColor = (backgroundColor == <span style="font-weight: bold; text-decoration: underline;">undefined</span>) ? <span style="font-style: italic;">"#FFFFFF"</span> : backgroundColor;
+                 foregroundColor = (foregroundColor == <span style="font-weight: bold; text-decoration: underline;">undefined</span>) ? <span style="font-style: italic;">"#FFFFFF"</span> : foregroundColor;
+                 
+                 <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                 {
+                         <span style="font-weight: bold;">throw</span> <span style="font-style: italic;">"addBTreeNode:Object with same ID already Exists!"</span>;
+                 }
+
+                 <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">newNode</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">AnimatedBTreeNode</span>(objectID,widthPerElem, height, numElems, backgroundColor, foregroundColor);
+                 <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] = newNode;
+         }
+        
+         <span style="font-weight: bold; text-decoration: underline;">this</span>.addRectangleObject = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">objectID</span>,<span style="font-weight: bold; font-style: italic;">nodeLabel</span>, <span style="font-weight: bold; font-style: italic;">width</span>, <span style="font-weight: bold; font-style: italic;">height</span>, <span style="font-weight: bold; font-style: italic;">xJustify</span> , <span style="font-weight: bold; font-style: italic;">yJustify</span> , <span style="font-weight: bold; font-style: italic;">backgroundColor</span>, <span style="font-weight: bold; font-style: italic;">foregroundColor</span>)
+         {
+                 <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] != <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                 {
+                         <span style="font-weight: bold;">throw</span> <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Error</span>(<span style="font-style: italic;">"addRectangleObject:Object with same ID already Exists!"</span>);
+                 }
+                 <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">newNode</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">AnimatedRectangle</span>(objectID, nodeLabel, width, height, xJustify, yJustify, backgroundColor, foregroundColor);
+                 <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[objectID] = newNode;
+                 
+         }
+         
+         
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setNodePosition = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>, <span style="font-weight: bold; font-style: italic;">newX</span>, <span style="font-weight: bold; font-style: italic;">newY</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">null</span> || <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID] == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">TODO:  Error here?</span>
+                        <span style="font-weight: bold;">return</span>;
+                }
+                <span style="font-weight: bold;">if</span> (newX == <span style="font-weight: bold; text-decoration: underline;">undefined</span> || newY == <span style="font-weight: bold; text-decoration: underline;">undefined</span>)
+                {
+                        
+                        <span style="font-weight: bold;">return</span>;
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].x = newX;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.Nodes[nodeID].y = newY;
+                <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">Don't need to dirty anything, since we repaint everything every frame</span>
+<span style="font-weight: bold; font-style: italic;">                 (TODO:  Revisit if we do conditional redraws)</span>
+<span style="font-weight: bold; font-style: italic;">                 }*/</span>
+                
+        }
+        
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: VLEAD</p>
+<p class="date">Created: 2019-08-27 Tue 13:08</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.1.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

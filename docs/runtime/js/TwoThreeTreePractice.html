@@ -1,0 +1,1732 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title></title>
+<!-- 2019-08-27 Tue 13:08 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="VLEAD" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title"></h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Code for 23 tree practice</a>
+<ul>
+<li><a href="#sec-1-1">1.1. Declaring global variables for tree parameters</a></li>
+<li><a href="#sec-1-2">1.2. Constructor the the tree. It takes the canvas as 'am', width and heigh as parameters</a></li>
+<li><a href="#sec-1-3">1.3. Function to initialize the Tree with its parameters, this is the function which gets called first in the tree life cycle</a></li>
+<li><a href="#sec-1-4">1.4. Function that adds controls to the top bar of the artefacts and shows buttons and text boxes.</a></li>
+<li><a href="#sec-1-5">1.5. These lists have been created to render the question for practice and check the solution.</a></li>
+<li><a href="#sec-1-6">1.6. Function called when the element to be inserted does not cause any split</a></li>
+<li><a href="#sec-1-7">1.7. Function resets the last operation that was done on the tree</a></li>
+<li><a href="#sec-1-8">1.8. Function called when the element to be inserted in to the tree does not cause any split and goes into the left subtree.</a></li>
+<li><a href="#sec-1-9">1.9. Function called when the element to be inserted in to the tree does not cause any split and goes into the right subtree.</a></li>
+<li><a href="#sec-1-10">1.10. Function called when the element to be inserted in to the tree does not cause any split and is inserted into the middle subtree.</a></li>
+<li><a href="#sec-1-11">1.11. Function called when the element to be inserted in to the tree causes a split and is inserted into the right subtree.</a></li>
+<li><a href="#sec-1-12">1.12. Function called when the tree needs to reset, this is internal to the tree's functioning and does not represent the reset exercise button.</a></li>
+<li><a href="#sec-1-13">1.13. Function enables the user controls on the UI such as insert delete and search</a></li>
+<li><a href="#sec-1-14">1.14. Function called when animating the current operation on the UI. This prevents overlapping of two operation and inconsistent results.</a></li>
+<li><a href="#sec-1-15">1.15. Function is called whenever an insert operation is performed on the tree after click the Insert Button rendered on the UI.</a></li>
+<li><a href="#sec-1-16">1.16. Function performs the insert operation on the tree and receives the value to be inserted as its arguments.</a></li>
+<li><a href="#sec-1-17">1.17. Function for displaying error message on the screen.</a></li>
+<li><a href="#sec-1-18">1.18. Function is called to perform the actual insert operation in the in memory tree DS. This takes in an argument to be inserted into the tree.</a></li>
+<li><a href="#sec-1-19">1.19. Function handles the case when an insertion into the tree node violates the propery and internally calls split</a></li>
+<li><a href="#sec-1-20">1.20. Function performs the split operation on the nodes when insertion has caused a violation 23 tree property</a></li>
+<li><a href="#sec-1-21">1.21. Function returns the label of the node in the tree.</a></li>
+<li><a href="#sec-1-22">1.22. Function resizes the tree according to the start_x and start_y coordinate.</a></li>
+<li><a href="#sec-1-23">1.23. Function responsible for setting the new position of the node in the tree. This needs to be called during insertion and deletion</a></li>
+<li><a href="#sec-1-24">1.24. Function animates the new positions of elements in the tree this is called after and during the insertion, split and deletion operation</a></li>
+<li><a href="#sec-1-25">1.25. Function resizes the width of the tree as a whole and node just the nodes. This width is calculated using number of keys in the tree, width per node and their spacing.</a></li>
+<li><a href="#sec-1-26">1.26. Function takes in the id, intial pos_X and pos_Y and initialises the tree node.</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2. Tangle</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Code for 23 tree practice</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Declaring global variables for tree parameters</h3>
+<div class="outline-text-3" id="text-1-1">
+<div class="org-src-container">
+
+<pre class="src src-js" id="DeclareVariables"><span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">MIN_MAX_DEGREE</span> = 3;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">MAX_MAX_DEGREE</span> = 3;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">HEIGHT_DELTA</span>  = 60;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">NODE_SPACING</span> = 10; 
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">STARTING_Y</span> = 70;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">WIDTH_PER_ELEM</span> = 60;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">NODE_HEIGHT</span> = 7;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">MESSAGE_X</span> = 5;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">MESSAGE_Y</span> = 10;
+
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">LINK_COLOR</span> = <span style="font-style: italic;">"#007700"</span>;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">HIGHLIGHT_CIRCLE_COLOR</span> = <span style="font-style: italic;">"#3297CF"</span>;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">FOREGROUND_COLOR</span> = <span style="font-style: italic;">"#000000"</span>;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">BACKGROUND_COLOR</span> = <span style="font-style: italic;">"#97CB3B"</span>;
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Constructor the the tree. It takes the canvas as 'am', width and heigh as parameters</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
++We are doing a sort of "faked" inheritance within javascript. We define our function, 
+set the prototype of our function to the prototype of our superclass, 
+reset the constructor to be our own constructor, 
+and then cache the superclass prototype, for simulating a java-style "super" call. 
+</p>
+
+<p>
++Notice that to make inheritance work well on counstructors, we don't do anything 
+in the main constructor function other than call an 
+init function (that way we can have our init function call the init 
+function of the superclass. Yes, this is a bit of a hack.)
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-js" id="Inheritance"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">TwoThreeTree</span>(<span style="font-weight: bold; font-style: italic;">am</span>, <span style="font-weight: bold; font-style: italic;">w</span>, <span style="font-weight: bold; font-style: italic;">h</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.init(am, w, h);
+
+}
+
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Algorithm</span>();
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = TwoThreeTree;
+TwoThreeTree.superclass = Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>;
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> Function to initialize the Tree with its parameters, this is the function which gets called first in the tree life cycle</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
++All of the work of the constructor is done in the init function &#x2013; 
+that way constructors of subclass can effectively call the constructors of 
+their superclasses. For the init function in this case, we need to do very 
+little work. Here, we are not adding any elements to the canvas at load time. 
+</p>
+
+<p>
++All we need to do is set up our own internal data structures.
+</p>
+<div class="org-src-container">
+
+<pre class="src src-js" id="InitializeTree">TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.init = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">am</span>, <span style="font-weight: bold; font-style: italic;">w</span>, <span style="font-weight: bold; font-style: italic;">h</span>)
+{
+        TwoThreeTree.superclass.init.call(<span style="font-weight: bold; text-decoration: underline;">this</span>, am, w, h);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex = 0;
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.starting_x = w / 1.5;
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.addControls();     
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.max_keys = 2;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.min_keys = 1;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index = 1;
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.max_degree = 3;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.messageID = <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex++;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"CreateLabel"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.messageID, <span style="font-style: italic;">""</span>, MESSAGE_X, MESSAGE_Y, 0);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.moveLabel1ID = <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex++;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.moveLabel2ID = <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex++;
+        
+        animationManager.StartNewAnimation(<span style="font-weight: bold; text-decoration: underline;">this</span>.commands);
+        animationManager.skipForward();
+        animationManager.clearHistory();
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.commands = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Array</span>();
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.xPosOfNextLabel = 100;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.yPosOfNextLabel = 200;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> Function that adds controls to the top bar of the artefacts and shows buttons and text boxes.</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
++Next up is the method to add algorithm controls and callbacks. 
+The tricky bit here is that we can't do something like:
+this.popButton.onclick = this.popCallback
+to add our callbacks. 
+</p>
+
+<p>
++Why not? 
+This would pass in the proper function, but not the proper contex &#x2013; essentially, 
+it would be passing a pointer to the code of the function, without saving the "this" pointer. 
+</p>
+
+
+<p>
++So we need to bind the "this" pointer to our function before we store it.
+</p>
+<div class="org-src-container">
+
+<pre class="src src-js" id="AddControls">TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.addControls =  <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.controls = [];
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertButton = document.getElementById(<span style="font-style: italic;">"control-prac-root"</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertButton.onclick = <span style="font-weight: bold; text-decoration: underline;">this</span>.insertCallback.bind(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertLeftButton = document.getElementById(<span style="font-style: italic;">"control-prac-insert-same"</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertLeftButton.onclick=<span style="font-weight: bold; text-decoration: underline;">this</span>.insertsameCallback.bind(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertRightButton = document.getElementById(<span style="font-style: italic;">"control-prac-insert-l"</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertRightButton.onclick=<span style="font-weight: bold; text-decoration: underline;">this</span>.insertLeftCallback.bind(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertRightButton = document.getElementById(<span style="font-style: italic;">"control-prac-insert-m"</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertRightButton.onclick=<span style="font-weight: bold; text-decoration: underline;">this</span>.insertMiddleCallback.bind(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertRightButton = document.getElementById(<span style="font-style: italic;">"control-prac-insert-r"</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertRightButton.onclick=<span style="font-weight: bold; text-decoration: underline;">this</span>.insertRightCallback.bind(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.rightrotateButton = document.getElementById(<span style="font-style: italic;">"control-prac-insert-split"</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.rightrotateButton.onclick=<span style="font-weight: bold; text-decoration: underline;">this</span>.rightandsplitCallback.bind(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.resetButton = document.getElementById(<span style="font-style: italic;">"control-prac-reset"</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.resetButton.onclick=<span style="font-weight: bold; text-decoration: underline;">this</span>.resetCallback.bind(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-5" class="outline-3">
+<h3 id="sec-1-5"><span class="section-number-3">1.5</span> These lists have been created to render the question for practice and check the solution.</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
++Here we have an inserted value list which is presented to the user and the user is prompted for an action.
+</p>
+
+<p>
++The correct steps are stored in the steps list. 
+</p>
+
+<p>
++These steps are then checked at every click the user makes
+</p>
+
+<p>
++In case of a wrong answer the user is prompted with the correct choice
+</p>
+
+<p>
++In case of a correct answer, next value to be inserted is presented on the screen.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-js" id="PracticeQuestion"><span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">ptr</span>=0
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">insertedvaluelist</span>=[10,18,30,19,24,20,8];
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">steps</span>=[<span style="font-style: italic;">"Insert"</span>,<span style="font-style: italic;">"Insert Right and split"</span>,<span style="font-style: italic;">"Insert Right"</span>,<span style="font-style: italic;">"Insert Right and split"</span>,<span style="font-style: italic;">"Insert Middle"</span>,<span style="font-style: italic;">"Insert Left"</span>]
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-6" class="outline-3">
+<h3 id="sec-1-6"><span class="section-number-3">1.6</span> Function called when the element to be inserted does not cause any split</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
++In 23 tree insertion in a node can cause a violation in the tree property.
+</p>
+
+<p>
++However, if the node is only half full, we can insert value in the node without any violation
+</p>
+
+<p>
++This function handles that case.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-js" id="InsertSame">TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.insertsameCallback=<span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{
+        <span style="font-weight: bold;">if</span>(steps[ptr-1]==<span style="font-style: italic;">"Insert"</span>)
+        {
+        document.getElementById(<span style="font-style: italic;">"nextcomment"</span>).innerHTML=<span style="font-style: italic;">"Correct. We can have a maximum of two elements in a node."</span>
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertCallback(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+
+        }<span style="font-weight: bold;">else</span>{
+                document.getElementById(<span style="font-style: italic;">"nextcomment"</span>).innerHTML=<span style="font-style: italic;">"Incorrect. The correct operation is "</span>+steps[ptr-1];
+        }
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-7" class="outline-3">
+<h3 id="sec-1-7"><span class="section-number-3">1.7</span> Function resets the last operation that was done on the tree</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
++This function resets all the action that a user has taken on the artefact as of now.
+</p>
+
+<p>
++The tree that was rendered on the canvas will be removed.
+</p>
+
+<p>
++All the pointers and list will be reset to their original values.
+</p>
+
+<p>
++All the comment box boxes will be reset to blank
+</p>
+<div class="org-src-container">
+
+<pre class="src src-js" id="ResetCallback">TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.resetCallback=<span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>){
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex = 1;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot = <span style="font-weight: bold; text-decoration: underline;">null</span>;
+        ptr=1;
+        stepschosen=[];
+        document.getElementById(<span style="font-style: italic;">"nextcomment"</span>).innerHTML=<span style="font-style: italic;">""</span>;
+        document.getElementById(<span style="font-style: italic;">"nextelement"</span>).innerHTML=<span style="font-style: italic;">""</span>;
+        <span style="font-weight: bold;">for</span>(k=0;k&lt;insertedvaluelist.length;k++)
+        {
+                        animationManager.skipBack();
+        }
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertButton.disabled=<span style="font-weight: bold; text-decoration: underline;">false</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertButton.style.backgroundColor=<span style="font-style: italic;">"#3297CF"</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertButton.style.border=<span style="font-style: italic;">"#3297CF"</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-8" class="outline-3">
+<h3 id="sec-1-8"><span class="section-number-3">1.8</span> Function called when the element to be inserted in to the tree does not cause any split and goes into the left subtree.</h3>
+<div class="outline-text-3" id="text-1-8">
+<p>
++Insert left callback function is called when the value to be inserted into the tree will go to left subtree
+</p>
+
+<p>
++If the user clicks on this button and this is the correct answer a success message is displayed.
+</p>
+
+<p>
++If the user clicks on this button and this is not the right answer the user is  prompted with a message with the right answer.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-js" id="InsertLeftCallback">TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.insertLeftCallback=<span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{
+        <span style="font-weight: bold;">if</span>(steps[ptr-1]==<span style="font-style: italic;">"Insert Left"</span>)
+        {
+        document.getElementById(<span style="font-style: italic;">"nextcomment"</span>).innerHTML=<span style="font-style: italic;">"Correct. Since, the current element is less than the first element of root, we insert towards left."</span>
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertCallback(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+
+        }<span style="font-weight: bold;">else</span>{
+                document.getElementById(<span style="font-style: italic;">"nextcomment"</span>).innerHTML=<span style="font-style: italic;">"Incorrect. The correct operation is "</span>+steps[ptr-1];
+        }
+}
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-9" class="outline-3">
+<h3 id="sec-1-9"><span class="section-number-3">1.9</span> Function called when the element to be inserted in to the tree does not cause any split and goes into the right subtree.</h3>
+<div class="outline-text-3" id="text-1-9">
+<p>
++Insert right callback function is called when the value to be inserted into the tree will go to right subtree
+</p>
+
+<p>
++If the user clicks on this button and this is the correct answer a success message is displayed.
+</p>
+
+<p>
++If the user clicks on this button and this is not the right answer the user is  prompted with a message with the right answer.
+</p>
+<div class="org-src-container">
+
+<pre class="src src-js" id="InsertRightCallback">TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.insertRightCallback=<span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{
+        <span style="font-weight: bold;">if</span>(steps[ptr-1]==<span style="font-style: italic;">"Insert Right"</span>)
+        {
+        document.getElementById(<span style="font-style: italic;">"nextcomment"</span>).innerHTML=<span style="font-style: italic;">"Correct. Since, the current element is greater than all elements of root, we insert towards right."</span>
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertCallback(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+
+        }<span style="font-weight: bold;">else</span>{
+                document.getElementById(<span style="font-style: italic;">"nextcomment"</span>).innerHTML=<span style="font-style: italic;">"Incorrect. The correct operation is "</span>+steps[ptr-1];
+        }
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-10" class="outline-3">
+<h3 id="sec-1-10"><span class="section-number-3">1.10</span> Function called when the element to be inserted in to the tree does not cause any split and is inserted into the middle subtree.</h3>
+<div class="outline-text-3" id="text-1-10">
+<p>
++Insert middle callback function is called when the value to be inserted into the tree will go to middle subtree
+</p>
+
+<p>
++If the user clicks on this button and this is the correct answer a success message is displayed.
+</p>
+
+<p>
++If the user clicks on this button and this is not the right answer the user is  prompted with a message with the right answer.
+</p>
+<div class="org-src-container">
+
+<pre class="src src-js" id="InsertMiddleCallback">TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.insertMiddleCallback=<span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{
+        <span style="font-weight: bold;">if</span>(steps[ptr-1]==<span style="font-style: italic;">"Insert Middle"</span>)
+        {
+        document.getElementById(<span style="font-style: italic;">"nextcomment"</span>).innerHTML=<span style="font-style: italic;">"Correct. Current elemet lies in between first and last element of root. So, we insert in middle."</span>
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertCallback(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+
+        }<span style="font-weight: bold;">else</span>{
+                document.getElementById(<span style="font-style: italic;">"nextcomment"</span>).innerHTML=<span style="font-style: italic;">"Incorrect. The correct operation is "</span>+steps[ptr-1];
+        }
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-11" class="outline-3">
+<h3 id="sec-1-11"><span class="section-number-3">1.11</span> Function called when the element to be inserted in to the tree causes a split and is inserted into the right subtree.</h3>
+<div class="outline-text-3" id="text-1-11">
+<p>
++Insert right callback function is called when the value to be inserted into the tree will go to right subtree and
+this insertion causes a violation in the 23 property, thus we need to split.
+</p>
+
+<p>
++If the user clicks on this button and this is the correct answer a success message is displayed.
+</p>
+
+<p>
++If the user clicks on this button and this is not the right answer the user is  prompted with a message with the right answer.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-js" id="InsertRightAndSplitCallback">TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.rightandsplitCallback=<span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{       
+        <span style="font-weight: bold;">if</span>(steps[ptr-1]==<span style="font-style: italic;">"Insert Right and split"</span>)
+        {
+        document.getElementById(<span style="font-style: italic;">"nextcomment"</span>).innerHTML=<span style="font-style: italic;">"Correct. Current element is greater than all elements in the root so we insert towards right. The insertion causes overflow so we split."</span>
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertCallback(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+
+        }<span style="font-weight: bold;">else</span>{
+                document.getElementById(<span style="font-style: italic;">"nextcomment"</span>).innerHTML=<span style="font-style: italic;">"Incorrect. The correct operation is "</span>+steps[ptr-1];
+        }
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-12" class="outline-3">
+<h3 id="sec-1-12"><span class="section-number-3">1.12</span> Function called when the tree needs to reset, this is internal to the tree's functioning and does not represent the reset exercise button.</h3>
+<div class="outline-text-3" id="text-1-12">
+<p>
++Rests all the tree parameters                                
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-js" id="Reset">TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.reset = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex = 3;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.max_degree = 3;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.max_keys = 2;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.min_keys = 1;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index = 1;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot = <span style="font-weight: bold; text-decoration: underline;">null</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.ignoreInputs = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.ignoreInputs = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-13" class="outline-3">
+<h3 id="sec-1-13"><span class="section-number-3">1.13</span> Function enables the user controls on the UI such as insert delete and search</h3>
+<div class="outline-text-3" id="text-1-13">
+<p>
++Called by our superclass when we get an animation completed event &#x2013; we can now interact again.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-js" id="EnableUI">TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.enableUI = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span>;
+        <span style="font-weight: bold;">for</span> (i = 0; i &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.controls.length; i++)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.controls[i].disabled = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+        }       
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-14" class="outline-3">
+<h3 id="sec-1-14"><span class="section-number-3">1.14</span> Function called when animating the current operation on the UI. This prevents overlapping of two operation and inconsistent results.</h3>
+<div class="outline-text-3" id="text-1-14">
+<p>
++Called by our superclass when we get an animation started event &#x2013; need to wait for the
+event to finish before we start doing anything.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-js" id="DisableUI">TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.disableUI = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{
+        <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.controls.length; i++)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.controls[i].disabled = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+        }       
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-15" class="outline-3">
+<h3 id="sec-1-15"><span class="section-number-3">1.15</span> Function is called whenever an insert operation is performed on the tree after click the Insert Button rendered on the UI.</h3>
+<div class="outline-text-3" id="text-1-15">
+<p>
++The insert callback function does not perform any insert operation on its own. It makes a call to the implementAction function, the implement action function receives two arguments - a bounded function and the value to be inserted in to the tree. 
+</p>
+
+<p>
++The implementAction function then makes a call to the function it receives along the value to be inserted. The insert operation is performed thereafter.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-js" id="InsertCallback">TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.insertCallback = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{
+        <span style="font-weight: bold;">if</span>(ptr&lt;insertedvaluelist.length){
+                
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">insertedValue</span> = parseInt(insertedvaluelist[ptr],10);
+                console.log(insertedValue)
+                
+                
+                        <span style="font-weight: bold;">if</span> (insertedValue != <span style="font-style: italic;">""</span>)
+                        {
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.implementAction(<span style="font-weight: bold; text-decoration: underline;">this</span>.insertElement.bind(<span style="font-weight: bold; text-decoration: underline;">this</span>), insertedValue);
+                                        <span style="font-weight: bold;">if</span>(ptr+1&lt;insertedvaluelist.length)
+                                                document.getElementById(<span style="font-style: italic;">"nextelement"</span>).innerHTML=insertedvaluelist[ptr+1]
+                                        <span style="font-weight: bold;">else</span>
+                                                document.getElementById(<span style="font-style: italic;">"nextelement"</span>).innerHTML=<span style="font-style: italic;">"No More Values to insert"</span>
+                        }
+                        
+        }
+                
+        ptr=ptr+1
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertButton.disabled=<span style="font-weight: bold; text-decoration: underline;">true</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertButton.style.backgroundColor=<span style="font-style: italic;">"gray"</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertButton.style.border=<span style="font-style: italic;">"gray"</span>;
+        
+}
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-16" class="outline-3">
+<h3 id="sec-1-16"><span class="section-number-3">1.16</span> Function performs the insert operation on the tree and receives the value to be inserted as its arguments.</h3>
+<div class="outline-text-3" id="text-1-16">
+<p>
++This function performs the insert operation in the 23 tree. While performing insert in a 23 tree there are two cases that arise. The first case is when they key to be inserted into the tree falls into a node which is not already full. In this case, we can simply insert the key into the node and end our insert operation. 
+</p>
+
+<p>
++This is done here by calling the insertNotfull function, which basically just adds the key to the node as there is still space.
+</p>
+
+<p>
++There is a second case where the key to be inserted falls into a node which is already full, this causes a violation in the 23 tree property and we need to fix this. This done by calling the insert function to first insert the vaue into the tree node and then calling split function to restore the tree property.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-js" id="InsertElement">TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.insertElement = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">insertedValue</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.commands = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Array</span>();
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.messageID, <span style="font-style: italic;">"Inserting "</span> + insertedValue);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Step"</span>);
+        
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot == <span style="font-weight: bold; text-decoration: underline;">null</span>)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">TwoThreeTreeNode</span>(<span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex++, <span style="font-weight: bold; text-decoration: underline;">this</span>.starting_x, STARTING_Y);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"CreateBTreeNode"</span>,
+                                 <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.graphicID, 
+                                 WIDTH_PER_ELEM, NODE_HEIGHT, 
+                                 1, 
+                                 <span style="font-weight: bold; text-decoration: underline;">this</span>.starting_x, 
+                                 STARTING_Y, 
+                                 BACKGROUND_COLOR,  
+                                 FOREGROUND_COLOR);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.keys[0] = insertedValue;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.graphicID, insertedValue, 0);
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.insert(<span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot, insertedValue);                                      
+                
+                <span style="font-weight: bold;">if</span> (!<span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.isLeaf)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.resizeTree();
+                }
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.messageID, <span style="font-style: italic;">""</span>);
+        
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.commands;
+        
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-17" class="outline-3">
+<h3 id="sec-1-17"><span class="section-number-3">1.17</span> Function for displaying error message on the screen.</h3>
+<div class="outline-text-3" id="text-1-17">
+<p>
++While inserting values into the 23 tree it is possible for the user to insert values which as non-numneric. Our current data structure only supports numeric values. This function is called before the value to be inserted is actually inserted into the tree. 
+</p>
+
+<p>
++It checks if value inserted is numeric or not. If it is, the value is allowed to be inserted into the else an error message is given to the user.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-js" id="ErrorCheck">TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.valueErrorMessage = <span style="font-weight: bold;">function</span>(){
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.messageID, <span style="font-style: italic;">"Enter a numeric value."</span>);
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.commands;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-18" class="outline-3">
+<h3 id="sec-1-18"><span class="section-number-3">1.18</span> Function is called to perform the actual insert operation in the in memory tree DS. This takes in an argument to be inserted into the tree.</h3>
+<div class="outline-text-3" id="text-1-18">
+<p>
++The insert function here first updates the number of values into the trees and sets up the steps which are
+involved in the animation. 
+</p>
+
+<p>
++These steps will cause the animation to render on the screen. This is done with the help of cmd functionn. It then, makes a call to insertRepair and passes the tree as argument, which then handles the condition like node splitting.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-js" id="Insert">TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.insert = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">tree</span>, <span style="font-weight: bold; font-style: italic;">insertValue</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetHighlight"</span>, tree.graphicID, 1);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Step"</span>);
+        <span style="font-weight: bold;">if</span> (tree.isLeaf)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.messageID, <span style="font-style: italic;">"Inserting "</span> + insertValue + <span style="font-style: italic;">".  Inserting into a leaf"</span>);
+                tree.numKeys++;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetNumElements"</span>, tree.graphicID, tree.numKeys);
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">insertIndex</span> = tree.numKeys - 1;
+                <span style="font-weight: bold;">while</span> (insertIndex &gt; 0 &amp;&amp; tree.keys[insertIndex - 1] &gt; insertValue)
+                {
+                        tree.keys[insertIndex] = tree.keys[insertIndex - 1];
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, tree.graphicID, tree.keys[insertIndex], insertIndex);
+                        insertIndex--;
+                }
+                tree.keys[insertIndex] = insertValue;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, tree.graphicID, tree.keys[insertIndex], insertIndex);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetHighlight"</span>, tree.graphicID, 0);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.resizeTree();
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.insertRepair(tree);
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">findIndex</span> = 0;
+                <span style="font-weight: bold;">while</span> (findIndex &lt; tree.numKeys &amp;&amp; tree.keys[findIndex] &lt; insertValue)
+                {
+                        findIndex++;                                    
+                }                               
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetEdgeHighlight"</span>, tree.graphicID, tree.children[findIndex].graphicID, 1);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Step"</span>);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetEdgeHighlight"</span>, tree.graphicID, tree.children[findIndex].graphicID, 0);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetHighlight"</span>, tree.graphicID, 0);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.insert(tree.children[findIndex], insertValue);                             
+        }
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-19" class="outline-3">
+<h3 id="sec-1-19"><span class="section-number-3">1.19</span> Function handles the case when an insertion into the tree node violates the propery and internally calls split</h3>
+<div class="outline-text-3" id="text-1-19">
+<p>
++After the insert function has set the animation to be rendered on the screen, a call to insertRepair is made, this is checks if there is a violation in the 23 tree property after an insert has been made. If there is a violation of the 23 tree property, that is, the node after insertion is neither a two node nor a three node, it calls for a split. 
+</p>
+
+<p>
++The split function restores the 23 tree property by splitting the full node. The repair function then repairs the tree by creating adding the middle key to the parent node and creating the new children after the split operation has taken place.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-js" id="InsertRepair">TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.insertRepair = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">tree</span>) 
+{
+        <span style="font-weight: bold;">if</span> (tree.numKeys &lt;= <span style="font-weight: bold; text-decoration: underline;">this</span>.max_keys)
+        {
+                <span style="font-weight: bold;">return</span>;
+        }
+        <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> (tree.parent == <span style="font-weight: bold; text-decoration: underline;">null</span>)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot = <span style="font-weight: bold; text-decoration: underline;">this</span>.split(tree);
+                <span style="font-weight: bold;">return</span>;
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">newNode</span>  = <span style="font-weight: bold; text-decoration: underline;">this</span>.split(tree);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.insertRepair(newNode);
+        }                       
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-20" class="outline-3">
+<h3 id="sec-1-20"><span class="section-number-3">1.20</span> Function performs the split operation on the nodes when insertion has caused a violation 23 tree property</h3>
+<div class="outline-text-3" id="text-1-20">
+<p>
++The split function first takes in a tree and performs a check if the parent of the tree is null or not, this is because it is being called from insertRepair which is a recursive function and it is possible that during this recursion the tree parent is null. 
+</p>
+
+<p>
++After this check has been performed, the function proceedes with the actual split operation. First the animation commands are used to perform the animation on the screen, this involves setting up new texts to aid the split. 
+</p>
+
+<p>
++Then, a disconnect command is issued, this command takes a parent and child and disconnects the parent from the child, this results in splitting. The splitted value is then moveed to the parent node of the tree. This node is then again checked for any violation in the 23 property in the insertRepair function.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-js" id="Split">TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.split = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">tree</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.messageID, <span style="font-style: italic;">"Node now contains too many keys.  Splittig"</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetHighlight"</span>, tree.graphicID, 1);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Step"</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetHighlight"</span>, tree.graphicID, 0);
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">rightNode</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">TwoThreeTreeNode</span>(<span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex++, tree.x + 100, tree.y);
+        rightNode.numKeys = tree.numKeys - <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index - 1;
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">risingNode</span> = tree.keys[<span style="font-weight: bold; text-decoration: underline;">this</span>.split_index];
+        
+        
+        <span style="font-weight: bold;">if</span> (tree.parent != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">currentParent</span> = tree.parent;
+                <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">parentIndex</span> = 0; parentIndex &lt; currentParent.numKeys + 1 &amp;&amp; currentParent.children[parentIndex] != tree; parentIndex++);
+                <span style="font-weight: bold;">if</span> (parentIndex == currentParent.numKeys + 1)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Error</span>(<span style="font-style: italic;">"Couldn't find which child we were!"</span>);
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetNumElements"</span>, currentParent.graphicID, currentParent.numKeys + 1);
+                <span style="font-weight: bold;">for</span> (i = currentParent.numKeys; i &gt; parentIndex; i--)
+                {
+                        currentParent.children[i+1] = currentParent.children[i];
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Disconnect"</span>, currentParent.graphicID, currentParent.children[i].graphicID);
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Connect"</span>, currentParent.graphicID,  currentParent.children[i].graphicID, FOREGROUND_COLOR, 
+                                0, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Curve</span>
+                                0, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Directed</span>
+                                <span style="font-style: italic;">""</span>, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Label</span>
+                                i+1);
+                        
+                        currentParent.keys[i] = currentParent.keys[i-1];
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, currentParent.graphicID, currentParent.keys[i] ,i);
+                }
+                currentParent.numKeys++;
+                currentParent.keys[parentIndex] = risingNode;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, currentParent.graphicID, <span style="font-style: italic;">""</span>, parentIndex);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.moveLabel1ID = <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex++;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"CreateLabel"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.moveLabel1ID, risingNode, <span style="font-weight: bold; text-decoration: underline;">this</span>.getLabelX(tree, <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index),  tree.y)
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetForegroundColor"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.moveLabel1ID, FOREGROUND_COLOR);
+
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Move"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.moveLabel1ID,  <span style="font-weight: bold; text-decoration: underline;">this</span>.getLabelX(currentParent, parentIndex),  currentParent.y)
+                
+                
+                
+                
+                currentParent.children[parentIndex+1] = rightNode;
+                rightNode.parent = currentParent;
+                
+        }
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"CreateBTreeNode"</span>,
+                          rightNode.graphicID, 
+                          WIDTH_PER_ELEM, NODE_HEIGHT, 
+                          tree.numKeys - <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index - 1, 
+                          tree.x, 
+                          tree.y,  
+                          BACKGROUND_COLOR, 
+                          FOREGROUND_COLOR);
+        
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span>;
+        <span style="font-weight: bold;">for</span> (i = <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index + 1; i &lt; tree.numKeys + 1; i++)
+        {
+                rightNode.children[i - <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index - 1] = tree.children[i];
+                <span style="font-weight: bold;">if</span> (tree.children[i] != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        rightNode.isLeaf = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Disconnect"</span>, tree.graphicID, tree.children[i].graphicID);
+                        
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Connect"</span>, rightNode.graphicID, 
+                                rightNode.children[i - <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index - 1].graphicID,
+                                FOREGROUND_COLOR,
+                                0, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Curve</span>
+                                0, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Directed</span>
+                                <span style="font-style: italic;">""</span>, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Label</span>
+                                i - <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index - 1);
+                        <span style="font-weight: bold;">if</span> (tree.children[i] != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                        {
+                                tree.children[i].parent = rightNode;
+                        }
+                        tree.children[i] = <span style="font-weight: bold; text-decoration: underline;">null</span>;
+                        
+                }
+        }
+        <span style="font-weight: bold;">for</span> (i = <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index+1; i &lt; tree.numKeys; i++)
+        {
+                rightNode.keys[i - <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index - 1] = tree.keys[i];
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, rightNode.graphicID, rightNode.keys[i - <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index - 1], i - <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index - 1);
+        }
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">leftNode</span> = tree;
+        leftNode.numKeys = <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index;
+        
+        <span style="font-weight: bold;">for</span> (i = <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index; i &lt; tree.numKeys; i++)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, tree.graphicID, <span style="font-style: italic;">""</span>, i); 
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetNumElements"</span>, tree.graphicID, <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index);
+        
+        <span style="font-weight: bold;">if</span> (tree.parent != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Connect"</span>, currentParent.graphicID, rightNode.graphicID, FOREGROUND_COLOR, 
+                        0, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Curve</span>
+                        0, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Directed</span>
+                        <span style="font-style: italic;">""</span>, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Label</span>
+                        parentIndex + 1);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.resizeTree();
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Step"</span>)
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Delete"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.moveLabel1ID);                          
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, currentParent.graphicID, risingNode, parentIndex);
+                <span style="font-weight: bold;">return</span> tree.parent;
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">TwoThreeTreeNode</span>(<span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex++, <span style="font-weight: bold; text-decoration: underline;">this</span>.starting_x, STARTING_Y);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"CreateBTreeNode"</span>,
+                                 <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.graphicID, 
+                                 WIDTH_PER_ELEM, 
+                                 NODE_HEIGHT, 
+                                 1, 
+                                 <span style="font-weight: bold; text-decoration: underline;">this</span>.starting_x, 
+                                 STARTING_Y,
+                                 BACKGROUND_COLOR,  
+                                 FOREGROUND_COLOR);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.keys[0] = risingNode;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.graphicID, risingNode, 0);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.children[0] = leftNode;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.children[1] = rightNode;
+                leftNode.parent = <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot;
+                rightNode.parent = <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Connect"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.graphicID, leftNode.graphicID, FOREGROUND_COLOR, 
+                        0, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Curve</span>
+                        0, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Directed</span>
+                        <span style="font-style: italic;">""</span>, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Label</span>
+                        0);     <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Connection Point</span>
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Connect"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.graphicID, rightNode.graphicID, FOREGROUND_COLOR, 
+                        0, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Curve</span>
+                        0, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Directed</span>
+                        <span style="font-style: italic;">""</span>, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Label</span>
+                        1); <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Connection Point</span>
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.isLeaf = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot;
+        }
+        
+        
+        
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-21" class="outline-3">
+<h3 id="sec-1-21"><span class="section-number-3">1.21</span> Function returns the label of the node in the tree.</h3>
+<div class="outline-text-3" id="text-1-21">
+<div class="org-src-container">
+
+<pre class="src src-js" id="GetLabel">TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getLabelX = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">tree</span>, <span style="font-weight: bold; font-style: italic;">index</span>) 
+{
+        <span style="font-weight: bold;">return</span> tree.x - WIDTH_PER_ELEM * tree.numKeys / 2 + WIDTH_PER_ELEM / 2 + index * WIDTH_PER_ELEM;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-22" class="outline-3">
+<h3 id="sec-1-22"><span class="section-number-3">1.22</span> Function resizes the tree according to the start_x and start_y coordinate.</h3>
+<div class="outline-text-3" id="text-1-22">
+<div class="org-src-container">
+
+<pre class="src src-js" id="ResizeTree">TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.resizeTree = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.resizeWidths(<span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setNewPositions(<span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot, <span style="font-weight: bold; text-decoration: underline;">this</span>.starting_x, STARTING_Y);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.animateNewPositions(<span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot);
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-23" class="outline-3">
+<h3 id="sec-1-23"><span class="section-number-3">1.23</span> Function responsible for setting the new position of the node in the tree. This needs to be called during insertion and deletion</h3>
+<div class="outline-text-3" id="text-1-23">
+<div class="org-src-container">
+
+<pre class="src src-js" id="NewTreePosition">TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setNewPositions = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">tree</span>, <span style="font-weight: bold; font-style: italic;">xPosition</span>, <span style="font-weight: bold; font-style: italic;">yPosition</span>)
+{
+        <span style="font-weight: bold;">if</span> (tree != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+        {
+                tree.y = yPosition;
+                tree.x = xPosition;
+                <span style="font-weight: bold;">if</span> (!tree.isLeaf)
+                {
+                        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">leftEdge</span> = xPosition - tree.width / 2;
+                        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">priorWidth</span> = 0;
+                        <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; tree.numKeys+1; i++)
+                        {
+                                <span style="font-weight: bold; text-decoration: underline;">this</span>.setNewPositions(tree.children[i], leftEdge + priorWidth + tree.widths[i] / 2, yPosition+HEIGHT_DELTA);
+                                priorWidth += tree.widths[i];
+                        }
+                }                               
+        }                       
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-24" class="outline-3">
+<h3 id="sec-1-24"><span class="section-number-3">1.24</span> Function animates the new positions of elements in the tree this is called after and during the insertion, split and deletion operation</h3>
+<div class="outline-text-3" id="text-1-24">
+<div class="org-src-container">
+
+<pre class="src src-js" id="AnimatePosition">TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.animateNewPositions = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">tree</span>)
+{
+        <span style="font-weight: bold;">if</span> (tree == <span style="font-weight: bold; text-decoration: underline;">null</span>)
+        {
+                <span style="font-weight: bold;">return</span>;
+        }
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span>;
+        <span style="font-weight: bold;">for</span> (i = 0; i &lt; tree.numKeys + 1; i++)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.animateNewPositions(tree.children[i]);
+        }
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Move"</span>, tree.graphicID, tree.x, tree.y);
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-25" class="outline-3">
+<h3 id="sec-1-25"><span class="section-number-3">1.25</span> Function resizes the width of the tree as a whole and node just the nodes. This width is calculated using number of keys in the tree, width per node and their spacing.</h3>
+<div class="outline-text-3" id="text-1-25">
+<div class="org-src-container">
+
+<pre class="src src-js" id="ResizeWidth">TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.resizeWidths = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">tree</span>) 
+{
+        <span style="font-weight: bold;">if</span> (tree == <span style="font-weight: bold; text-decoration: underline;">null</span>)
+        {
+                <span style="font-weight: bold;">return</span> 0;
+        }
+        <span style="font-weight: bold;">if</span> (tree.isLeaf)
+        {
+                <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; tree.numKeys + 1; i++)
+                {
+                        tree.widths[i] = 0;
+                }
+                tree.width = tree.numKeys * WIDTH_PER_ELEM + NODE_SPACING;
+                <span style="font-weight: bold;">return</span> tree.width;                              
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">treeWidth</span> = 0;
+                <span style="font-weight: bold;">for</span> (i = 0; i &lt; tree.numKeys+1; i++)
+                {
+                        tree.widths[i] = <span style="font-weight: bold; text-decoration: underline;">this</span>.resizeWidths(tree.children[i]);
+                        treeWidth = treeWidth + tree.widths[i];
+                }
+                treeWidth = Math.max(treeWidth, tree.numKeys * WIDTH_PER_ELEM + NODE_SPACING);
+                tree.width = treeWidth;
+                <span style="font-weight: bold;">return</span> treeWidth;
+        }
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-26" class="outline-3">
+<h3 id="sec-1-26"><span class="section-number-3">1.26</span> Function takes in the id, intial pos_X and pos_Y and initialises the tree node.</h3>
+<div class="outline-text-3" id="text-1-26">
+<p>
++Determines where the node will get displayed. This function also declares the initial structure for the 23 node. As the node in a 23 tree can be either a two node or a three node, the number of keys in a node can be more than one.
+</p>
+
+<p>
++Also, a node can have left, right and middle subtree. There we declare approrpiate data structures here for this.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-js" id="CreateTreeNode"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">TwoThreeTreeNode</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">initialX</span>, <span style="font-weight: bold; font-style: italic;">initialY</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.widths = [];
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.keys = [];
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.children = [];
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.x = initialX;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.y = initialY;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.graphicID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.numKeys = 1;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.isLeaf = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.parent = <span style="font-weight: bold; text-decoration: underline;">null</span>;
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.leftWidth = 0;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.rightWidth = 0;
+        
+}
+
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">currentAlg</span>;
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">init</span>()
+{
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">animManag</span> = initCanvas();
+        currentAlg = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">TwoThreeTree</span>(animManag, canvas.width, canvas.height);
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Tangle</h2>
+<div class="outline-text-2" id="text-2">
+<div class="org-src-container">
+
+<pre class="src src-js"><span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">MIN_MAX_DEGREE</span> = 3;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">MAX_MAX_DEGREE</span> = 3;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">HEIGHT_DELTA</span>  = 60;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">NODE_SPACING</span> = 10; 
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">STARTING_Y</span> = 70;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">WIDTH_PER_ELEM</span> = 60;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">NODE_HEIGHT</span> = 7;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">MESSAGE_X</span> = 5;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">MESSAGE_Y</span> = 10;
+
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">LINK_COLOR</span> = <span style="font-style: italic;">"#007700"</span>;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">HIGHLIGHT_CIRCLE_COLOR</span> = <span style="font-style: italic;">"#3297CF"</span>;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">FOREGROUND_COLOR</span> = <span style="font-style: italic;">"#000000"</span>;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">BACKGROUND_COLOR</span> = <span style="font-style: italic;">"#97CB3B"</span>;
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">TwoThreeTree</span>(<span style="font-weight: bold; font-style: italic;">am</span>, <span style="font-weight: bold; font-style: italic;">w</span>, <span style="font-weight: bold; font-style: italic;">h</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.init(am, w, h);
+
+}
+
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Algorithm</span>();
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = TwoThreeTree;
+TwoThreeTree.superclass = Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>;
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.init = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">am</span>, <span style="font-weight: bold; font-style: italic;">w</span>, <span style="font-weight: bold; font-style: italic;">h</span>)
+{
+        TwoThreeTree.superclass.init.call(<span style="font-weight: bold; text-decoration: underline;">this</span>, am, w, h);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex = 0;
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.starting_x = w / 1.5;
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.addControls();     
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.max_keys = 2;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.min_keys = 1;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index = 1;
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.max_degree = 3;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.messageID = <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex++;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"CreateLabel"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.messageID, <span style="font-style: italic;">""</span>, MESSAGE_X, MESSAGE_Y, 0);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.moveLabel1ID = <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex++;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.moveLabel2ID = <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex++;
+        
+        animationManager.StartNewAnimation(<span style="font-weight: bold; text-decoration: underline;">this</span>.commands);
+        animationManager.skipForward();
+        animationManager.clearHistory();
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.commands = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Array</span>();
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.xPosOfNextLabel = 100;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.yPosOfNextLabel = 200;
+}
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.addControls =  <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.controls = [];
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertButton = document.getElementById(<span style="font-style: italic;">"control-prac-root"</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertButton.onclick = <span style="font-weight: bold; text-decoration: underline;">this</span>.insertCallback.bind(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertLeftButton = document.getElementById(<span style="font-style: italic;">"control-prac-insert-same"</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertLeftButton.onclick=<span style="font-weight: bold; text-decoration: underline;">this</span>.insertsameCallback.bind(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertRightButton = document.getElementById(<span style="font-style: italic;">"control-prac-insert-l"</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertRightButton.onclick=<span style="font-weight: bold; text-decoration: underline;">this</span>.insertLeftCallback.bind(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertRightButton = document.getElementById(<span style="font-style: italic;">"control-prac-insert-m"</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertRightButton.onclick=<span style="font-weight: bold; text-decoration: underline;">this</span>.insertMiddleCallback.bind(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertRightButton = document.getElementById(<span style="font-style: italic;">"control-prac-insert-r"</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertRightButton.onclick=<span style="font-weight: bold; text-decoration: underline;">this</span>.insertRightCallback.bind(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.rightrotateButton = document.getElementById(<span style="font-style: italic;">"control-prac-insert-split"</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.rightrotateButton.onclick=<span style="font-weight: bold; text-decoration: underline;">this</span>.rightandsplitCallback.bind(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.resetButton = document.getElementById(<span style="font-style: italic;">"control-prac-reset"</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.resetButton.onclick=<span style="font-weight: bold; text-decoration: underline;">this</span>.resetCallback.bind(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+}
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">ptr</span>=0
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">insertedvaluelist</span>=[10,18,30,19,24,20,8];
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">steps</span>=[<span style="font-style: italic;">"Insert"</span>,<span style="font-style: italic;">"Insert Right and split"</span>,<span style="font-style: italic;">"Insert Right"</span>,<span style="font-style: italic;">"Insert Right and split"</span>,<span style="font-style: italic;">"Insert Middle"</span>,<span style="font-style: italic;">"Insert Left"</span>]
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.insertsameCallback=<span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{
+        <span style="font-weight: bold;">if</span>(steps[ptr-1]==<span style="font-style: italic;">"Insert"</span>)
+        {
+        document.getElementById(<span style="font-style: italic;">"nextcomment"</span>).innerHTML=<span style="font-style: italic;">"Correct. We can have a maximum of two elements in a node."</span>
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertCallback(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+
+        }<span style="font-weight: bold;">else</span>{
+                document.getElementById(<span style="font-style: italic;">"nextcomment"</span>).innerHTML=<span style="font-style: italic;">"Incorrect. The correct operation is "</span>+steps[ptr-1];
+        }
+}
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.resetCallback=<span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>){
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex = 1;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot = <span style="font-weight: bold; text-decoration: underline;">null</span>;
+        ptr=1;
+        stepschosen=[];
+        document.getElementById(<span style="font-style: italic;">"nextcomment"</span>).innerHTML=<span style="font-style: italic;">""</span>;
+        document.getElementById(<span style="font-style: italic;">"nextelement"</span>).innerHTML=<span style="font-style: italic;">""</span>;
+        <span style="font-weight: bold;">for</span>(k=0;k&lt;insertedvaluelist.length;k++)
+        {
+                        animationManager.skipBack();
+        }
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertButton.disabled=<span style="font-weight: bold; text-decoration: underline;">false</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertButton.style.backgroundColor=<span style="font-style: italic;">"#3297CF"</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertButton.style.border=<span style="font-style: italic;">"#3297CF"</span>;
+}
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.insertLeftCallback=<span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{
+        <span style="font-weight: bold;">if</span>(steps[ptr-1]==<span style="font-style: italic;">"Insert Left"</span>)
+        {
+        document.getElementById(<span style="font-style: italic;">"nextcomment"</span>).innerHTML=<span style="font-style: italic;">"Correct. Since, the current element is less than the first element of root, we insert towards left."</span>
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertCallback(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+
+        }<span style="font-weight: bold;">else</span>{
+                document.getElementById(<span style="font-style: italic;">"nextcomment"</span>).innerHTML=<span style="font-style: italic;">"Incorrect. The correct operation is "</span>+steps[ptr-1];
+        }
+}
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.insertRightCallback=<span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{
+        <span style="font-weight: bold;">if</span>(steps[ptr-1]==<span style="font-style: italic;">"Insert Right"</span>)
+        {
+        document.getElementById(<span style="font-style: italic;">"nextcomment"</span>).innerHTML=<span style="font-style: italic;">"Correct. Since, the current element is greater than all elements of root, we insert towards right."</span>
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertCallback(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+
+        }<span style="font-weight: bold;">else</span>{
+                document.getElementById(<span style="font-style: italic;">"nextcomment"</span>).innerHTML=<span style="font-style: italic;">"Incorrect. The correct operation is "</span>+steps[ptr-1];
+        }
+}
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.insertMiddleCallback=<span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{
+        <span style="font-weight: bold;">if</span>(steps[ptr-1]==<span style="font-style: italic;">"Insert Middle"</span>)
+        {
+        document.getElementById(<span style="font-style: italic;">"nextcomment"</span>).innerHTML=<span style="font-style: italic;">"Correct. Current elemet lies in between first and last element of root. So, we insert in middle."</span>
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertCallback(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+
+        }<span style="font-weight: bold;">else</span>{
+                document.getElementById(<span style="font-style: italic;">"nextcomment"</span>).innerHTML=<span style="font-style: italic;">"Incorrect. The correct operation is "</span>+steps[ptr-1];
+        }
+}
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.rightandsplitCallback=<span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{       
+        <span style="font-weight: bold;">if</span>(steps[ptr-1]==<span style="font-style: italic;">"Insert Right and split"</span>)
+        {
+        document.getElementById(<span style="font-style: italic;">"nextcomment"</span>).innerHTML=<span style="font-style: italic;">"Correct. Current element is greater than all elements in the root so we insert towards right. The insertion causes overflow so we split."</span>
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertCallback(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+
+        }<span style="font-weight: bold;">else</span>{
+                document.getElementById(<span style="font-style: italic;">"nextcomment"</span>).innerHTML=<span style="font-style: italic;">"Incorrect. The correct operation is "</span>+steps[ptr-1];
+        }
+}
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.enableUI = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span>;
+        <span style="font-weight: bold;">for</span> (i = 0; i &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.controls.length; i++)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.controls[i].disabled = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+        }       
+}
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.disableUI = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{
+        <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; <span style="font-weight: bold; text-decoration: underline;">this</span>.controls.length; i++)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.controls[i].disabled = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+        }       
+}
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.insert = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">tree</span>, <span style="font-weight: bold; font-style: italic;">insertValue</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetHighlight"</span>, tree.graphicID, 1);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Step"</span>);
+        <span style="font-weight: bold;">if</span> (tree.isLeaf)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.messageID, <span style="font-style: italic;">"Inserting "</span> + insertValue + <span style="font-style: italic;">".  Inserting into a leaf"</span>);
+                tree.numKeys++;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetNumElements"</span>, tree.graphicID, tree.numKeys);
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">insertIndex</span> = tree.numKeys - 1;
+                <span style="font-weight: bold;">while</span> (insertIndex &gt; 0 &amp;&amp; tree.keys[insertIndex - 1] &gt; insertValue)
+                {
+                        tree.keys[insertIndex] = tree.keys[insertIndex - 1];
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, tree.graphicID, tree.keys[insertIndex], insertIndex);
+                        insertIndex--;
+                }
+                tree.keys[insertIndex] = insertValue;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, tree.graphicID, tree.keys[insertIndex], insertIndex);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetHighlight"</span>, tree.graphicID, 0);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.resizeTree();
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.insertRepair(tree);
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">findIndex</span> = 0;
+                <span style="font-weight: bold;">while</span> (findIndex &lt; tree.numKeys &amp;&amp; tree.keys[findIndex] &lt; insertValue)
+                {
+                        findIndex++;                                    
+                }                               
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetEdgeHighlight"</span>, tree.graphicID, tree.children[findIndex].graphicID, 1);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Step"</span>);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetEdgeHighlight"</span>, tree.graphicID, tree.children[findIndex].graphicID, 0);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetHighlight"</span>, tree.graphicID, 0);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.insert(tree.children[findIndex], insertValue);                             
+        }
+}
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.insertCallback = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{
+        <span style="font-weight: bold;">if</span>(ptr&lt;insertedvaluelist.length){
+                
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">insertedValue</span> = parseInt(insertedvaluelist[ptr],10);
+                console.log(insertedValue)
+                
+                
+                        <span style="font-weight: bold;">if</span> (insertedValue != <span style="font-style: italic;">""</span>)
+                        {
+                                        <span style="font-weight: bold; text-decoration: underline;">this</span>.implementAction(<span style="font-weight: bold; text-decoration: underline;">this</span>.insertElement.bind(<span style="font-weight: bold; text-decoration: underline;">this</span>), insertedValue);
+                                        <span style="font-weight: bold;">if</span>(ptr+1&lt;insertedvaluelist.length)
+                                                document.getElementById(<span style="font-style: italic;">"nextelement"</span>).innerHTML=insertedvaluelist[ptr+1]
+                                        <span style="font-weight: bold;">else</span>
+                                                document.getElementById(<span style="font-style: italic;">"nextelement"</span>).innerHTML=<span style="font-style: italic;">"No More Values to insert"</span>
+                        }
+                        
+        }
+                
+        ptr=ptr+1
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertButton.disabled=<span style="font-weight: bold; text-decoration: underline;">true</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertButton.style.backgroundColor=<span style="font-style: italic;">"gray"</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertButton.style.border=<span style="font-style: italic;">"gray"</span>;
+        
+}
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.insertElement = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">insertedValue</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.commands = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Array</span>();
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.messageID, <span style="font-style: italic;">"Inserting "</span> + insertedValue);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Step"</span>);
+        
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot == <span style="font-weight: bold; text-decoration: underline;">null</span>)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">TwoThreeTreeNode</span>(<span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex++, <span style="font-weight: bold; text-decoration: underline;">this</span>.starting_x, STARTING_Y);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"CreateBTreeNode"</span>,
+                                 <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.graphicID, 
+                                 WIDTH_PER_ELEM, NODE_HEIGHT, 
+                                 1, 
+                                 <span style="font-weight: bold; text-decoration: underline;">this</span>.starting_x, 
+                                 STARTING_Y, 
+                                 BACKGROUND_COLOR,  
+                                 FOREGROUND_COLOR);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.keys[0] = insertedValue;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.graphicID, insertedValue, 0);
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.insert(<span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot, insertedValue);                                      
+                
+                <span style="font-weight: bold;">if</span> (!<span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.isLeaf)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.resizeTree();
+                }
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.messageID, <span style="font-style: italic;">""</span>);
+        
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.commands;
+        
+}
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.valueErrorMessage = <span style="font-weight: bold;">function</span>(){
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.messageID, <span style="font-style: italic;">"Enter a numeric value."</span>);
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.commands;
+}
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.insertRepair = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">tree</span>) 
+{
+        <span style="font-weight: bold;">if</span> (tree.numKeys &lt;= <span style="font-weight: bold; text-decoration: underline;">this</span>.max_keys)
+        {
+                <span style="font-weight: bold;">return</span>;
+        }
+        <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> (tree.parent == <span style="font-weight: bold; text-decoration: underline;">null</span>)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot = <span style="font-weight: bold; text-decoration: underline;">this</span>.split(tree);
+                <span style="font-weight: bold;">return</span>;
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">newNode</span>  = <span style="font-weight: bold; text-decoration: underline;">this</span>.split(tree);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.insertRepair(newNode);
+        }                       
+}
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.split = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">tree</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.messageID, <span style="font-style: italic;">"Node now contains too many keys.  Splittig"</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetHighlight"</span>, tree.graphicID, 1);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Step"</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetHighlight"</span>, tree.graphicID, 0);
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">rightNode</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">TwoThreeTreeNode</span>(<span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex++, tree.x + 100, tree.y);
+        rightNode.numKeys = tree.numKeys - <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index - 1;
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">risingNode</span> = tree.keys[<span style="font-weight: bold; text-decoration: underline;">this</span>.split_index];
+        
+        
+        <span style="font-weight: bold;">if</span> (tree.parent != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">currentParent</span> = tree.parent;
+                <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">parentIndex</span> = 0; parentIndex &lt; currentParent.numKeys + 1 &amp;&amp; currentParent.children[parentIndex] != tree; parentIndex++);
+                <span style="font-weight: bold;">if</span> (parentIndex == currentParent.numKeys + 1)
+                {
+                        <span style="font-weight: bold;">throw</span> <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Error</span>(<span style="font-style: italic;">"Couldn't find which child we were!"</span>);
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetNumElements"</span>, currentParent.graphicID, currentParent.numKeys + 1);
+                <span style="font-weight: bold;">for</span> (i = currentParent.numKeys; i &gt; parentIndex; i--)
+                {
+                        currentParent.children[i+1] = currentParent.children[i];
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Disconnect"</span>, currentParent.graphicID, currentParent.children[i].graphicID);
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Connect"</span>, currentParent.graphicID,  currentParent.children[i].graphicID, FOREGROUND_COLOR, 
+                                0, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Curve</span>
+                                0, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Directed</span>
+                                <span style="font-style: italic;">""</span>, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Label</span>
+                                i+1);
+                        
+                        currentParent.keys[i] = currentParent.keys[i-1];
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, currentParent.graphicID, currentParent.keys[i] ,i);
+                }
+                currentParent.numKeys++;
+                currentParent.keys[parentIndex] = risingNode;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, currentParent.graphicID, <span style="font-style: italic;">""</span>, parentIndex);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.moveLabel1ID = <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex++;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"CreateLabel"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.moveLabel1ID, risingNode, <span style="font-weight: bold; text-decoration: underline;">this</span>.getLabelX(tree, <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index),  tree.y)
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetForegroundColor"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.moveLabel1ID, FOREGROUND_COLOR);
+
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Move"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.moveLabel1ID,  <span style="font-weight: bold; text-decoration: underline;">this</span>.getLabelX(currentParent, parentIndex),  currentParent.y)
+                
+                
+                
+                
+                currentParent.children[parentIndex+1] = rightNode;
+                rightNode.parent = currentParent;
+                
+        }
+        
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"CreateBTreeNode"</span>,
+                          rightNode.graphicID, 
+                          WIDTH_PER_ELEM, NODE_HEIGHT, 
+                          tree.numKeys - <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index - 1, 
+                          tree.x, 
+                          tree.y,  
+                          BACKGROUND_COLOR, 
+                          FOREGROUND_COLOR);
+        
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span>;
+        <span style="font-weight: bold;">for</span> (i = <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index + 1; i &lt; tree.numKeys + 1; i++)
+        {
+                rightNode.children[i - <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index - 1] = tree.children[i];
+                <span style="font-weight: bold;">if</span> (tree.children[i] != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        rightNode.isLeaf = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Disconnect"</span>, tree.graphicID, tree.children[i].graphicID);
+                        
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Connect"</span>, rightNode.graphicID, 
+                                rightNode.children[i - <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index - 1].graphicID,
+                                FOREGROUND_COLOR,
+                                0, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Curve</span>
+                                0, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Directed</span>
+                                <span style="font-style: italic;">""</span>, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Label</span>
+                                i - <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index - 1);
+                        <span style="font-weight: bold;">if</span> (tree.children[i] != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                        {
+                                tree.children[i].parent = rightNode;
+                        }
+                        tree.children[i] = <span style="font-weight: bold; text-decoration: underline;">null</span>;
+                        
+                }
+        }
+        <span style="font-weight: bold;">for</span> (i = <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index+1; i &lt; tree.numKeys; i++)
+        {
+                rightNode.keys[i - <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index - 1] = tree.keys[i];
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, rightNode.graphicID, rightNode.keys[i - <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index - 1], i - <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index - 1);
+        }
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">leftNode</span> = tree;
+        leftNode.numKeys = <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index;
+        
+        <span style="font-weight: bold;">for</span> (i = <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index; i &lt; tree.numKeys; i++)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, tree.graphicID, <span style="font-style: italic;">""</span>, i); 
+        }
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetNumElements"</span>, tree.graphicID, <span style="font-weight: bold; text-decoration: underline;">this</span>.split_index);
+        
+        <span style="font-weight: bold;">if</span> (tree.parent != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Connect"</span>, currentParent.graphicID, rightNode.graphicID, FOREGROUND_COLOR, 
+                        0, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Curve</span>
+                        0, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Directed</span>
+                        <span style="font-style: italic;">""</span>, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Label</span>
+                        parentIndex + 1);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.resizeTree();
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Step"</span>)
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Delete"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.moveLabel1ID);                          
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, currentParent.graphicID, risingNode, parentIndex);
+                <span style="font-weight: bold;">return</span> tree.parent;
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">TwoThreeTreeNode</span>(<span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex++, <span style="font-weight: bold; text-decoration: underline;">this</span>.starting_x, STARTING_Y);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"CreateBTreeNode"</span>,
+                                 <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.graphicID, 
+                                 WIDTH_PER_ELEM, 
+                                 NODE_HEIGHT, 
+                                 1, 
+                                 <span style="font-weight: bold; text-decoration: underline;">this</span>.starting_x, 
+                                 STARTING_Y,
+                                 BACKGROUND_COLOR,  
+                                 FOREGROUND_COLOR);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.keys[0] = risingNode;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.graphicID, risingNode, 0);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.children[0] = leftNode;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.children[1] = rightNode;
+                leftNode.parent = <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot;
+                rightNode.parent = <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Connect"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.graphicID, leftNode.graphicID, FOREGROUND_COLOR, 
+                        0, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Curve</span>
+                        0, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Directed</span>
+                        <span style="font-style: italic;">""</span>, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Label</span>
+                        0);     <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Connection Point</span>
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Connect"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.graphicID, rightNode.graphicID, FOREGROUND_COLOR, 
+                        0, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Curve</span>
+                        0, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Directed</span>
+                        <span style="font-style: italic;">""</span>, <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Label</span>
+                        1); <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Connection Point</span>
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.isLeaf = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot;
+        }
+        
+        
+        
+}
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.getLabelX = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">tree</span>, <span style="font-weight: bold; font-style: italic;">index</span>) 
+{
+        <span style="font-weight: bold;">return</span> tree.x - WIDTH_PER_ELEM * tree.numKeys / 2 + WIDTH_PER_ELEM / 2 + index * WIDTH_PER_ELEM;
+}
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.resizeTree = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.resizeWidths(<span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.setNewPositions(<span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot, <span style="font-weight: bold; text-decoration: underline;">this</span>.starting_x, STARTING_Y);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.animateNewPositions(<span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot);
+}
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setNewPositions = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">tree</span>, <span style="font-weight: bold; font-style: italic;">xPosition</span>, <span style="font-weight: bold; font-style: italic;">yPosition</span>)
+{
+        <span style="font-weight: bold;">if</span> (tree != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+        {
+                tree.y = yPosition;
+                tree.x = xPosition;
+                <span style="font-weight: bold;">if</span> (!tree.isLeaf)
+                {
+                        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">leftEdge</span> = xPosition - tree.width / 2;
+                        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">priorWidth</span> = 0;
+                        <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; tree.numKeys+1; i++)
+                        {
+                                <span style="font-weight: bold; text-decoration: underline;">this</span>.setNewPositions(tree.children[i], leftEdge + priorWidth + tree.widths[i] / 2, yPosition+HEIGHT_DELTA);
+                                priorWidth += tree.widths[i];
+                        }
+                }                               
+        }                       
+}
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.animateNewPositions = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">tree</span>)
+{
+        <span style="font-weight: bold;">if</span> (tree == <span style="font-weight: bold; text-decoration: underline;">null</span>)
+        {
+                <span style="font-weight: bold;">return</span>;
+        }
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span>;
+        <span style="font-weight: bold;">for</span> (i = 0; i &lt; tree.numKeys + 1; i++)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.animateNewPositions(tree.children[i]);
+        }
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Move"</span>, tree.graphicID, tree.x, tree.y);
+}
+TwoThreeTree.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.resizeWidths = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">tree</span>) 
+{
+        <span style="font-weight: bold;">if</span> (tree == <span style="font-weight: bold; text-decoration: underline;">null</span>)
+        {
+                <span style="font-weight: bold;">return</span> 0;
+        }
+        <span style="font-weight: bold;">if</span> (tree.isLeaf)
+        {
+                <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; tree.numKeys + 1; i++)
+                {
+                        tree.widths[i] = 0;
+                }
+                tree.width = tree.numKeys * WIDTH_PER_ELEM + NODE_SPACING;
+                <span style="font-weight: bold;">return</span> tree.width;                              
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">treeWidth</span> = 0;
+                <span style="font-weight: bold;">for</span> (i = 0; i &lt; tree.numKeys+1; i++)
+                {
+                        tree.widths[i] = <span style="font-weight: bold; text-decoration: underline;">this</span>.resizeWidths(tree.children[i]);
+                        treeWidth = treeWidth + tree.widths[i];
+                }
+                treeWidth = Math.max(treeWidth, tree.numKeys * WIDTH_PER_ELEM + NODE_SPACING);
+                tree.width = treeWidth;
+                <span style="font-weight: bold;">return</span> treeWidth;
+        }
+}
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">TwoThreeTreeNode</span>(<span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">initialX</span>, <span style="font-weight: bold; font-style: italic;">initialY</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.widths = [];
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.keys = [];
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.children = [];
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.x = initialX;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.y = initialY;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.graphicID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.numKeys = 1;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.isLeaf = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.parent = <span style="font-weight: bold; text-decoration: underline;">null</span>;
+        
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.leftWidth = 0;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.rightWidth = 0;
+        
+}
+
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">currentAlg</span>;
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">init</span>()
+{
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">animManag</span> = initCanvas();
+        currentAlg = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">TwoThreeTree</span>(animManag, canvas.width, canvas.height);
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: VLEAD</p>
+<p class="date">Created: 2019-08-27 Tue 13:08</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.1.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
